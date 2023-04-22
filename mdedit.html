@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+        
+        
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+        <link rel="stylesheet" href="scripts/cm/lib/codemirror.css">
+
+        <script type="text/javascript" src="scripts/cm/lib/codemirror.js"></script>
+    
+        
+        <script type="text/javascript" src="scripts/cm/mode/clike/clike.js"></script>
+        <script type="text/javascript" src="scripts/cm/mode/python/python.js"></script>
+        
+        <link id="mainStylesheet" rel="stylesheet" href="styles/light.css">
+        
+        
+        <title>Markdown Editor</title>
+        
+        <style>
+            #write{
+                resize:none;
+                outline:none;
+                border:none;
+                border-right:3px solid black;
+                padding:10px;
+                width: 50%;
+                overflow: auto;
+            }
+            
+            #show{
+                width:50%;
+                overflow: auto;
+            }
+        </style>
+         
+    </head>
+    
+    <body>
+        
+        <div style="display:flex;height: 98.2vh;">
+            
+            <textarea id="write" onkeyup="update()"></textarea>
+            <div id="show" class="bigBoxContent">
+                <p id="display"></p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <div id="editorCalls"></div>
+        <script src="scripts/markdown.js"></script>
+        <script>
+            function update(){
+                let html = markToHTML(document.getElementById("write").value);
+                document.getElementById("display").innerHTML = html[0];
+                eval(html[1]);
+                
+            }
+        </script>
+        
+    </body>
+    
+</html>
