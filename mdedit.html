@@ -9,22 +9,16 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+        <link id="mainStylesheet" rel="stylesheet" href="styles/light.css">
+        
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
-        
-        
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
         <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-        <link rel="stylesheet" href="scripts/cm/lib/codemirror.css">
-
-        <script type="text/javascript" src="scripts/cm/lib/codemirror.js"></script>
-    
-        
-        <script type="text/javascript" src="scripts/cm/mode/clike/clike.js"></script>
-        <script type="text/javascript" src="scripts/cm/mode/python/python.js"></script>
-        
-        <link id="mainStylesheet" rel="stylesheet" href="styles/light.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/clike/clike.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.min.js"></script>
         
         
         <title>Markdown Editor</title>
@@ -67,7 +61,7 @@
         <script src="scripts/markdown.js"></script>
         <script>
             function update(){
-                let html = markToHTML(document.getElementById("write").value);
+                let html = mdToHTML(document.getElementById("write").value);
                 document.getElementById("display").innerHTML = html[0];
                 eval(html[1]);
                 
