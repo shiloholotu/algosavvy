@@ -97,10 +97,7 @@ button{
 
 
 /* images */
-.mdContent img{
-    display: block;
-    margin: auto;
-    border-radius: 10px;
+img{
     max-width: 100%;
 }
 
