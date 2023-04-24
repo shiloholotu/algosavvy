@@ -118,7 +118,7 @@ img{
     border-radius: 7px;
     font-weight: lighter;
     color:var(--lighter-font-color);
-    border:1px solid rgb(0,0,0,0.1);
+    border: none;
 }
 
 .singleCodeBlock{
@@ -159,6 +159,6 @@ img{
     height:auto;
     border-radius: 7px;
     padding: 10px;
-    border:1px solid rgb(0,0,0,0.1);
+    border: none;
     background: var(--bg-light-blue);
 }
