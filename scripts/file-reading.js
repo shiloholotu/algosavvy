@@ -1,8 +1,6 @@
 
 function loadMdFile(text){
 	const r = mdToHTML(text);
-	console.log(text);
-	console.log(r[0]);
 	document.getElementById("pageView").innerHTML = r[0];
 	eval(r[1]);//😱😱
 }
