@@ -256,8 +256,3 @@ function mdToHTML(text){
     let html = converter.makeHtml(returns[0]);
     return [html,returns[1]];
 }
-
-let r = mdToHTML(text);
-document.getElementById("test").innerHTML = r[0];
-eval(r[1]);
-
