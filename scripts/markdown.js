@@ -89,7 +89,6 @@ function extraMD(input){
         
         
         let line = "";
-        let suffix = "";//what will be added to end of line
         
         if(input[i] == ""){
             allMD += "<br>\n";
@@ -107,11 +106,11 @@ function extraMD(input){
             //multiline code block
             if(j < input[i].length-2 && input[i].substring(j,j+3) == "```"){
 
-                let mode = input[i].split("```")[1];
-                let ind = i+1; 
+                let mode = input[i].split("```")[1];//gets the languange
+                let ind = i+1;//next line
                 let codeStr = "";
                 
-                
+                //parse through markdown until reaching end of block
                 while(ind < input.length && input[ind] != "```"){
                     codeStr += input[ind] + "\n";
                     ind++;
@@ -164,7 +163,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
                 
                 else{
                     
-                    allMD += `<div class='multiCodeBlock'>${codeStr.replaceAll("\n","<br>").replaceAll("\\\\","\\")}</div>`;
+                    allMD += `<div class='multiCodeBlock'><pre>${codeStr.replaceAll("\n","<br>").replaceAll("\\\\","\\")}<pre></div>`;
                     line = "";
                 }
                 codeEditors++;
@@ -194,13 +193,14 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
             //warning 3
             if(j < input[i].length-3 && input[i].substring(j,j+4) == "!!!!" && j == 0){
                 
+                //if this is the start of the warning block
                 if(!warning3){
-                    let warningTitle = input[i].split("!!!!")[1];
+                    let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
                     line = `<div class="warning3"><h3><img class="warningIcon" src='assets/svg/warning.svg' align='top'> ${warningTitle}</h3>`;
                     warning3 = !warning3;
                     break;
                 }
-                
+                //if this is the end of the warning block
                 warning3 = !warning3;
                 line = "</div>";
                 break;
@@ -211,7 +211,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
             //warning 2
             if(j < input[i].length-2 && input[i].substring(j,j+3) == "!!!" && j == 0){
                 if(!warning2){
-                    let warningTitle = input[i].split("!!!")[1];
+                    let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
                     line = `<div class="warning2"><h3><img class="warningIcon" src='assets/svg/warning.svg' align='top'> ${warningTitle}</h3>`;
                     warning2 = !warning2;
                     break;
@@ -225,7 +225,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
             //warning 1
             if(j < input[i].length-1 && input[i].substring(j,j+2) == "!!" && j == 0){
                 if(!warning1){
-                    let warningTitle = input[i].split("!!")[1];
+                    let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
                     line = `<div class="warning1"><h3><img class="warningIcon" src='assets/svg/info.svg' align='center'> ${warningTitle}</h3>`;
                     warning1 = !warning1;
                     break;

@@ -121,6 +121,10 @@ img{
     border: none;
 }
 
+.multiCodeBlock{
+    overflow-x:auto;
+}
+
 .singleCodeBlock{
     display: inline-block;
     padding: 4px;
