@@ -78,6 +78,11 @@ button{
     margin-bottom:5px;
 }
 
+.warning1 h3 p,.warning2 h3 p,.warning3 h3 p{
+    margin:none;
+    display: inline;
+}
+
 .warningIcon{
     margin-right: 5px;
 }

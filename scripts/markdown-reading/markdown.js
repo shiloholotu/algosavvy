@@ -195,6 +195,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
                 
                 //if this is the start of the warning block
                 if(!warning3){
+                
                     let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
                     line = `<div class="warning3"><h3><img class="warningIcon" src='assets/svg/warning.svg' align='top'> ${warningTitle}</h3>`;
                     warning3 = !warning3;
@@ -211,7 +212,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
             //warning 2
             if(j < input[i].length-2 && input[i].substring(j,j+3) == "!!!" && j == 0){
                 if(!warning2){
-                    let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
+                    let warningTitle = converter.makeHtml(input[i].split("!!!")[1]);//get parse the title
                     line = `<div class="warning2"><h3><img class="warningIcon" src='assets/svg/warning.svg' align='top'> ${warningTitle}</h3>`;
                     warning2 = !warning2;
                     break;
@@ -225,7 +226,7 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
             //warning 1
             if(j < input[i].length-1 && input[i].substring(j,j+2) == "!!" && j == 0){
                 if(!warning1){
-                    let warningTitle = converter.makeHtml(input[i].split("!!!!")[1]);//get parse the title
+                    let warningTitle = converter.makeHtml(input[i].split("!!")[1]);//get parse the title
                     line = `<div class="warning1"><h3><img class="warningIcon" src='assets/svg/info.svg' align='center'> ${warningTitle}</h3>`;
                     warning1 = !warning1;
                     break;
