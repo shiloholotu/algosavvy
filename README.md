@@ -1,2 +1,2 @@
 # AlgoSavvy
-An expansive resource that educates users on different competitive programming concepts and also provides various CP-centered game modes
+An expansive resource that educates users on different programming algorithm concepts and also provides various competitve programming centered game modes
