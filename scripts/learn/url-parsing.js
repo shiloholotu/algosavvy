@@ -9,5 +9,5 @@ function loadMdFromUrl(){
     let section = null;
     if(loc.length == 3)section = loc[2];
 
-    readMdFile(docs[folder][0],section);
+    readMdFile("/" + docs[folder][doc][0],section);
 }
