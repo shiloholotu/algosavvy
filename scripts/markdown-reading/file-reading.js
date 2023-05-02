@@ -1,7 +1,7 @@
 
 function loadMdFile(text,scrollTo){
 	const r = mdToHTML(text);
-	document.getElementById("pageView").innerHTML = r[0];
+	document.getElementById("docView").innerHTML = r[0];
 	eval(r[1]);//😱😱
     if(scrollTo != null)document.getElementById(scrollTo).scrollIntoView();
 }
