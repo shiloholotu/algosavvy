@@ -52,6 +52,19 @@ button{
     border: 2px solid rgba(0,0,50,.3);
 }
 
+#fadeCover{
+    position: fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100vw;
+    height:100vh;
+    background:var(--bg-light-blue);
+    display:none;
+}
+
 
 /* MARKDOWN SYNTAX */
 
