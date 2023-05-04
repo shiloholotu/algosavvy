@@ -118,6 +118,7 @@ button{
 .headerLink{
     opacity: .5;
     margin-left: 10px;
+    vertical-align: middle;
 }
 .headerLink:hover{
     opacity: 1;
