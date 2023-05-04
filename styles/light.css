@@ -9,7 +9,7 @@
 body{
     font-family: 'Poppins';
     color:var(--font-color);
-    background:rgb(242,242,247);
+    background:var(--bg-light-blue);
 }
 
 
@@ -114,6 +114,15 @@ button{
 }
 
 
+/* header links */
+.headerLink{
+    opacity: .5;
+    margin-left: 10px;
+}
+.headerLink:hover{
+    opacity: 1;
+}
+
 /* images */
 img{
     max-width: 100%;
@@ -148,33 +157,6 @@ img{
     padding: 4px;
     margin-top: 2px;
     margin-bottom: 2px;
-}
-/* rgb(229 229 239); */
-
-.copyButton{
-    display: block;
-    margin-left:auto;
-    border-radius: 7px;
-    padding: 7px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background: transparent;
-    border:none;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color:rgb(120,120,150);
-    opacity: .5;
-
-}
-
-.copyButtonContainter{
-    background: white;
-    margin-top: -1px;
-    border-radius: 0 0 7px 7px;
-}
-
-.copyButton:hover{
-    opacity: .7;
 }
 
 .CodeMirror {

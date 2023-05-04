@@ -5,7 +5,8 @@ function linkHeaders(){
         const allHeaders = document.getElementById("docView").getElementsByTagName(i);
         for(let j = 0; j < allHeaders.length; j++){
             const link = document.createElement("a");
-            link.appendChild(document.createTextNode("[LINK]"));
+            link.innerHTML = "<img src='assets/svg/link.svg'>";
+            link.classList.add("headerLink");
             let newUrl = window.location.href.split("#")[0] + "#";
             newUrl += curFolder + "/" + curDoc + "/" + allHeaders[j].id;
             link.setAttribute("href",newUrl);
