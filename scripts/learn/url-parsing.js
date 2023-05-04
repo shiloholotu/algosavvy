@@ -12,7 +12,7 @@ function loadMdFromUrl(){
     curFolder = folder;
     curDoc = doc;
     let section = null;
-    if(loc.length == 3)section = loc[2];
+    if(loc.length == 3 && loc[2] != "")section = loc[2];
 
     readMdFile("learn-docs/"+folder+"/" + docs[folder][doc][0],section);
 }
