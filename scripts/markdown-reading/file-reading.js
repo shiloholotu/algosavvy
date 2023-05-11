@@ -7,8 +7,7 @@ function linkHeaders(){
             const link = document.createElement("a");
             link.innerHTML = "<img src='assets/svg/link.svg'>";
             link.classList.add("headerLink");
-            let newUrl = window.location.href.split("#")[0] + "#";
-            newUrl += curFolder + "/" + curDoc + "/" + allHeaders[j].id;
+            const newUrl = "learn#" + curFolder + "/" + curDoc + "/" + allHeaders[j].id;
             link.setAttribute("href",newUrl);
             allHeaders[j].appendChild(link);
         }
