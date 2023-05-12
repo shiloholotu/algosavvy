@@ -2,6 +2,8 @@
     /* overall stuff */
     --font-color: rgb(50,50,50);
     --bg-light-blue: rgb(242,242,247);
+    --light-border-color: rgb(100,0,0,0.1);
+    --dark-border-color:rgba(0,0,50,.3);
     /* code blocks */
     --lighter-font-color: rgb(100,100,100);
 }
@@ -49,7 +51,7 @@ button{
     margin:auto;
     padding:5px;
     border-radius:15px;
-    border: 2px solid rgba(0,0,50,.3);
+    border: 2px solid var(--dark-border-color);
 }
 
 #fadeCover{
@@ -65,6 +67,17 @@ button{
     display:none;
 }
 
+
+/* TABLE OF CONTENTS */
+#tableOfContents a{
+    text-decoration: none;
+    color:var(--font-color);
+}
+.tocBlock{
+    border:2px solid var(--light-border-color);
+    border-radius: 10px;
+    padding:10px; 
+}
 
 /* MARKDOWN SYNTAX */
 
@@ -84,7 +97,7 @@ button{
 .warning1,.warning2,.warning3{
     padding:10px;
     border-radius: 7px;
-    border:2px solid rgb(100,0,0,0.1);
+    border:2px solid var(--light-border-color);
 }
 
 .warning1 h3,.warning2 h3,.warning3 h3{
