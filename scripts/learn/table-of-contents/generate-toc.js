@@ -3,7 +3,14 @@ function generateTOC(){
     table.innerHTML = "";
     table.innerHTML += "<h2>Introduction</h2>";
     for(let i in docs["introduction"]){
-        table.innerHTML += `<a href="learn#introduction/${i}">${docs["introduction"][i][0]}</a><br>`;
+        table.innerHTML += `
+        <a href="learn#introduction/${i}">
+            <div class='tocBlock'>
+                <h3>${docs["introduction"][i][0]}</h3>
+                <p> Last Updated: ${docs["introduction"][i][2]}</p>
+            </div>
+            
+        </a><br>`;
     }
 
 }
