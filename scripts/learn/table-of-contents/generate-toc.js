@@ -1,7 +1,7 @@
 function generateTOC(){
     const table = document.getElementById("tableOfContents")
     table.innerHTML = "";
-    table.innerHTML += "<h2>Introduction</h2>";
+    table.innerHTML += "<h2>INTRODUCTION</h2>";
     for(let i in docs["introduction"]){
         table.innerHTML += `
         <a href="learn#introduction/${i}">
