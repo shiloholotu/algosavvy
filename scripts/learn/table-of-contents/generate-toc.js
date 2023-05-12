@@ -12,7 +12,7 @@ function generateTOC(){
             
         </a>`;
         if(i != docs["introduction"].length-1){
-            table.innerHTML += "<div class='tocBlockSerparator'></div>";
+            table.innerHTML += "<div class='tocBlockSeparator'></div>";
         }
     }
 
