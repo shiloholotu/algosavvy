@@ -2,7 +2,7 @@
     /* overall stuff */
     --font-color: rgb(50,50,50);
     --bg-light-blue: rgb(242,242,247);
-    --light-border-color: rgb(100,0,0,0.1);
+    --light-border-color: rgb(0,0,50,0.1);
     --dark-border-color:rgba(0,0,50,.3);
     /* code blocks */
     --lighter-font-color: rgb(100,100,100);
