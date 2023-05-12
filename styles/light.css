@@ -84,6 +84,13 @@ button{
     margin:0;
 }
 
+.tocBlockSeparator{
+    background: var(--light-border-color);
+    height: 30px;
+    width: 2px;
+    margin: auto;
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */

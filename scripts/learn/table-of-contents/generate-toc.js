@@ -10,7 +10,10 @@ function generateTOC(){
                 <p> Last Updated: ${docs["introduction"][i][2]}</p>
             </div>
             
-        </a><br>`;
+        </a>`;
+        if(i != docs["introduction"].length-1){
+            table.innerHTML += "<div class='tocBlockSerparator'></div>";
+        }
     }
 
 }
