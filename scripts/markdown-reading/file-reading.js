@@ -13,7 +13,8 @@ function linkHeaders(){
         //add <a> tags to all headers in docView
         i.appendChild(link);
         //duplicate link in doc contents preview
-        const docContLink = link.cloneNode(true);
+        const docContLink = link.cloneNode(false);
+        docContLink.textContent = i.textContent;
         const indent = parseInt(i.nodeName[1]) - 1;//indent based on header size
         docContLink.style["margin-left"] = `${indent*5}px`;
         document.getElementById("docContents").appendChild(docContLink);
