@@ -117,6 +117,7 @@ button{
     text-decoration: none;
     color: var(--dark-border-color);
     opacity: 1;
+    margin-bottom:10px;
 }
 #docContents a:hover{
     text-decoration: underline;
