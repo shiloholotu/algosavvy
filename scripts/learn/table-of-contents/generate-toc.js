@@ -6,7 +6,7 @@ function generateTOC(){
 
         //completion status
         let compStatusStr = "<p style='opacity:.5'><img src='assets/svg/minus.svg'>Incomplete</p>";
-        if(getCompletionStatus(docs["introduction"][i][0]) == null){
+        if(getCompletionStatus(docs["introduction"][i][0]) == "complete"){
             compStatusStr = "<p style='opacity:.5'><img src='assets/svg/check.svg' style='background:rgb(0,200,50,0.5)'>Complete</p>";
         }
         table.innerHTML += `
