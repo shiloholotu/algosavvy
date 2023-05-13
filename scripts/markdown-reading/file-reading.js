@@ -27,6 +27,7 @@ function loadMdFile(text,scrollTo){
 	document.getElementById("docView").innerHTML = r[0];
 	eval(r[1]);//😱😱
     if(scrollTo != null)document.getElementById(scrollTo).scrollIntoView();
+    console.log(`document.getElementById("${scrollTo}").scrollIntoView();`);
     linkHeaders();
 
 }
