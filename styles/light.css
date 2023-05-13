@@ -111,6 +111,11 @@ button{
 }
 
 /* doc contents preview */
+#docContents{
+    position: fixed;
+    width: 15vw;
+    margin: 15px;
+}
 #docContents a{
     display: block;
     font-weight: 600;
