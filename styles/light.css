@@ -113,6 +113,13 @@ button{
 /* doc contents preview */
 #docContents a{
     display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark-border-color);
+    opacity: 1;
+}
+#docContents a:hover{
+    text-decoration: underline;
 }
 
 /* MARKDOWN SYNTAX */
