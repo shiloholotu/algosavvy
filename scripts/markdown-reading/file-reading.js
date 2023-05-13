@@ -17,6 +17,7 @@ function linkHeaders(){
         docContLink.textContent = i.textContent;
         const indent = parseInt(i.nodeName[1]) - 1;//indent based on header size
         docContLink.style["margin-left"] = `${indent*2}vw`;
+        docContLink.setAttribute("onclick","document.getElementById(scrollTo).scrollIntoView();return false")
         document.getElementById("docContents").appendChild(docContLink);
     }
 
