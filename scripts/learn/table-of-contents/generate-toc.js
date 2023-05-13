@@ -12,7 +12,7 @@ function generateTOC(){
         table.innerHTML += `
         <a href="learn#introduction/${i}">
             <div class='tocBlock'>
-                <p style='opacity:.5'><img src='assets/svg/minus.svg'>Incomplete</p>
+                ${compStatusStr}
                 <h3>${docs["introduction"][i][0]}</h3>
                 <p> Last Updated: ${docs["introduction"][i][2]}</p>
             </div>
