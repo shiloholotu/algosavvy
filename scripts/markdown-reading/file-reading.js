@@ -1,17 +1,24 @@
 //adds links to headers in docView
 function linkHeaders(){
-    const headerTags = ["h1","h2","h3","h4","h5","h6"];
-    for(i of headerTags){
-        const allHeaders = document.getElementById("docView").getElementsByTagName(i);
-        for(let j = 0; j < allHeaders.length; j++){
-            const link = document.createElement("a");
-            link.innerHTML = "<img src='assets/svg/link.svg'>";
-            link.classList.add("headerLink");
-            const newUrl = "learn#" + curFolder + "/" + curDoc + "/" + allHeaders[j].id;
-            link.setAttribute("href",newUrl);
-            allHeaders[j].appendChild(link);
-        }
+
+    const headers = document.getElementById("docView").querySelectorAll("h1, h2, h3, h4, h5, h6");
+    for(i of headers){
+
+        const link = document.createElement("a");
+        link.innerHTML = "<img src='assets/svg/link.svg'>";
+        link.classList.add("headerLink");
+        const newUrl = "learn#" + curFolder + "/" + curDoc + "/" + i.id;
+        link.setAttribute("href",newUrl);
+
+        //add <a> tags to all headers in docView
+        i.appendChild(link);
+        //duplicate link in doc contents preview
+        const docContLink = link.cloneNode(true);
+        const indent = parseInt(i.nodeName[1]) - 1;//indent based on header size
+        docContLink.style["margin-left"] = `${indent*5}px`;
+        document.getElementById("docContents").appendChild(docContLink);
     }
+
 }
 
 function loadMdFile(text,scrollTo){
