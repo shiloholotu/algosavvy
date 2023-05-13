@@ -4,6 +4,7 @@
     --bg-light-blue: rgb(242,242,247);
     --light-border-color: rgb(0,0,50,0.1);
     --dark-border-color:rgba(0,0,50,.3);
+    --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
     /* code blocks */
     --lighter-font-color: rgb(100,100,100);
 }
@@ -34,12 +35,6 @@ p{
 }
 
 
-.hide{
-    color:transparent;
-    pointer-events:none;
-    user-select:none;
-}
-
 button{
     font-family: 'Poppins';
     cursor: pointer;
@@ -52,6 +47,7 @@ button{
     padding:5px;
     border-radius:15px;
     border: 2px solid var(--dark-border-color);
+    box-shadow: var(--light-shadow);
 }
 
 #fadeCover{
@@ -85,7 +81,8 @@ button{
 .tocBlock{
     border:2px solid var(--light-border-color);
     border-radius: 10px;
-    padding:10px; 
+    padding:10px;
+    box-shadow: var(--light-shadow);
 }
 .tocBlock p{
     margin:0;
