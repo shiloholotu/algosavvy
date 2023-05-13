@@ -1,6 +1,9 @@
 //adds links to headers in docView
 function linkHeaders(){
 
+    const capitalizedCurFolder = curFolder[0].toUpperCase() + curFolder.slice(1);
+    document.getElementById("docContents").innerHTML = `<a href="contents">${capitalizedCurFolder}</a>`;
+
     const headers = document.getElementById("docView").querySelectorAll("h1, h2, h3, h4, h5, h6");
     for(i of headers){
 
@@ -15,7 +18,7 @@ function linkHeaders(){
         //duplicate link in doc contents preview
         const docContLink = link.cloneNode(false);
         docContLink.textContent = i.textContent;
-        const indent = parseInt(i.nodeName[1]) - 1;//indent based on header size
+        const indent = parseInt(i.nodeName[1]);//indent based on header size
         docContLink.style["margin-left"] = `${indent*2}vw`;
         docContLink.setAttribute("onclick",`document.getElementById("${i.id}").scrollIntoView();return false`)
         document.getElementById("docContents").appendChild(docContLink);
