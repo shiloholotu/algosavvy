@@ -40,16 +40,6 @@ button{
     cursor: pointer;
 }
 
-.bigBox{
-    width:60vw;
-    max-width: 800px;
-    margin:auto;
-    padding:5px;
-    border-radius:15px;
-    border: 2px solid var(--dark-border-color);
-    box-shadow: var(--light-shadow);
-}
-
 #fadeCover{
     position: fixed;
     z-index:1000;
@@ -107,6 +97,22 @@ button{
     height: 30px;
     width: 2px;
     margin: auto;
+}
+
+/* DOC VIEW LEARN PAGE */
+.bigBox{
+    width:60vw;
+    max-width: 800px;
+    margin:auto;
+    padding:5px;
+    border-radius:15px;
+    border: 2px solid var(--dark-border-color);
+    box-shadow: var(--light-shadow);
+}
+
+/* doc contents preview */
+#docContents a{
+    display: block;
 }
 
 /* MARKDOWN SYNTAX */
