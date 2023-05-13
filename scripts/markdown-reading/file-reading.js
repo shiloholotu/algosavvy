@@ -16,7 +16,7 @@ function linkHeaders(){
         const docContLink = link.cloneNode(false);
         docContLink.textContent = i.textContent;
         const indent = parseInt(i.nodeName[1]) - 1;//indent based on header size
-        docContLink.style["margin-left"] = `${indent*5}px`;
+        docContLink.style["margin-left"] = `${indent*2}vw`;
         document.getElementById("docContents").appendChild(docContLink);
     }
 
