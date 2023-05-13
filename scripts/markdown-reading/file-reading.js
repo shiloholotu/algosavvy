@@ -28,8 +28,7 @@ function loadMdFile(text,scrollTo){
 	eval(r[1]);//😱😱
     console.log(scrollTo);
     if(scrollTo != null){
-        document.getElementById(scrollTo).scrollIntoView();
-        console.log(`document.getElementById("${scrollTo}").scrollIntoView();`);
+        setTimeout(function(){document.getElementById(scrollTo).scrollIntoView();},100);//to stop the scroll function from being called before the page content is rendered
     }
         
     linkHeaders();
