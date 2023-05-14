@@ -22,7 +22,7 @@ function displayCompletionIndicator(){
 }
 
 function toggleCompletionIndicator(){
-    if(getCompletionStatus(docs[curFolder][curDoc] == "incomplete")) setCompletionStatus(docs[curFolder][curDoc],"complete");
+    if(getCompletionStatus(docs[curFolder][curDoc]) == "incomplete") setCompletionStatus(docs[curFolder][curDoc],"complete");
     else setCompletionStatus(docs[curFolder][curDoc],"incomplete");
     displayCompletionIndicator();
 }
