@@ -1,6 +1,31 @@
 let curFolder = null;
 let curDoc = null;
 
+//displays competion indicator at bottom of doc content preview
+function displayCompletionIndicator(){
+    const status = getCompletionStatus(docs[curFolder][curDoc][0]);
+    const completionIndicatorImg = document.getElementById("completionIndicatorImg");
+    const completionIndicatorLabel = document.getElementById("completionIndicatorLabel");
+    if(status == "complete"){
+        completionIndicatorImg.style["background"] = "rgb(144 238 144)";
+        completionIndicatorImg.style["float"] = "right";
+        completionIndicatorImg.setAttribute("src","assets/svg/check.svg");
+        completionIndicatorLabel.textContent = "Complete";
+
+    }
+    else{
+        completionIndicatorImg.style["background"] = "var(--light-border-color)";
+        completionIndicatorImg.style["float"] = "left";
+        completionIndicatorImg.setAttribute("src","assets/svg/minus.svg");
+        completionIndicatorLabel.textContent = "Incomplete";
+    }
+}
+
+function toggleCompletionIndicator(){
+    if(getCompletionStatus(docs[curFolder][curDoc] == "incomplete")) setCompletionStatus(docs[curFolder][curDoc],"complete");
+    else setCompletionStatus(docs[curFolder][curDoc],"incomplete");
+    displayCompletionIndicator();
+}
 
 //adds links to headers in docView
 function linkHeaders(){
@@ -38,7 +63,11 @@ function linkHeaders(){
     </div>
     `;
 
+    displayCompletionIndicator();
+
 }
+
+
 
 function loadMdFile(text,scrollTo){
 	const r = mdToHTML(text);
