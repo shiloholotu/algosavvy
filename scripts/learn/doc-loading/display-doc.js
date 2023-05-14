@@ -24,9 +24,19 @@ function linkHeaders(){
         docContLink.textContent = i.textContent;
         const indent = parseInt(i.nodeName[1]);//indent based on header size
         docContLink.style["margin-left"] = `${indent*2}vw`;
-        docContLink.setAttribute("onclick",`document.getElementById("${i.id}").scrollIntoView();return false`)
+        docContLink.setAttribute("onclick",`document.getElementById("${i.id}").scrollIntoView();return false`);
         document.getElementById("docContents").appendChild(docContLink);
     }
+
+    //completion indicator
+    document.getElementById("docContents").innerHTML += `
+    <div>
+        <div id="completionIndicator">
+            <img id="completionIndicatorImg" src="check.svg">
+        </div>
+        <p id="completionIndicatorLabel">Complete</p>
+    </div>
+    `;
 
 }
 

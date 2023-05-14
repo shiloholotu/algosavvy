@@ -129,18 +129,26 @@ button{
 }
 
 #completionIndicator{
-    display: flex;
+    display: inline-block;
     border: 2px solid var(--light-border-color);
     border-radius: 10px;
     padding: 4px;
     width: 48px;
-    justify-content: left;
+    height:24px;
 }
 
 #completionIndicatorImg{
     background: lightgreen;
     max-width: 100%;
     border-radius: 5px;
+}
+
+#completionIndicatorLabel{
+    margin: 0;
+    display: inline-block;
+    font-weight: 600;
+    margin-left: 10px;
+    opacity: .8;
 }
 
 /* MARKDOWN SYNTAX */
