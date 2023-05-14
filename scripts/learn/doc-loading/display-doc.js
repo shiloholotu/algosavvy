@@ -56,7 +56,7 @@ function linkHeaders(){
     //completion indicator
     document.getElementById("docContents").innerHTML += `
     <div>
-        <div id="completionIndicator">
+        <div id="completionIndicator" onclick="toggleCompletionIndicator()">
             <img id="completionIndicatorImg" src="assets/svg/check.svg">
         </div>
         <p id="completionIndicatorLabel">Complete</p>
