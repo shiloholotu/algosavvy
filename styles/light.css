@@ -135,6 +135,7 @@ button{
     padding: 4px;
     width: 48px;
     height:24px;
+    vertical-align: middle;
 }
 
 #completionIndicatorImg{

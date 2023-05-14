@@ -32,7 +32,7 @@ function linkHeaders(){
     document.getElementById("docContents").innerHTML += `
     <div>
         <div id="completionIndicator">
-            <img id="completionIndicatorImg" src="check.svg">
+            <img id="completionIndicatorImg" src="assets/svg/check.svg">
         </div>
         <p id="completionIndicatorLabel">Complete</p>
     </div>
