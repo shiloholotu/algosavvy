@@ -5,10 +5,10 @@ function generateTOC(){
     for(let i in docs["introduction"]){
 
         //completion status
-        let compStatusStr = "<p style='opacity:.5;font-weight:lighter'><img src='assets/svg/minus.svg'>Incomplete</p>";
+        let compStatusStr = "<p style='font-weight:lighter'><img src='assets/svg/minus.svg'><span style='opacity:.5'>Incomplete</span></p>";
         let boxShadowStr = "";
         if(getCompletionStatus(docs["introduction"][i][0]) == "complete"){
-            compStatusStr = "<p style='opacity:.5;font-weight:lighter'><img src='assets/svg/check.svg' style='background:rgb(0,200,50,0.5)'>Complete</p>";
+            compStatusStr = "<p style='font-weight:lighter'><img src='assets/svg/check.svg' style='background:lightgreen'><span style='opacity:.5'>Complete</span></p>";
             boxShadowStr = "style='box-shadow:none'";
         }
         table.innerHTML += `
@@ -16,7 +16,7 @@ function generateTOC(){
             <div class='tocBlock' ${boxShadowStr}>
                 ${compStatusStr}
                 <h3>${docs["introduction"][i][0]}</h3>
-                <p> Last Updated: ${docs["introduction"][i][2]}</p>
+                <p style="opacity: .7"> Last Updated: ${docs["introduction"][i][2]}</p>
             </div>
             
         </a>`;
