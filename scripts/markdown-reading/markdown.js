@@ -195,5 +195,5 @@ var myCodeMirror = CodeMirror(document.getElementById("editor${codeEditors}"),{
 function mdToHTML(text){
     let returns = extraMD(text);
     let html = converter.makeHtml(returns[0]);
-    return [html,returns[1]];
+    return [html,returns[1]+"MathJax.typeset()"];//calls MathJax along with the editors
 }
