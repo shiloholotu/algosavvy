@@ -22,8 +22,8 @@ function displayCompletionIndicator(){
 }
 
 function toggleCompletionIndicator(){
-    if(getCompletionStatus(docs[curFolder][curDoc]) == "incomplete") setCompletionStatus(docs[curFolder][curDoc],"complete");
-    else setCompletionStatus(docs[curFolder][curDoc],"incomplete");
+    if(getCompletionStatus(docs[curFolder][curDoc][0]) == "incomplete") setCompletionStatus(docs[curFolder][curDoc][0],"complete");
+    else setCompletionStatus(docs[curFolder][curDoc][0],"incomplete");
     displayCompletionIndicator();
 }
 
