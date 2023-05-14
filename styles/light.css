@@ -139,7 +139,7 @@ button{
 }
 
 #completionIndicatorImg{
-    background: lightgreen;
+    background: rgb(144 238 144);
     max-width: 100%;
     border-radius: 5px;
 }
