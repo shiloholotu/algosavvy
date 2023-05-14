@@ -1,3 +1,4 @@
+//url parsing for learn page
 let curFolder = null;
 let curDoc = null;
 
