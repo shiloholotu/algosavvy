@@ -246,10 +246,10 @@ img{
     margin-bottom: 2px;
 }
 
-.CodeMirror {
-    height:auto;
-    border-radius: 7px;
-    padding: 10px;
-    border: none;
+pre code.hljs {
+    padding: 14px;
+    font-size: 14px;
     background: var(--bg-light-blue);
+    border-radius: 10px;
+    max-height: 50vh;
 }
