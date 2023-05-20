@@ -65,8 +65,9 @@
         <script>
             function update(){
                 let html = mdToHTML(document.getElementById("write").value);
-                document.getElementById("display").innerHTML = html[0];
-                eval(html[1]);
+                document.getElementById("display").innerHTML = html;
+                MathJax.typeset();
+                hljs.highlightAll();
                 
             }
         </script>
