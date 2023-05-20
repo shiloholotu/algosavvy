@@ -5,7 +5,7 @@ let converter = new showdown.Converter();
 //uses $...$ instead of \(...\)
 function formatMath(input){
     let dollarSignCount = 0;
-    let ouput = "";
+    let output = "";
     for(let c of input){
         if(c == "$"){
             if(dollarSignCount % 2 == 0)output += "\\(";
