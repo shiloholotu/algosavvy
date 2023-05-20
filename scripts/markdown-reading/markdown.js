@@ -8,6 +8,6 @@ function formatSpaces(input){
 
 
 function mdToHTML(text){
-    text = formatSpaces(text);
+    //text = formatSpaces(text);
     return converter.makeHtml(text);
 }
