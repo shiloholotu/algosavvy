@@ -79,6 +79,7 @@ function loadMdFile(text,scrollTo){
     }
         
     linkHeaders();
+    document.getElementById("title").innerHTML = docs[curFolder][curDoc][0];
 
 }
 async function readMdFile(location,scrollTo = null){
