@@ -7,7 +7,7 @@ function displayDocNavBar(){
     //previous doc
     let prevDocInd = parseInt(curDoc)-1;
     let prevDocFolder = curFolder;
-    //if last doc of folder
+    //if first doc of folder
     if(prevDocInd == -1){
 
 
@@ -23,6 +23,7 @@ function displayDocNavBar(){
         prevDocInd = docs[prevDocFolder].length-1;
     }
     document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
+    document.getElementById("prevDocLink").setAttribute("onclick",`window.open("learn#${prevDocFolder}/${prevDocInd}","_self")`);
 
     //next doc
     let nextDocInd = parseInt(curDoc)+1;
@@ -42,6 +43,7 @@ function displayDocNavBar(){
         }
     }
     document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
+    document.getElementById("nextDocLink").setAttribute("onclick",`window.open("learn#${nextDocFolder}/${nextDocInd}","_self")`);
 }
 
 //displays competion indicator at bottom of doc content preview
