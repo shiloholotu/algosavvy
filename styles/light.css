@@ -155,6 +155,7 @@ button{
     display:flex;
     width:45vw;
     max-width: 800px;
+    margin:auto;
 }
 
 #docNavBar a{
