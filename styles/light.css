@@ -150,6 +150,29 @@ button{
     opacity: .8;
 }
 
+/* doc nav bar */
+#docNavBar{
+    display:flex;
+    width:45vw;
+    max-width: 800px;
+}
+
+#docNavBar a{
+    flex: 1;
+    text-align: center;
+    border: 2px solid var(--light-border-color);
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--dark-border-color);
+    padding: 5px;
+}
+
+#docNavBar a:hover{
+    background: white;
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */
