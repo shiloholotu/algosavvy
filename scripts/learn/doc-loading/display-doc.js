@@ -1,6 +1,49 @@
 let curFolder = null;
 let curDoc = null;
 
+//adds funcitonality to a tags in doc nav bar
+function displayDocNavBar(){
+
+    //previous doc
+    let prevDocInd = curDoc-1;
+    let prevDocFolder = curFolder;
+    //if last doc of folder
+    if(nextDocInd == -1){
+
+
+        if(prevDocFolder == "easy") prevDocFolder = "introduction";
+        else if(prevDocFolder == "medium") prevDocFolder = "easy";
+        else if(prevDocFolder == "hard") prevDocFolder = "medium";
+        else if(prevDocFolder == "advanced") prevDocFolder = "hard";
+        else{
+            document.getElementById("prevDocLink").style["background"] = "var(--light-border-color)";
+            document.getElementById("prevDocLink").style["pointer-events"] = "none";
+        }
+
+        prevDocInd = docs[prevDocFolder].length-1;
+    }
+    document.getElementById("prevDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
+
+    //next doc
+    let nextDocInd = curDoc+1;
+    let nextDocFolder = curFolder;
+    //if last doc of folder
+    if(nextDocInd >= docs[nextDocFolder].length){
+
+        nextDocInd = 0;
+
+        if(nextDocFolder == "introduction")nextDocFolder = "easy";
+        else if(nextDocFolder == "easy") nextDocFolder = "medium";
+        else if(nextDocFolder == "medium") nextDocFolder = "hard";
+        else if(nextDocFolder == "hard") nextDocFolder = "advanced";
+        else{
+            document.getElementById("nextDocLink").style["background"] = "var(--light-border-color)";
+            document.getElementById("nextDocLink").style["pointer-events"] = "none";
+        }
+    }
+    document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
+}
+
 //displays competion indicator at bottom of doc content preview
 function displayCompletionIndicator(){
     const status = getCompletionStatus(docs[curFolder][curDoc][0]);
@@ -20,6 +63,7 @@ function displayCompletionIndicator(){
         completionIndicatorLabel.textContent = "Incomplete";
     }
 }
+
 
 function toggleCompletionIndicator(){
     if(getCompletionStatus(docs[curFolder][curDoc][0]) == "incomplete") setCompletionStatus(docs[curFolder][curDoc][0],"complete");
@@ -64,6 +108,7 @@ function linkHeaders(){
     `;
 
     displayCompletionIndicator();
+    displayDocNavBar();
 
 }
 
