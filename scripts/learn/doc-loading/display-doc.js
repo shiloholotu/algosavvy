@@ -23,7 +23,7 @@ function displayDocNavBar(){
         prevDocInd = docs[prevDocFolder].length-1;
     }
     document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
-    document.getElementById("prevDocLink").setAttribute("onclick",`window.open("learn#${prevDocFolder}/${prevDocInd}","_self")`);
+    document.getElementById("prevDocLink").setAttribute("onclick",`window.open("learn#${prevDocFolder}/${prevDocInd}","_self"); return false`);
 
     //next doc
     let nextDocInd = parseInt(curDoc)+1;
@@ -43,7 +43,7 @@ function displayDocNavBar(){
         }
     }
     document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
-    document.getElementById("nextDocLink").setAttribute("onclick",`window.open("learn#${nextDocFolder}/${nextDocInd}","_self")`);
+    document.getElementById("nextDocLink").setAttribute("onclick",`window.open("learn#${nextDocFolder}/${nextDocInd}","_self"); return false`);
 }
 
 //displays competion indicator at bottom of doc content preview
