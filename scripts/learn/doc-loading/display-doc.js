@@ -8,7 +8,7 @@ function displayDocNavBar(){
     let prevDocInd = curDoc-1;
     let prevDocFolder = curFolder;
     //if last doc of folder
-    if(nextDocInd == -1){
+    if(prevDocInd == -1){
 
 
         if(prevDocFolder == "easy") prevDocFolder = "introduction";
@@ -22,7 +22,7 @@ function displayDocNavBar(){
 
         prevDocInd = docs[prevDocFolder].length-1;
     }
-    document.getElementById("prevDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
+    document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
 
     //next doc
     let nextDocInd = curDoc+1;
