@@ -5,7 +5,7 @@ let curDoc = null;
 function displayDocNavBar(){
 
     //previous doc
-    let prevDocInd = curDoc-1;
+    let prevDocInd = parseInt(curDoc)-1;
     let prevDocFolder = curFolder;
     //if last doc of folder
     if(prevDocInd == -1){
@@ -25,7 +25,7 @@ function displayDocNavBar(){
     document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
 
     //next doc
-    let nextDocInd = curDoc+1;
+    let nextDocInd = parseInt(curDoc)+1;
     let nextDocFolder = curFolder;
     //if last doc of folder
     if(nextDocInd >= docs[nextDocFolder].length){
