@@ -1,6 +1,14 @@
 let curFolder = null;
 let curDoc = null;
 
+//used for when you make changes to the url variables without changing the actual page, but actually want to update the page with those changes
+//window.open by itself just changes the url but the page isn't updated
+function openAndReload(url){
+    window.open(url,"_self")
+    location.reload();
+}
+
+
 //adds funcitonality to a tags in doc nav bar
 function displayDocNavBar(){
 
@@ -23,7 +31,7 @@ function displayDocNavBar(){
         prevDocInd = docs[prevDocFolder].length-1;
     }
     document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
-    document.getElementById("prevDocLink").setAttribute("onclick",`window.open("learn#${prevDocFolder}/${prevDocInd}","_self"); return false`);
+    document.getElementById("prevDocLink").setAttribute("onclick",`openAndReload("learn#${prevDocFolder}/${prevDocInd}"); return false`);
 
     //next doc
     let nextDocInd = parseInt(curDoc)+1;
@@ -43,7 +51,7 @@ function displayDocNavBar(){
         }
     }
     document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
-    document.getElementById("nextDocLink").setAttribute("onclick",`location.reload();`);
+    document.getElementById("nextDocLink").setAttribute("onclick",`openAndReload("learn#${nextDocFolder}/${nextDocInd}"); return false`);
 }
 
 //displays competion indicator at bottom of doc content preview
