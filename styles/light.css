@@ -168,6 +168,7 @@ button{
     font-weight: 600;
     color: var(--dark-border-color);
     padding: 5px;
+    text-decoration: none;
 }
 
 #docNavBar a:hover{
@@ -180,10 +181,6 @@ button{
 .mdContent{
     background: white;
     padding:40px;
-}
-
-.mdContent p{
-    /*margin: 0;*/
 }
 
 
