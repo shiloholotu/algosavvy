@@ -43,7 +43,7 @@ function displayDocNavBar(){
         }
     }
     document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
-    document.getElementById("nextDocLink").setAttribute("onclick",`window.open("learn#${nextDocFolder}/${nextDocInd}"); return false`);
+    document.getElementById("nextDocLink").setAttribute("onclick",`location.reload();`);
 }
 
 //displays competion indicator at bottom of doc content preview
