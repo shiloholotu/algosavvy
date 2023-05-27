@@ -157,5 +157,5 @@ function loadMdFromUrl(){
     let section = null;
     if(loc.length == 3 && loc[2] != "")section = loc[2];
 
-    readMdFile("learn-docs/"+folder+"/" + docs[folder][doc][1],section);
+    readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
 }

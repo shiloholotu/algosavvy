@@ -18,7 +18,7 @@ async function loadProblems(type = "easy", ind = 0){
         console.log("Done!");
         return;
     }
-    const response = await fetch(gameProblemFiles[type][ind]);
+    const response = await fetch(problemFiles[type][ind]);
     const text = await response.text();
     let data = null;
     if(type != "snippet") data = text.split("\n[BREAK]\n");
@@ -27,7 +27,7 @@ async function loadProblems(type = "easy", ind = 0){
     problemData[type].push(data);
 
     ind++;//move onto next file
-    if(ind >= gameProblemFiles[type].length){
+    if(ind >= problemFiles[type].length){
         ind = 0;
         if(type == "easy")type = "medium";
         else if(type == "medium") type = "hard";
