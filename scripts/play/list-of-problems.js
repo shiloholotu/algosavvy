@@ -8,7 +8,7 @@ const gameProblemFiles = {
     "hard":[
         "game-problems-markdown/easy/alvins-building-blocks.md"
     ],
-    "advancded":[
+    "advanced":[
         "game-problems-markdown/easy/alvins-building-blocks.md"
     ],
     "snippet":[
