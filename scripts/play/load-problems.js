@@ -13,6 +13,7 @@ const problemData = {
  - code snippets, which are used by error blitz
  */
 async function loadProblems(type = "easy", ind = 0){
+    console.log(`${type}:${ind}`);
     if(type == "Done"){
         console.log("Done!");
         return;
