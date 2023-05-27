@@ -1,12 +1,7 @@
 let curFolder = null;
 let curDoc = null;
 
-//used for when you make changes to the url variables without changing the actual page, but actually want to update the page with those changes
-//window.open by itself just changes the url but the page isn't updated
-function openAndReload(url){
-    window.open(url,"_self")
-    location.reload();
-}
+
 
 
 //adds funcitonality to a tags in doc nav bar

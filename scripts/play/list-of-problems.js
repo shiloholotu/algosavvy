@@ -12,6 +12,6 @@ const problemFiles = {
         "problem-markdown/easy/alvins-building-blocks.md"
     ],
     "snippet":[
-        "problem-markdown/snippets/binsearch.md"
+        "problem-markdown/snippet/binsearch.md"
     ]
 };

@@ -37,3 +37,60 @@ async function loadProblems(type = "easy", ind = 0){
     }
     loadProblems(type,ind);
 }
+
+
+function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
+
+    if(type == "solutionSearch"){
+        const diffChoice = randomChoice(diff);
+        const probChoice = randomChoice(problemData[diffChoice])
+        
+        const probStatement = probChoice[0];
+        const correctAnswer = probChoice[1]
+        return [probStatement, correctAnswer];
+    }
+
+    if(type == "methodMadness"){
+        const diffChoice = randomChoice(diff);
+        const probChoice = randomChoice(problemData[diffChoice])
+
+        
+        const probStatement = probChoice[0];
+        const correctAnswer = probChoice[2];
+        const answerChoices = [correctAnswer];
+
+        while(answerChoices.length < 4){
+            const anotherDiffChoice = randomChoice(["easy","medium","hard","advanced"]);
+            const anotherProbChoice = randomChoice(problemData[anotherDiffChoice]);
+            const answerChoice = anotherProbChoice[2];
+            //if(answerChoices.includes(answerChoice))continue;
+            answerChoices.push(answerChoice);
+        }
+        return [probStatement, correctAnswer, answerChoices];
+    }
+
+    if(type == "timeCrunch"){
+        const diffChoice = randomChoice(diff);
+        const probChoice = randomChoice(problemData[diffChoice])
+
+        
+        const probStatement = probChoice[0];
+        const correctAnswer = probChoice[3];
+        const answerChoices = [correctAnswer];
+
+        while(answerChoices.length < 4){
+            const anotherDiffChoice = randomChoice(["easy","medium","hard","advanced"]);
+            const anotherProbChoice = randomChoice(problemData[anotherDiffChoice]);
+            const answerChoice = anotherProbChoice[3];
+            //if(answerChoices.includes(answerChoice))continue;
+            answerChoices.push(answerChoice);
+        }
+        return [probStatement, correctAnswer, answerChoices];
+    }
+
+    if(type == "errorBlitz"){
+        //i'll figure this out later
+    }
+    
+
+}
