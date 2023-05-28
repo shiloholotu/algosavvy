@@ -45,17 +45,14 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
         
-        const probStatement = probChoice[0];
         const correctAnswer = probChoice[1]
-        return [probStatement, correctAnswer];
+        return [probChoice, correctAnswer];
     }
 
     if(type == "methodMadness"){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
 
-        
-        const probStatement = probChoice[0];
         const correctAnswer = probChoice[2];
         const answerChoices = [correctAnswer];
 
@@ -66,15 +63,13 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probStatement, correctAnswer, answerChoices];
+        return [probChoice, answerChoices];
     }
 
     if(type == "timeCrunch"){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
 
-        
-        const probStatement = probChoice[0];
         const correctAnswer = probChoice[3];
         const answerChoices = [correctAnswer];
 
@@ -85,7 +80,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probStatement, correctAnswer, answerChoices];
+        return [probChoice, answerChoices];
     }
 
     if(type == "errorBlitz"){
