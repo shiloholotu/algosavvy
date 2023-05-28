@@ -223,7 +223,7 @@ img{
     overflow-x:auto;
 }
 
-.code{
+code{
     padding: 5px;
     border-radius: 7px;
     color:var(--lighter-font-color);
