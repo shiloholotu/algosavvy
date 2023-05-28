@@ -184,40 +184,6 @@ button{
 }
 
 
-/* warnings */
-.warning1,.warning2,.warning3{
-    padding:10px;
-    border-radius: 7px;
-    border:2px solid var(--light-border-color);
-}
-
-.warning1 h3,.warning2 h3,.warning3 h3{
-    margin-bottom:5px;
-}
-
-.warning1 h3 p,.warning2 h3 p,.warning3 h3 p{
-    margin:none;
-    display: inline;
-}
-
-.warningIcon{
-    margin-right: 5px;
-}
-
-
-.warning1{
-    background:rgb(166,222,255);
-}
-
-.warning2{
-    background:rgb(255,217,109);
-}
-
-.warning3{
-    background:rgb(255,109,109);
-}
-
-
 /* header links */
 .headerLink{
     opacity: .5;
@@ -257,11 +223,11 @@ img{
     overflow-x:auto;
 }
 
-.singleCodeBlock{
-    display: inline-block;
-    padding: 4px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+.code{
+    padding: 5px;
+    border-radius: 7px;
+    color:var(--lighter-font-color);
+    background:var(--bg-light-blue);
 }
 
 pre code.hljs {
