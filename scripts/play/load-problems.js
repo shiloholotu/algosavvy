@@ -13,12 +13,10 @@ const problemData = {
  - code snippets, which are used by error blitz
  */
 async function loadProblems(type = "easy", ind = 0){
-    console.log(`${type}:${ind}`);
-    if(type == "Done"){
-        console.log("Done!");
+    if(type == "done"){
         return;
     }
-    const response = await fetch(problemFiles[type][ind]);
+    const response = await fetch(problemFiles[type][ind][1]);
     const text = await response.text();
     let data = null;
     if(type != "snippet") data = text.split("\n[BREAK]\n");
@@ -33,7 +31,7 @@ async function loadProblems(type = "easy", ind = 0){
         else if(type == "medium") type = "hard";
         else if(type == "hard") type = "advanced";
         else if(type == "advanced") type = "snippet";
-        else type = "Done";
+        else type = "done";
     }
     loadProblems(type,ind);
 }
