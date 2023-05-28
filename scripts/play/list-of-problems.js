@@ -6,7 +6,7 @@ const problemFiles = {
         "problem-markdown/easy/alvins-building-blocks.md"
     ],
     "hard":[
-        "problem-markdown/easy/alvins-building-blocks.md"
+        "problem-markdown/hard/alvins-heavy-wallet.md"
     ],
     "advanced":[
         "problem-markdown/easy/alvins-building-blocks.md"
