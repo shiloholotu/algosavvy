@@ -33,7 +33,21 @@
     
     <body>
 
-        <h1>PLAY</h1>
+        <div class="bigBox">
+            <div class="mdContent" id="problemView"></div>
+            <div id="inputSection"></div>
+        </div>
+
+        <script>
+            const url = window.location.href;
+            let gameMode = "";
+            if(url.search("#") != -1){
+                gameMode = url.split("#")[1];
+            }
+            else{
+                window.open('contents','_self');
+            }
+        </script>
         
         <script src="scripts/util.js"></script>
 

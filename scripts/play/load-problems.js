@@ -39,7 +39,7 @@ async function loadProblems(type = "easy", ind = 0){
 
 function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
 
-    if(type == "solutionSearch"){
+    if(type == "solution-search"){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
         
@@ -47,7 +47,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
         return [probChoice, correctAnswer];
     }
 
-    if(type == "methodMadness"){
+    if(type == "method-madness"){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
 
@@ -64,7 +64,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
         return [probChoice, answerChoices];
     }
 
-    if(type == "timeCrunch"){
+    if(type == "time-crunch"){
         const diffChoice = randomChoice(diff);
         const probChoice = randomChoice(problemData[diffChoice])
 
@@ -81,7 +81,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
         return [probChoice, answerChoices];
     }
 
-    if(type == "errorBlitz"){
+    if(type == "error-blitz"){
         //i'll figure this out later
     }
     
