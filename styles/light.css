@@ -154,7 +154,7 @@ button{
 /* doc nav bar */
 #docNavBar{
     display:flex;
-    width:45vw;
+    width:55vw;
     max-width: 800px;
     margin:auto;
 }
