@@ -120,10 +120,9 @@ function linkHeaders(){
 
 
 function loadMdFile(text,scrollTo){
-	const html = mdToHTML(text);
-	document.getElementById("docView").innerHTML = html;
-	MathJax.typeset();
-    hljs.highlightAll();
+    
+    renderMd(text,"docView");
+
     if(scrollTo != null){
         setTimeout(function(){document.getElementById(scrollTo).scrollIntoView();},100);//to stop the scroll function from being called before the page content is rendered
     }

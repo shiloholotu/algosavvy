@@ -23,3 +23,9 @@ function mdToHTML(text){
     text = formatMath(text);
     return converter.makeHtml(text);
 }
+
+function renderMd(md,element){
+    document.getElementById(element).innerHTML = mdToHTML(md);
+    MathJax.typeset();
+    hljs.highlightAll();
+}
