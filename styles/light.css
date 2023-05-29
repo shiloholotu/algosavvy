@@ -176,6 +176,28 @@ button{
     background: white;
 }
 
+
+/* PLAY PAGE */
+
+/*answer section*/
+.answerChoice{
+    flex: 1;
+    border: 2px solid var(--light-border-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--lighter-font-color);
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-size: 16px;
+}
+
+.answerChoice:hover{
+    background-color: white;
+}
+
+
 /* MARKDOWN SYNTAX */
 
 /* container */
