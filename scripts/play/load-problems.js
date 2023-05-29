@@ -16,7 +16,7 @@ async function loadProblems(type = "easy", ind = 0){
     if(type == "done"){
         return;
     }
-    const response = await fetch(problemFiles[type][ind][1]);
+    const response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][1]}`);
     const text = await response.text();
     let data = null;
     if(type != "snippet") data = text.split("\n[BREAK]\n");
