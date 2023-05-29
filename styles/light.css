@@ -101,11 +101,12 @@ button{
 
 /* DOC VIEW LEARN PAGE */
 .bigBox{
-    width:45vw;
+    width:55vw;
     max-width: 800px;
     margin:auto;
     border-radius:15px;
     border: 2px solid var(--light-border-color);
+    overflow:hidden;
 }
 
 /* doc contents preview */
