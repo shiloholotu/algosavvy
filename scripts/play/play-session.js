@@ -3,7 +3,12 @@ function displayRandomProblem(){
     const problem = generateProblem(gameMode);
     document.getElementById("answerSection").innerHTML = "";
     renderMd(problem[0][0],"problemView");
-    document.getElementById("diffIndicator").innerHTML = problem[2];
+
+    document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
+    if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
+    else if(problem[2] == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
+    else if(problem[2] == "hard")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
+    else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
 
     const choiceContainer = document.createElement("div");
     
