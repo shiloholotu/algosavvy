@@ -223,6 +223,27 @@ button{
     background-color: white;
 }
 
+#answerTextarea{
+    display: block;
+    font-family: 'Poppins';
+    width: -webkit-fill-available;
+    font-size: 16px;
+    outline: none;
+    padding: 15px;
+    resize: none;
+    border-radius: 10px;
+    height: -webkit-fill-available;
+    color: var(--font-color);
+    border: none;
+}
+
+#answerTextareaContainer{
+    overflow: hidden;
+    height: 25vh;
+    border: 2px solid var(--dark-border-color);
+    border-radius: 10px;
+}
+
 
 /* MARKDOWN SYNTAX */
 
