@@ -191,6 +191,7 @@ button{
     display: grid;
     align-items: center;
     font-size: 16px;
+    background: transparent;
 }
 
 .answerChoice:hover{
