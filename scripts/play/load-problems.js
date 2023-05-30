@@ -16,10 +16,11 @@ async function loadProblems(type = "easy", ind = 0){
     if(type == "done"){
         return;
     }
+    //fetch problem file
     const response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][1]}`);
     const text = await response.text();
     let data = null;
-    if(type != "snippet") data = text.split("\n[BREAK]\n");
+    if(type != "snippet") data = text.split("\n[BREAK]\n");//break up file into problem statment, solution, algorithm/data structure, and time complexity
     else data = text;
 
     problemData[type].push(data);
@@ -44,7 +45,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
         const probChoice = randomChoice(problemData[diffChoice])
         
         const correctAnswer = probChoice[1]
-        return [probChoice, correctAnswer];
+        return [probChoice, correctAnswer, diffChoice];
     }
 
     if(type == "method-madness"){
@@ -61,7 +62,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probChoice, answerChoices];
+        return [probChoice, answerChoices, diffChoice];
     }
 
     if(type == "time-crunch"){
@@ -78,7 +79,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probChoice, answerChoices];
+        return [probChoice, answerChoices, diffChoice];
     }
 
     if(type == "error-blitz"){

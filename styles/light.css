@@ -179,6 +179,20 @@ button{
 
 /* PLAY PAGE */
 
+/* diffuculty indicator */
+.diffIndicator{
+    font-weight: 600;
+    background: var(--pretty-green);
+    width: fit-content;
+    padding: 7px;
+    margin: 0;
+    border-radius: 10px;
+    color: var(--dark-border-color);
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+}
+
 /*answer section*/
 .answerChoice{
     flex: 1;

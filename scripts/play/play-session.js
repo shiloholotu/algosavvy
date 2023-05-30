@@ -3,6 +3,7 @@ function displayRandomProblem(){
     const problem = generateProblem(gameMode);
     document.getElementById("answerSection").innerHTML = "";
     renderMd(problem[0][0],"problemView");
+    document.getElementById("diffIndicator").innerHTML = problem[2];
 
     const choiceContainer = document.createElement("div");
     
