@@ -33,7 +33,7 @@ function displayRandomProblem(){
     }
 
     else{
-        document.getElementById("answerSection").innerHTML = "<div id='answerTextareaContainer'><textarea id='answerTextarea'></textarea></div>";
+        document.getElementById("answerSection").innerHTML = "<div id='answerTextareaContainer'><textarea id='answerTextarea' placeholder='Describe a solution...'></textarea></div>";
     }
 
 }
