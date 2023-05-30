@@ -62,7 +62,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probChoice, answerChoices, diffChoice];
+        return [probChoice, shuffleArray(answerChoices), diffChoice];
     }
 
     if(type == "time-crunch"){
@@ -79,7 +79,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             //if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
-        return [probChoice, answerChoices, diffChoice];
+        return [probChoice, shuffleArray(answerChoices), diffChoice];
     }
 
     if(type == "error-blitz"){
