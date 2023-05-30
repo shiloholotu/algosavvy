@@ -6,6 +6,7 @@
     --dark-border-color:rgba(0,0,50,.3);
     --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
     --pretty-green: rgb(140,223,130);
+    --pretty-yellow: rgb(255 244 109);
     /* code blocks */
     --lighter-font-color: rgb(100,100,100);
 }
@@ -39,6 +40,16 @@ p{
 button{
     font-family: 'Poppins';
     cursor: pointer;
+}
+
+.bigBox{
+    width:55vw;
+    max-width: 800px;
+    margin:auto;
+    border-radius:15px;
+    border: 2px solid var(--light-border-color);
+    overflow:hidden;
+    background: white;
 }
 
 #fadeCover{
@@ -99,15 +110,8 @@ button{
     margin: auto;
 }
 
+
 /* DOC VIEW LEARN PAGE */
-.bigBox{
-    width:55vw;
-    max-width: 800px;
-    margin:auto;
-    border-radius:15px;
-    border: 2px solid var(--light-border-color);
-    overflow:hidden;
-}
 
 /* doc contents preview */
 #docContents{
@@ -180,7 +184,7 @@ button{
 /* PLAY PAGE */
 
 /* diffuculty indicator */
-.diffIndicator{
+#diffIndicator{
     font-weight: 600;
     background: var(--pretty-green);
     width: fit-content;
@@ -194,6 +198,11 @@ button{
 }
 
 /*answer section*/
+#answerSection{
+    padding:10px;
+    background:var(--bg-light-blue);
+}
+
 .answerChoice{
     flex: 1;
     border: 2px solid var(--light-border-color);
