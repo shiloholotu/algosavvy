@@ -1,7 +1,8 @@
 const problemFiles = {
     "easy":[
         //[title, md file, last update mm/dd/yyyy]
-        ["Alvin's Building Blocks","alvins-building-blocks.md", "05/28/2023"]
+        ["Alvin's Building Blocks","alvins-building-blocks.md", "05/28/2023"],
+        ["Alvin's City Plan", "alvins-city-plan.md","5/30/2023"]
     ],
     "medium":[
         ["Alvin's Sneakers","alvins-sneakers.md", "05/28/2023"]
