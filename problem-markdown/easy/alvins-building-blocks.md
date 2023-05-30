@@ -13,4 +13,4 @@ It is always optimal to choose the tallest blocks, as using them will allow Alvi
 [BREAK]
 Greedy
 [BREAK]
-$O(n)$
+O(n)
