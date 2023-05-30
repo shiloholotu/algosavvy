@@ -257,6 +257,10 @@ button{
     color: var(--font-color);
 }
 
+#answerDoneButton:hover{
+    background:var(--dark-border-color);
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */
