@@ -53,6 +53,13 @@ function checkAnswer(answer){
     document.getElementById("correctionSection").style["display"] = "block";
     
     const buttons = document.getElementsByClassName("answerChoice");
+
+    //disable the buttons
+    for(let i of buttons){
+        i.style["pointer-events"] = "none";
+        i.style["opacity"] = ".6";
+    }
+
     if(buttons[answer].classList.contains("correctAnswer")){//picked right answer
 
         buttons[answer].style["background"] = "var(--pretty-green)";
@@ -60,6 +67,7 @@ function checkAnswer(answer){
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-green)'>
             <img src="assets/svg/check.svg">Correct
+            <button id="nextProblemButton">Next</button>
             <button>No, I was incorrect</button>
         </p>
         `
@@ -71,8 +79,9 @@ function checkAnswer(answer){
 
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-red)'>
-            <img src="assets/svg/minus.svg">Correct
-            <button>No, I was right</button>
+            <img src="assets/svg/minus.svg"> Incorrect
+            <button id="nextProblemButton">Next</button>
+            <button>No, I was correct</button>
         </p>
         `
     }

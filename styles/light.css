@@ -296,6 +296,14 @@ button{
     background:transparent;
 }
 
+#nextProblemButton{
+    margin-left: 10px;
+    background: var(--font-color);
+    color: var(--bg-light-blue);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */
