@@ -193,7 +193,6 @@ button{
     padding: 7px;
     margin: 0;
     border-radius: 10px;
-    color: var(--dark-border-color);
     display: block;
     margin: 10px;
     margin-left: auto;
@@ -259,6 +258,42 @@ button{
 
 #answerDoneButton:hover{
     background:var(--dark-border-color);
+}
+
+/* correction section */
+#correctionSection{
+    padding: 10px;
+    background:var(--bg-light-blue);
+}
+
+#correctionIndicator{
+    font-weight: 600;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#correctionIndicator img{
+    vertical-align: middle;
+    border-radius: 100%;
+    margin-right: 5px;
+    border: 2px solid;
+}
+
+#correctionSection button{
+    float: right;
+    background: var(--light-border-color);
+    padding: 5px;
+    border-radius: 7px;
+    margin-top: -3px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+#correctionIndicator button:hover{
+    background:transparent;
 }
 
 /* MARKDOWN SYNTAX */

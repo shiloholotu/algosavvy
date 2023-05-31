@@ -1,8 +1,9 @@
 
 function displayRandomProblem(){
     const problem = generateProblem(gameMode);
+    
     document.getElementById("answerSection").innerHTML = "";
-    renderMd(problem[0][0],"problemView");
+    renderMd(problem[0][0],"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
     document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
@@ -12,11 +13,11 @@ function displayRandomProblem(){
     else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
 
     
-    if(gameMode != "solution-search" && gameMode != "error-blitz"){
+    if(gameMode != "solution-search" && gameMode != "error-blitz"){//generate answer choice buttons
 
         const choiceContainer = document.createElement("div");
         choiceContainer.style["display"] = "flex";
-        //generate answer choice buttons - solution search and error blitz are free response modes
+        
         for(let i = 0; i < 4; i++){
 
             let marginStyle = "10px";
@@ -32,7 +33,7 @@ function displayRandomProblem(){
         MathJax.typeset();//for rendering math in time crunch answers
     }
 
-    else{
+    else{//generate answer textarea
         document.getElementById("answerSection").innerHTML = `
         <div id='answerTextareaContainer'>
             <textarea id='answerTextarea' placeholder='Describe a solution...'></textarea>
