@@ -59,7 +59,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             const anotherDiffChoice = randomChoice(["easy","medium","hard","advanced"]);
             const anotherProbChoice = randomChoice(problemData[anotherDiffChoice]);
             const answerChoice = anotherProbChoice[2];
-            //if(answerChoices.includes(answerChoice))continue;
+            if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
         return [probChoice, shuffleArray(answerChoices), diffChoice];
@@ -76,7 +76,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
             const anotherDiffChoice = randomChoice(["easy","medium","hard","advanced"]);
             const anotherProbChoice = randomChoice(problemData[anotherDiffChoice]);
             const answerChoice = anotherProbChoice[3];
-            //if(answerChoices.includes(answerChoice))continue;
+            if(answerChoices.includes(answerChoice))continue;
             answerChoices.push(answerChoice);
         }
         return [probChoice, shuffleArray(answerChoices), diffChoice];
