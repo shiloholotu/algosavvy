@@ -280,7 +280,7 @@ button{
     border: 2px solid;
 }
 
-#correctionSection button{
+#changeCorrectButton,#nextProblemButton{
     float: right;
     background: var(--light-border-color);
     padding: 5px;
@@ -292,7 +292,7 @@ button{
     color: var(--font-color);
 }
 
-#correctionIndicator button:hover{
+#changeCorrectButton:hover{
     background:transparent;
 }
 
