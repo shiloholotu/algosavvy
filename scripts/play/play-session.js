@@ -58,11 +58,10 @@ function checkAnswer(answer){
     for(let i of buttons){
         i.style["pointer-events"] = "none";
         i.style["opacity"] = ".6";
+        if(i.classList.contains("correctAnswer"))i.style["background"] = "var(--pretty-green)";
     }
 
     if(buttons[answer].classList.contains("correctAnswer")){//picked right answer
-
-        buttons[answer].style["background"] = "var(--pretty-green)";
 
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-green)'>
