@@ -81,7 +81,7 @@ function checkAnswer(answer){
         <p id="correctionIndicator" style='background:var(--pretty-red)'>
             <img src="assets/svg/minus.svg"> Incorrect
             <button id="nextProblemButton">Next</button>
-            <button>No, I was correct</button>
+            <button id="changeCorrectButton">No, I was correct</button>
         </p>
         `
     }
