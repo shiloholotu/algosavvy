@@ -1,7 +1,11 @@
+
+let sessionStats = [0,0];//[attempted,correct]
+
 function displayRandomProblem(){
     const problem = generateProblem(gameMode);
     
     document.getElementById("answerSection").innerHTML = "";
+    document.getElementById("correctionSection").style["display"] = "none";
     renderMd(problem[0][0],"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
@@ -66,8 +70,8 @@ function checkAnswer(answer){
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-green)'>
             <img src="assets/svg/check.svg">Correct
-            <button id="nextProblemButton">Next</button>
-            <button id="changeCorrectButton">No, I was incorrect</button>
+            <button id="nextProblemButton" onclick="nextProblem(true)">Next</button>
+            <button id="changeCorrectButton" onclick="nextProblem(false)">No, I was incorrect</button>
         </p>
         `
     }
@@ -79,9 +83,15 @@ function checkAnswer(answer){
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-red)'>
             <img src="assets/svg/minus.svg"> Incorrect
-            <button id="nextProblemButton">Next</button>
-            <button id="changeCorrectButton">No, I was correct</button>
+            <button id="nextProblemButton" onclick="nextProblem(false)">Next</button>
+            <button id="changeCorrectButton" onclick="nextProblem(true)">No, I was correct</button>
         </p>
         `
     }
+}
+
+function nextProblem(correct){
+    sessionStats[0]++;
+    if(correct)sessionStats[1]++;
+    displayRandomProblem();
 }
