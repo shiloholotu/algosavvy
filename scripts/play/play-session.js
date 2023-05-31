@@ -1,11 +1,14 @@
 
 let sessionStats = [0,0];//[attempted,correct]
+let curProblem = null;
 
 function displayRandomProblem(){
     const problem = generateProblem(gameMode);
+    curProblem = problem;
     
     document.getElementById("answerSection").innerHTML = "";
     document.getElementById("correctionSection").style["display"] = "none";
+    document.getElementById("explanationSection").style["display"] = "none";
     renderMd(problem[0][0],"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
@@ -55,6 +58,12 @@ function checkAnswer(answer){
 
     document.getElementById("correctionSection").innerHTML = "";
     document.getElementById("correctionSection").style["display"] = "block";
+
+    //show solution if its method madness
+    if(gameMode == "methodMadness"){
+        renderMd(curProblem[0][1],"explanationSection")
+        document.getElementById("explanationSection").style["display"] = "block";
+    }
     
     const buttons = document.getElementsByClassName("answerChoice");
 
