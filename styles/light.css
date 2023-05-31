@@ -219,7 +219,7 @@ button{
 }
 
 .answerChoice:hover{
-    background-color: white;
+    background: var(--light-transp-blue);
 }
 
 #answerTextarea{
