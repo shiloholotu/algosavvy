@@ -67,7 +67,7 @@ function checkAnswer(answer){
 
     else{//picked wrong answer
 
-        buttons[answer].style["background"] = "var(--lighter-border-color)";
+        buttons[answer].style["background"] = "var(--light-border-color)";
 
         document.getElementById("correctionSection").innerHTML = `
         <p id="correctionIndicator" style='background:var(--pretty-red)'>
