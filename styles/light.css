@@ -2,8 +2,8 @@
     /* overall stuff */
     --font-color: rgb(50,50,50);
     --bg-light-blue: rgb(242,242,247);
-    --light-border-color: rgb(0,0,50,0.1);
-    --dark-border-color:rgba(0,0,50,.3);
+    --light-transp-blue: rgb(0,0,50,0.1);
+    --dark-transp-blue:rgba(0,0,50,.3);
     --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
     --pretty-green: rgb(140,223,130);
     --pretty-yellow: rgb(255 216 107);
@@ -49,7 +49,7 @@ button{
     max-width: 800px;
     margin:auto;
     border-radius:15px;
-    border: 2px solid var(--light-border-color);
+    border: 2px solid var(--light-transp-blue);
     overflow:hidden;
     background: white;
 }
@@ -83,7 +83,7 @@ button{
     margin-bottom:30px;
 }
 .tocBlock{
-    border:2px solid var(--light-border-color);
+    border:2px solid var(--light-transp-blue);
     border-radius: 10px;
     padding:10px;
     box-shadow: var(--light-shadow);
@@ -100,13 +100,13 @@ button{
 
 .tocBlock img{
     vertical-align: middle;
-    background: var(--light-border-color);
+    background: var(--light-transp-blue);
     border-radius: 7px;
     margin-right: 7px;
 }
 
 .tocBlockSeparator{
-    background: var(--light-border-color);
+    background: var(--light-transp-blue);
     height: 30px;
     width: 2px;
     margin: auto;
@@ -125,7 +125,7 @@ button{
     display: block;
     font-weight: 600;
     text-decoration: none;
-    color: var(--dark-border-color);
+    color: var(--dark-transp-blue);
     opacity: 1;
     margin-bottom:10px;
 }
@@ -135,7 +135,7 @@ button{
 
 #completionIndicator{
     display: inline-block;
-    border: 2px solid var(--light-border-color);
+    border: 2px solid var(--light-transp-blue);
     border-radius: 10px;
     padding: 4px;
     width: 48px;
@@ -168,12 +168,12 @@ button{
 #docNavBar a{
     flex: 1;
     text-align: center;
-    border: 2px solid var(--light-border-color);
+    border: 2px solid var(--light-transp-blue);
     cursor: pointer;
     margin: 10px;
     border-radius: 10px;
     font-weight: 600;
-    color: var(--dark-border-color);
+    color: var(--dark-transp-blue);
     padding: 5px;
     text-decoration: none;
 }
@@ -206,7 +206,7 @@ button{
 
 .answerChoice{
     flex: 1;
-    border: 2px solid var(--light-border-color);
+    border: 2px solid var(--light-transp-blue);
     padding: 10px;
     border-radius: 10px;
     color: var(--lighter-font-color);
@@ -239,7 +239,7 @@ button{
 #answerTextareaContainer{
     overflow: hidden;
     height: 25vh;
-    border: 2px solid var(--dark-border-color);
+    border: 2px solid var(--dark-transp-blue);
     border-radius: 10px;
 }
 
@@ -251,13 +251,13 @@ button{
     font-size: 16px;
     font-weight: 600;
     border: none;
-    background: var(--light-border-color);
+    background: var(--light-transp-blue);
     border-radius: 10px;
     color: var(--font-color);
 }
 
 #answerDoneButton:hover{
-    background:var(--dark-border-color);
+    background:var(--dark-transp-blue);
 }
 
 /* correction section */
@@ -282,7 +282,7 @@ button{
 
 #changeCorrectButton,#nextProblemButton{
     float: right;
-    background: var(--light-border-color);
+    background: var(--light-transp-blue);
     padding: 5px;
     border-radius: 7px;
     margin-top: -3px;

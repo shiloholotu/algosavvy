@@ -19,7 +19,7 @@ function displayDocNavBar(){
         else if(prevDocFolder == "hard") prevDocFolder = "medium";
         else if(prevDocFolder == "advanced") prevDocFolder = "hard";
         else{
-            document.getElementById("prevDocLink").style["background"] = "var(--light-border-color)";
+            document.getElementById("prevDocLink").style["background"] = "var(--light-transp-blue)";
             document.getElementById("prevDocLink").style["pointer-events"] = "none";
         }
 
@@ -41,7 +41,7 @@ function displayDocNavBar(){
         else if(nextDocFolder == "medium") nextDocFolder = "hard";
         else if(nextDocFolder == "hard") nextDocFolder = "advanced";
         else{
-            document.getElementById("nextDocLink").style["background"] = "var(--light-border-color)";
+            document.getElementById("nextDocLink").style["background"] = "var(--light-transp-blue)";
             document.getElementById("nextDocLink").style["pointer-events"] = "none";
         }
     }
@@ -62,7 +62,7 @@ function displayCompletionIndicator(){
 
     }
     else{
-        completionIndicatorImg.style["background"] = "var(--light-border-color)";
+        completionIndicatorImg.style["background"] = "var(--light-transp-blue)";
         completionIndicatorImg.style["float"] = "left";
         completionIndicatorImg.setAttribute("src","assets/svg/minus.svg");
         completionIndicatorLabel.textContent = "Incomplete";
@@ -120,7 +120,7 @@ function linkHeaders(){
 
 
 function loadMdFile(text,scrollTo){
-    
+
     renderMd(text,"docView");
 
     if(scrollTo != null){
