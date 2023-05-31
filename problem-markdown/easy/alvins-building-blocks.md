@@ -3,6 +3,10 @@ Alvin has $n$ building blocks and the $i$'th building block has a height of $h_i
 
 $1 \le n \le 10^5$
 
+$1 \le h\_i \le 10^4$
+
+$1 \le x \le 10^9$ 
+
 Note: Assume that there is always enough blocks to reach the desired height.
 [BREAK]
 It is always optimal to choose the tallest blocks, as using them will allow Alvin to cover more height with less blocks.  Therefore, to solve this problem we should do the following: 
