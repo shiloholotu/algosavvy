@@ -60,7 +60,7 @@ function checkAnswer(answer){
     document.getElementById("correctionSection").style["display"] = "block";
 
     //show solution if its method madness
-    if(gameMode == "methodMadness"){
+    if(gameMode == "method-madness"){
         renderMd(curProblem[0][1],"explanationSection")
         document.getElementById("explanationSection").style["display"] = "block";
     }
