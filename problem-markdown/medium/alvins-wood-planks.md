@@ -11,4 +11,4 @@ This problem can be solved by setting up 2D prefix sum array of size $\max(a,c) 
 [BREAK]
 Prefix Sums
 [BREAK]
-$O(n + \max(a,c)\times \max(b,d)+m)$
+O(n + \max(a,c)\times \max(b,d)+m)
