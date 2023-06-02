@@ -5,7 +5,8 @@ const problemFiles = {
         ["Alvin's City Plan", "alvins-city-plan.md","5/30/2023"]
     ],
     "medium":[
-        ["Alvin's Sneakers","alvins-sneakers.md", "05/28/2023"]
+        ["Alvin's Sneakers","alvins-sneakers.md", "05/28/2023"],
+        ["Alvin's Sneakers", "alvins-wood-planks.md", "06/02/2023"]
     ],
     "hard":[
         ["Alvin's Heavy Wallet","alvins-heavy-wallet.md", "05/28/2023"]
