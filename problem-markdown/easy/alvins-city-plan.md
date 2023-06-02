@@ -1,10 +1,10 @@
 # Alvin's City Plan
 Alvin has decided to become a city planner. When planning a city, Alvin uses a list of instructions that describe connections between houses. These instructions are in the format of:
-```
+```py
 House (n) connects to House (m)
 ```
 For example, one instruction may look like:
-```
+```py
 House 1 connects to House 2
 ```
 A **neighborhood** is described as a group of houses in which all houses are somehow connected and no houses share a connection to a house outside the neighborhood(Otherwise, that outside house would also have to be included in the neighborhood).
