@@ -45,3 +45,8 @@ function setPlayPreference(mode,preference, value){
     playPreferences[mode][preference] = value;
     localStorage.setItem("playPreferences",JSON.stringify(playPreferences));
 }
+
+function getPlayPreference(mode,preference){
+    const playPreferences = JSON.parse(localStorage.getItem("playPreferences"));
+    return playPreferences[mode][preference];   
+}
