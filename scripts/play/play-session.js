@@ -12,11 +12,15 @@ function displayRandomProblem(){
     renderMd(problem[0][0],"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
-    document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
-    if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
-    else if(problem[2] == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
-    else if(problem[2] == "hard")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
-    else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
+    if(gameMode != "error-blitz"){
+        document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
+        if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
+        else if(problem[2] == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
+        else if(problem[2] == "hard")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
+        else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
+    }else{
+        document.getElementById("diffIndicator").style["display"] = "none";
+    }
 
     
     if(gameMode != "solution-search" && gameMode != "error-blitz"){//generate answer choice buttons
@@ -45,9 +49,11 @@ function displayRandomProblem(){
     }
 
     else{//generate answer textarea
+        let placeholder = "Describe a solution...";
+        if(gameMode == "error-blitz") placeholder = "Describe the error...(There may not be one)";
         document.getElementById("answerSection").innerHTML = `
         <div id='answerTextareaContainer'>
-            <textarea id='answerTextarea' placeholder='Describe a solution...'></textarea>
+            <textarea id='answerTextarea' placeholder='${placeholder}'></textarea>
         </div>
         <button id="answerDoneButton">Done</button>`;
     }
