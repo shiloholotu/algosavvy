@@ -171,7 +171,7 @@ function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
                 
             }
 
-            errorExplanation = `At Line ${line}: "${wrongWord}" should be "${rightWord}."`;
+            errorExplanation = `At Line ${line}: "${wrongWord}" should be "${rightWord}".`;
             
         }
         else if(errorType == 2){//missing or extra "{}()[]" brackets
