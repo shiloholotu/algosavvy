@@ -47,6 +47,10 @@
             let gameMode = "";
             if(url.search("#") != -1){
                 gameMode = url.split("#")[1];
+                let tabTitle = gameMode.split("-");
+                tabTitle[0] = tabTitle[0][0].toUpperCase() + tabTitle[0].slice(1);
+                tabTitle[1] = tabTitle[1][0].toUpperCase() + tabTitle[1].slice(1);
+                document.getElementById("title").innerHTML = tabTitle.join(" ") + " | AlgoSavvy";
             }
             else{
                 window.open('contents','_self');
