@@ -125,8 +125,8 @@ function submitTextAnswer(){//for solution search and error blitz
         <div style="display:flex; align-items:center; justify-content:space-between">
             <p id="confirmChoiceLabel">Were you correct?</p>
             <div>
-                <button class="confirmChoiceButton">No</button>
-                <button class="confirmChoiceButton" style="background:var(--pretty-green)">Yes</button>
+                <button class="confirmChoiceButton" onclick="nextProblem(false)">No</button>
+                <button class="confirmChoiceButton" onclick="nextProblem(true)" style="background:var(--pretty-green)">Yes</button>
             </div>
         </div>
     `
