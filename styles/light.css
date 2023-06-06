@@ -251,13 +251,13 @@ button{
     font-size: 16px;
     font-weight: 600;
     border: none;
-    background: var(--light-transp-blue);
+    background: var(--font-color);
     border-radius: 10px;
-    color: var(--font-color);
+    color: var(--bg-light-blue);
 }
 
 #answerDoneButton:hover{
-    background:var(--dark-transp-blue);
+    /*background:var(--dark-transp-blue);*/
 }
 
 /* correction section */
