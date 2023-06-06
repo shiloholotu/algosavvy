@@ -56,7 +56,7 @@ function displayRandomProblem(){
         <div id='answerTextareaContainer'>
             <textarea id='answerTextarea' placeholder='${placeholder}'></textarea>
         </div>
-        <button id="answerDoneButton">Done</button>`;
+        <button id="answerDoneButton" onclick="submitTextAnswer()">Done</button>`;
     }
 
 }
@@ -110,6 +110,7 @@ function submitTextAnswer(){//for solution search and error blitz
 
     document.getElementById("answerDoneButton").style["display"] = "none";
     document.getElementById("answerTextareaContainer").style["opacity"] = ".5";
+    document.getElementById("confirmationSection").innerHTML = "";
 
     if(gameMode == "solution-search"){
         renderMd(curProblem[1],"explanationSection");
@@ -120,7 +121,15 @@ function submitTextAnswer(){//for solution search and error blitz
         document.getElementById("confirmationSection").innerHTML = `<p id='errorText'>${curProblem[1]}</p>`;
         if(curProblem[1] != "There is no error.") document.getElementById("errorText").style["color"] = "var(--pretty-red)";
     }
-
+    document.getElementById("confirmationSection").innerHTML += `
+        <div style="display:flex; align-items:center; justify-content:space-between">
+            <p id="confirmChoiceLabel">Were you correct?</p>
+            <div>
+                <button class="confirmChoiceButton">No</button>
+                <button class="confirmChoicebUtton">Yes</button>
+            </div>
+        </div>
+    `
     document.getElementById("confirmationSection").style["display"] = "block";
 }
 

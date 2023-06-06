@@ -315,6 +315,25 @@ button{
     font-family: monospace;
 }
 
+
+#confirmChoiceLabel{
+    font-weight: 600;
+    color: var(--dark-transp-blue);
+    margin-left: 10px;
+}
+
+.confirmChoiceButton{
+    border-radius: 10px;
+    border: none;
+    background: var(--pretty-red);
+    padding: 7px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */
