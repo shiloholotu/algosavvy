@@ -9,6 +9,7 @@ function displayRandomProblem(){
     document.getElementById("answerSection").innerHTML = "";
     document.getElementById("correctionSection").style["display"] = "none";
     document.getElementById("explanationSection").style["display"] = "none";
+    document.getElementById("confirmationSection").style["display"] = "none";
     renderMd(problem[0][0],"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
@@ -42,7 +43,7 @@ function displayRandomProblem(){
             if(problem[1][i] == problem[0][2] && gameMode == "method-madness")answerType = "correctAnswer";
             if(problem[1][i] == problem[0][3] && gameMode == "time-crunch") answerType = "correctAnswer";
 
-            choiceContainer.innerHTML += `<button onclick="checkAnswer(${i})" class="answerChoice ${answerType}" style="margin-right:${marginStyle}">${choiceText}</button>`;
+            choiceContainer.innerHTML += `<button onclick="checkAnswerChoice(${i})" class="answerChoice ${answerType}" style="margin-right:${marginStyle}">${choiceText}</button>`;
         }
         document.getElementById("answerSection").appendChild(choiceContainer);
         MathJax.typeset();//for rendering math in time crunch answers
@@ -60,7 +61,7 @@ function displayRandomProblem(){
 
 }
 
-function checkAnswer(answer){
+function checkAnswerChoice(answer){
 
     document.getElementById("correctionSection").innerHTML = "";
     document.getElementById("correctionSection").style["display"] = "block";
@@ -103,6 +104,25 @@ function checkAnswer(answer){
         </p>
         `
     }
+}
+
+function submitTextAnswer(){//for solution search and error blitz
+
+    document.getElementById("answerDoneButton").style["display"] = "none";
+    document.getElementById("answerTextareaContainer").style["opacity"] = ".5";
+    document.getElementById("answerTextareaContainer").style["pointer-events"] = "none";
+
+    if(gameMode == "solutionSearch"){
+        renderMd(curProblem[1],"explanationSection");
+        document.getElementById("explanationSection").style["display"] = "block";
+    }
+    
+    if(gameMode == "errorBlitz"){
+        document.getElementById("confirmationSection").innerHTML = `<p id='errorText'>${curProblem[1]}</p>`;
+        if(curProblem[1] != "There is no error.") document.getElementById("errorText").style["color"] = "var(--pretty-red)";
+    }
+
+    document.getElementById("confirmationSection").style["display"] = "block";
 }
 
 function nextProblem(correct){

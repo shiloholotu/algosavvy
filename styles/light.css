@@ -184,6 +184,10 @@ button{
 
 
 /* PLAY PAGE */
+#answerSection,#correctionSection,#confirmationSection{
+    padding:10px;
+    background:var(--bg-light-blue);
+}
 
 /* diffuculty indicator */
 #diffIndicator{
@@ -199,10 +203,6 @@ button{
 }
 
 /*answer section*/
-#answerSection{
-    padding:10px;
-    background:var(--bg-light-blue);
-}
 
 .answerChoice{
     flex: 1;
@@ -256,15 +256,8 @@ button{
     color: var(--bg-light-blue);
 }
 
-#answerDoneButton:hover{
-    /*background:var(--dark-transp-blue);*/
-}
 
 /* correction section */
-#correctionSection{
-    padding: 10px;
-    background:var(--bg-light-blue);
-}
 
 #correctionIndicator{
     font-weight: 600;
@@ -309,6 +302,17 @@ button{
     background:var(--bg-light-blue);
     padding: 40px;
     padding-top: 0.1px;/*when its 0, the margins from the paragraphs start acting weird*/
+}
+
+/* confirmation section */
+#errorText{
+    background: var(--font-color);
+    padding: 10px;
+    font-weight: bold;
+    color: var(--bg-light-blue);
+    margin: 0;
+    border-radius: 10px;
+    font-family: monospace;
 }
 
 /* MARKDOWN SYNTAX */
