@@ -50,7 +50,7 @@ button{
     max-width: 800px;
     margin:auto;
     border-radius:15px;
-    border: 2px solid var(--light-transp-blue);
+    border: 2px solid var(--dark-transp-blue);
     overflow:hidden;
     background: white;
 }
@@ -262,12 +262,13 @@ button{
     height: -webkit-fill-available;
     color: var(--font-color);
     border: none;
+    background-color: var(--bg-light-blue);
 }
 
 #answerTextareaContainer{
     overflow: hidden;
     height: 25vh;
-    border: 2px solid var(--dark-transp-blue);
+    border: 2px solid var(--light-transp-blue);
     border-radius: 10px;
 }
 
