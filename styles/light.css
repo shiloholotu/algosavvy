@@ -9,7 +9,7 @@
     --pretty-yellow: rgb(255 216 107);
     --pretty-red:rgb(255 109 109);
     --pretty-purple:rgb(245 152 229);
-    --navbar-gap: max(20vh,100px);
+    --navbar-gap: max(12vh,100px);
     /* code blocks */
     --lighter-font-color: rgb(100,100,100);
 }
@@ -147,7 +147,6 @@ button{
     position: fixed;
     width: 15vw;
     margin: 15px;
-    margin-top:var(--navbar-gap);
 }
 #docContents a{
     display: block;
