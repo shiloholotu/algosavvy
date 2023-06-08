@@ -21,7 +21,7 @@ function displayRandomProblem(){
     }
     else problemInfo = problem[0][0];
 
-    renderMd(probleminfo,"problemView");//dispay problem statement
+    renderMd(problemInfo,"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
     if(gameMode != "error-blitz"){
