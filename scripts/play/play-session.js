@@ -10,7 +10,18 @@ function displayRandomProblem(){
     document.getElementById("correctionSection").style["display"] = "none";
     document.getElementById("explanationSection").style["display"] = "none";
     document.getElementById("confirmationSection").style["display"] = "none";
-    renderMd(problem[0][0],"problemView");//dispay problem statement
+
+    let problemInfo = "";
+    if(gameMode != "error-blitz"){
+        const infoPref = getPlayPreference(gameMode,"problemInfo");
+        if(infoPref[0]) problemInfo += problem[0][0];
+        if(infoPref[1]) problemInfo += "\n" + "## Solution\n" + problem[0][1];
+        if(infoPref[2]) problemInfo += "\n" + "## Method\n" + problem[0][2];
+        if(infoPref[3]) problemInfo += "\n" + "## Complexity\n" + problem[0][3];
+    }
+    else problemInfo = problem[0][0];
+
+    renderMd(probleminfo,"problemView");//dispay problem statement
 
     //difficulty indicator color based on difficulty
     if(gameMode != "error-blitz"){
