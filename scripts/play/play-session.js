@@ -17,7 +17,7 @@ function displayRandomProblem(){
         if(infoPref[0]) problemInfo += problem[0][0];
         if(infoPref[1]) problemInfo += "\n" + "## Solution\n" + problem[0][1];
         if(infoPref[2]) problemInfo += "\n" + "## Method\n" + problem[0][2];
-        if(infoPref[3]) problemInfo += "\n" + "## Complexity\n" + problem[0][3];
+        if(infoPref[3]) problemInfo += "\n" + "## Complexity\n$" + problem[0][3] + "$";
     }
     else problemInfo = problem[0][0];
 
