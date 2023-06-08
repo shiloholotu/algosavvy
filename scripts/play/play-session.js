@@ -78,7 +78,7 @@ function checkAnswerChoice(answer){
     document.getElementById("correctionSection").style["display"] = "block";
 
     //show solution if its method madness
-    if(gameMode == "method-madness"){
+    if(getPlayPreference(gameMode,"problemInfo")[1] == false){
         renderMd(curProblem[0][1],"explanationSection")
         document.getElementById("explanationSection").style["display"] = "block";
     }
