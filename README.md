@@ -1,4 +1,4 @@
-# AlgoSavvy
+# ![algosavvy](https://shiloholotu.github.io/algosavvy/assets/logo/banner.png)
 **A Free and Open Source resource for diving deep into data structures and algorithms.**
 
 **Howdy👋!** AlgoSavvy is a free online open-source resource that provides a variety of tutorials and game modes to help you understand a wide range data structures and algorithms. The different concepts addressed in this guide are invaluable for **coding interviews, competitive programming, writing clean and effective code, and more!**
