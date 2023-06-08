@@ -15,6 +15,7 @@ const problemData = {
 async function loadProblems(type = "easy", ind = 0){
     if(type == "done"){
         displayRandomProblem();
+        return;
     }
     //fetch problem file
     const response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][1]}`);
