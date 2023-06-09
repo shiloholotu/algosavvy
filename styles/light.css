@@ -79,6 +79,7 @@ button{
     top: 0;
     display:flex;
     background:var(--bg-light-blue);
+    z-index:999;
 }
 
 #navbarLogo{
@@ -207,6 +208,52 @@ button{
 
 #docNavBar a:hover{
     background: white;
+}
+
+
+/* GAME MODE PAGE */
+
+.gameModeOption{
+    width: 66%;
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid var(--light-transp-blue);
+    border-radius: 17px;
+    padding: 10px;
+    transition: .5s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+}
+
+.gameModeOption:hover{
+    box-shadow: var(--light-shadow);
+}
+
+.gameModeIcon{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--pretty-purple);
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+
+.gameModeIcon p{
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.gameModeDesc{
+    font-weight: 600;
+    opacity: .7;
+    margin: 0;
 }
 
 
