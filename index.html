@@ -43,7 +43,7 @@
 
         <div style="height:15vh"></div>
 
-        <div style="display:flex;justify-content: space-evenly;position:relative;z-index:-1;opacity:.7">
+        <div style="display:flex;justify-content: space-evenly;position:relative;z-index:-1">
             <div id="floatCube1" class="gameModeIcon"><p>BFS</p></div>
             <div id="floatCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
             <img id="floatCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
@@ -124,9 +124,12 @@
         <script>
             const sp = new ScrollParallax();
             for(let i = 1; i <= 6; i++){
-                let randomNeg = parseInt(Math.random() * 3)-1;
-                document.getElementById(`floatCube${i}`).style["margin-top"] = `${Math.random()*15 * (parseInt(Math.random() * 3)-1)}vh`
-                sp.enable(`floatCube${i}`,Math.random());
+                
+                document.getElementById(`floatCube${i}`).style["margin-top"] = `${Math.random()*15 * (parseInt(Math.random() * 3)-1)}vh`;
+
+                const scrollIntensity = Math.random();
+                document.getElementById(`floatCube${i}`).style["opacity"] = Math.max(.3,scrollIntensity);
+                sp.enable(`floatCube${i}`,scrollIntensity);
             }
         </script>
         
