@@ -42,13 +42,14 @@ async function loadProblems(type = "easy", ind = 0){
 function generateProblem(type){
 
     const diffNames = ["easy","medium","hard","advanced"];
-    const diff = [];
+    let diff = [];
     
     if(type != "error-blitz"){
         for(const i in diffNames){
             if(getPlayPreference(type,"difficulty")[i])diff.push(diffNames[i]);
         }
     }
+    if(diff.length == 0) diff = diffNames;
 
     if(type == "solution-search"){
         const diffChoice = randomChoice(diff);
