@@ -93,7 +93,73 @@ button{
 }
 
 .navbarGap{
-    height: var(--navbar-gap)
+    height: var(--navbar-gap);
+}
+
+/* INDEX PAGE */
+.bigHeader{
+    font-size: 3em;
+    text-align: center;
+}
+.bigHeader span{
+    font-weight: 800;
+    background: -webkit-linear-gradient(right, rgb(130 223 185), var(--pretty-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 100px var(--pretty-green);
+}
+
+.bigGap{
+    height: 30vh;
+}
+
+.subHeader{
+    text-align: center;
+    opacity: .2;
+}
+
+.bigParagraph{
+    font-weight: lighter;
+    width: 60%;
+    display: block;
+    margin:auto;
+    text-align: center;
+}
+
+.bigParagraph b{
+    font-weight: 600;
+}
+
+
+.modePreview{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left:35vw;
+    margin-top: 50px;
+}
+
+.actionButton{
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 0 40px rgba(140,223,130,0.5);
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+    color: var(--lighter-font-color);
+    margin-bottom: 50px;
+    width: fit-content;
+    transition:1s;
+}
+.actionButton:hover{
+    box-shadow: none;
 }
 
 /* TABLE OF CONTENTS */
