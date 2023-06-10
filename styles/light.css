@@ -199,7 +199,7 @@ button{
     border: 2px solid var(--light-transp-blue);
     cursor: pointer;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight: 600;
     color: var(--dark-transp-blue);
     padding: 5px;
