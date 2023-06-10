@@ -166,6 +166,7 @@ button{
 }
 .actionButton:hover{
     box-shadow: none;
+    background:var(--bg-light-blue);
 }
 
 /* TABLE OF CONTENTS */
