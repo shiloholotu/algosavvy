@@ -155,5 +155,6 @@ function loadMdFromUrl(){
         readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
     }catch(error){
         renderMd(`# Uh Oh🫤\nWe can't find that page. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
+        document.getElementById("docNavBar").style["display"] = "none";
     }
 }
