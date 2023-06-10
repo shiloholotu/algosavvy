@@ -151,5 +151,9 @@ function loadMdFromUrl(){
     let section = null;
     if(loc.length == 3 && loc[2] != "")section = loc[2];
 
-    readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
+    try{
+        readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
+    }catch(error){
+        renderMd(`# Uh Oh🫤\nWe can't find that page. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
+    }
 }
