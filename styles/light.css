@@ -82,6 +82,11 @@ button{
     z-index:999;
 }
 
+#navbar a{
+    text-decoration: none;
+    color:var(--font-color);
+}
+
 #navbarLogo{
     font-size: 25px;
 }
@@ -130,7 +135,7 @@ button{
     font-weight: 600;
 }
 
-
+/* mode preview */
 .modePreview{
     display: flex;
     align-items: center;
@@ -139,6 +144,7 @@ button{
     margin-top: 50px;
 }
 
+/* action button */
 .actionButton{
     text-decoration: none;
     padding: 10px;
