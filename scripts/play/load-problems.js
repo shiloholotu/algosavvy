@@ -39,7 +39,16 @@ async function loadProblems(type = "easy", ind = 0){
 }
 
 
-function generateProblem(type, diff = ["easy","medium","hard","advanced"]){
+function generateProblem(type){
+
+    const diffNames = ["easy","medium","hard","advanced"];
+    const diff = [];
+    
+    if(type != "error-blitz"){
+        for(const i in diffNames){
+            if(getPlayPreference(type,"difficulty")[i])diff.push(diffNames[i]);
+        }
+    }
 
     if(type == "solution-search"){
         const diffChoice = randomChoice(diff);

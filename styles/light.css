@@ -213,6 +213,80 @@ button{
 
 /* GAME MODE PAGE */
 
+/* pop up */
+#gameModePopup{
+    padding: 30px;
+    max-height: calc(75vh - 60px);
+    position: fixed;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow: auto;
+    z-index: 998;
+    transition:.5s;
+    opacity: 0;
+    pointer-events:none;
+}
+
+#popupBackdrop{
+    background: rgb(242 242 247 / 50%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* opacity: .5; */
+    z-index: 997;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: .5s;
+    pointer-events:none;
+}
+
+#restoreButton{
+    background: transparent;
+    border:none;
+    font-size:16px;
+    color:var(--lighter-font-color);
+    padding:0;
+    margin-top: 30px;
+    opacity: .7;
+}
+
+#restoreButton:hover{
+    opacity: 1;
+}
+
+#gameModePopup a{
+    padding: 10px;
+    background: var(--font-color);
+    color: var(--bg-light-blue);
+    text-decoration: none;
+    margin-left: auto;
+    display: block;
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gameModeSettings{
+    margin-top: 30px;
+}
+
+
+.gameModeSettings p{
+    font-weight: 600;
+    margin: 5px;
+}
+
+.gameModeSettings input{
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+/* modes */
 .gameModeOption{
     width: 66%;
     max-width: 600px;

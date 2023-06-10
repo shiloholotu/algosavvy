@@ -37,10 +37,14 @@
             <div><h1 id="navbarLogo"><img src="assets/logo/alvin64_r.png">algosavvy</h1></div>
         </div>
         <div class="navbarGap"></div>
+
+        <div class="bigBox" id="gameModePopup"></div>
+        <div id="popupBackdrop" onclick="hidePopup()"></div>
+
         
         <h2 style="font-weight: 800;text-align: center;margin-bottom:40px">GAME MODES</h2>
 
-        <div class="gameModeOption">
+        <div class="gameModeOption" onclick="gameModePopup('solution-search')">
            
             <div class="gameModeIcon"><p>HEY!</p></div>
 
@@ -53,7 +57,7 @@
 
         <div class="tocBlockSeparator"></div>
 
-        <div class="gameModeOption">
+        <div class="gameModeOption" onclick="gameModePopup('method-madness')">
             <div class="gameModeIcon" style="background:var(--pretty-yellow);"><p>o o o</p></div>
 
             <div>
@@ -65,7 +69,7 @@
 
         <div class="tocBlockSeparator"></div>
 
-        <div class="gameModeOption">
+        <div class="gameModeOption" onclick="gameModePopup('time-crunch')">
             <div class="gameModeIcon" style="background:var(--pretty-green);"><p>O(?)</p></div>
 
             <div>
@@ -77,7 +81,7 @@
 
         <div class="tocBlockSeparator"></div>
 
-        <div class="gameModeOption">
+        <div class="gameModeOption" onclick="gameModePopup('error-blitz')">
             <div class="gameModeIcon" style="background:var(--pretty-red);"><p>! ! !</p></div>
 
             <div>
@@ -90,6 +94,7 @@
         <script src="scripts/local-storage-vars.js"></script>
 
         <script src="scripts/play/list-of-problems.js"></script>
+        <script src="scripts/play/game-modes.js"></script>
         
         
         
