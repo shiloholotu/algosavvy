@@ -137,7 +137,7 @@ button{
 }
 
 /* floating cubes */
-#floatingCubeContainer{
+.floatingCubeContainer{
     display:flex;
     justify-content: space-evenly;
     position:relative;

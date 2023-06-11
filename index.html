@@ -43,18 +43,25 @@
 
         <div style="height:15vh"></div>
 
-        <div id="floatingCubeContainer">
-            <div id="floatCube1" class="gameModeIcon"><p>BFS</p></div>
-            <div id="floatCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
-            <img id="floatCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
-            <div id="floatCube4" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
-            <div id="floatCube5" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
-            <div id="floatCube6" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
+        <div class="floatingCubeContainer">
+            <div id="floatingCube1" class="gameModeIcon"><p>BFS</p></div>
+            <div id="floatingCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
+            <img id="floatingCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingCube4" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
+            <div id="floatingCube5" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
+            <div id="floatingCube6" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
         </div>
 
 
 
         <div class="bigGap"></div>
+
+
+
+
+
+
+
 
 
         <h1 class="bigHeader">Learn with <span>TUTORIALS.</span></h1>
@@ -63,6 +70,13 @@
         <a href="contents" class="actionButton">See tutorials</a>
         
         <img id="tutorialImage" src="assets/homepage/docprev.png">
+
+        <div class="floatingCubeContainer" style="z-index:1">
+            <div id="floatingCube7" class="gameModeIcon" style="background:var(--pretty-green); box-shadow: 0 0 100px var(--pretty-green)"><p>DP</p></div>
+            <div id="floatingCube8" class="gameModeIcon" style="margin-right:20vw;background:var(--pretty-yellow); box-shadow: 0 0 100px var(--pretty-yellow)"><p>DFS</p></div>
+            <div id="floatingCube9" class="gameModeIcon" style="margin-left:20vw; box-shadow: 0 0 100px var(--pretty-purple)"><p>O(1)</p></div>
+            <div id="floatingCube10" class="gameModeIcon" style="background:var(--pretty-red); box-shadow: 0 0 100px var(--pretty-red)"><p>C++</p></div>
+        </div>
 
 
 
@@ -121,13 +135,25 @@
         <script>
             const sp = new ScrollParallax();
             for(let i = 1; i <= 6; i++){
-                
-                document.getElementById(`floatCube${i}`).style["margin-top"] = `${Math.random()*15 * (parseInt(Math.random() * 3)-1)}vh`;
+
+                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random()*15 * (parseInt(Math.random() * 3)-1)}vh`;
 
                 const scrollIntensity = Math.random();
-                document.getElementById(`floatCube${i}`).style["opacity"] = Math.max(.2,scrollIntensity);
-                sp.enable(`floatCube${i}`,scrollIntensity);
+                document.getElementById(`floatingCube${i}`).style["opacity"] = Math.max(.2,scrollIntensity);
+                sp.enable(`floatingCube${i}`,scrollIntensity);
             }
+
+
+            for(let i = 7; i <= 10; i++){
+                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random()*15** (parseInt(Math.random() * 3)-1)}vh`;
+
+                const intensity = Math.max(.2,Math.min(.5,Math.random()));
+                document.getElementById(`floatingCube${i}`).style["opacity"] = 2*intensity;
+                sp.enable(`floatingCube${i}`,intensity);
+            }
+
+            //sp.enable("tutorialImage",.1);
+            //document.getElementById("tutorialImage").style["z-index"] = -1;
         </script>
         
     </body>
