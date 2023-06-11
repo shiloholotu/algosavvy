@@ -136,13 +136,33 @@ button{
     font-weight: 600;
 }
 
+/* floating cubes */
+#floatingCubeContainer{
+    display:flex;
+    justify-content: space-evenly;
+    position:relative;
+    z-index:-1;
+}
+
+/* tutorial image */
+#tutorialImage{
+    width: 70%;
+    max-width: 850px;
+    margin:auto;
+    display: block;
+}
+
 /* mode preview */
 .modePreview{
     display: flex;
     align-items: center;
     width: fit-content;
-    margin-left:35vw;
     margin-top: 50px;
+}
+
+#modePreviewContainer{
+    width: fit-content;
+    margin:auto
 }
 
 /* action button */

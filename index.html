@@ -38,12 +38,12 @@
         
         <div class="navbarGap"></div>
 
-        <h1 class="bigHeader" style="text-align: center;">A <span>FREE</span> and <span>FRIENDLY</span> way<br>to learn Data Structures and Algorithms.</h1>
+        <h1 class="bigHeader">A <span>FREE</span> and <span>FRIENDLY</span> way<br>to learn Data Structures and Algorithms.</h1>
         <h2 class="subHeader">Free • No sign up required</h2>
 
         <div style="height:15vh"></div>
 
-        <div style="display:flex;justify-content: space-evenly;position:relative;z-index:-1">
+        <div id="floatingCubeContainer">
             <div id="floatCube1" class="gameModeIcon"><p>BFS</p></div>
             <div id="floatCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
             <img id="floatCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
@@ -62,7 +62,7 @@
         
         <a href="contents" class="actionButton">See tutorials</a>
         
-        <img style="width: 70%;max-width: 850px;margin:auto;display: block;" src="assets/homepage/docprev.png">
+        <img id="tutorialImage" src="assets/homepage/docprev.png">
 
 
 
@@ -77,39 +77,41 @@
 
         <br><br>
 
-        <div class="modePreview">
-           
-            <div class="gameModeIcon" style="box-shadow: 0 0 70px var(--pretty-purple)"><p>HEY!</p></div>
-            <div>
-                <h3>Solution Search</h3>
-                <p class="gameModeDesc">Write a solution in plain english</p>
-            </div>
+        <div id="modePreviewContainer">
+            <div class="modePreview">
             
-        </div>
-
-        <div class="modePreview">
-            <div class="gameModeIcon" style="background:var(--pretty-yellow);box-shadow: 0 0 70px var(--pretty-yellow)"><p>o o o</p></div>
-
-            <div>
-                <h3>Method Madness</h3>
-                <p class="gameModeDesc">Choose the best DS/A for a problem</p>
+                <div class="gameModeIcon" style="box-shadow: 0 0 70px var(--pretty-purple)"><p>HEY!</p></div>
+                <div>
+                    <h3>Solution Search</h3>
+                    <p class="gameModeDesc">Write a solution in plain english</p>
+                </div>
+                
             </div>
-        </div>
 
-        <div class="modePreview">
-            <div class="gameModeIcon" style="background:var(--pretty-green);box-shadow: 0 0 70px var(--pretty-green)"><p>O(?)</p></div>
-            <div>
-                <h3>Time Crucnh</h3>
-                <p class="gameModeDesc">Determine the time complexity of a scenario</p>
+            <div class="modePreview">
+                <div class="gameModeIcon" style="background:var(--pretty-yellow);box-shadow: 0 0 70px var(--pretty-yellow)"><p>o o o</p></div>
+
+                <div>
+                    <h3>Method Madness</h3>
+                    <p class="gameModeDesc">Choose the best DS/A for a problem</p>
+                </div>
             </div>
-        </div>
 
-        <div class="modePreview">
-            <div class="gameModeIcon" style="background:var(--pretty-red);box-shadow: 0 0 70px var(--pretty-red)"><p>! ! !</p></div>
-            <div>
-                <h3>Error Blitz</h3>
-                <p class="gameModeDesc">Spot the potential error</p>
-            </div>    
+            <div class="modePreview">
+                <div class="gameModeIcon" style="background:var(--pretty-green);box-shadow: 0 0 70px var(--pretty-green)"><p>O(?)</p></div>
+                <div>
+                    <h3>Time Crucnh</h3>
+                    <p class="gameModeDesc">Determine the time complexity of a scenario</p>
+                </div>
+            </div>
+
+            <div class="modePreview">
+                <div class="gameModeIcon" style="background:var(--pretty-red);box-shadow: 0 0 70px var(--pretty-red)"><p>! ! !</p></div>
+                <div>
+                    <h3>Error Blitz</h3>
+                    <p class="gameModeDesc">Spot the potential error</p>
+                </div>    
+            </div>
         </div>
 
         <div class="bigGap"></div>
