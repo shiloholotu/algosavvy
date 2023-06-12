@@ -108,7 +108,7 @@ function generateProblem(type){
         if(languageChoices.length == 0)languageChoices.push("snippet/cpp");
 
         const errorType = Math.floor(Math.random()*6);
-        const langChoice = randomChoice(languageChoices);
+        let langChoice = randomChoice(languageChoices);
         const snippet = randomChoice(problemData[langChoice]).split("");//must be broken into array because strings are immutable
         const ogSnippet = [...snippet];//wont be messed with
         let errorExplanation = "There is no error.";
