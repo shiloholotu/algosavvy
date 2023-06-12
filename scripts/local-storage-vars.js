@@ -57,6 +57,15 @@ function setPlayPreference(mode,preference, value){
 }
 
 function getPlayPreference(mode,preference){
-    const playPreferences = JSON.parse(localStorage.getItem("playPreferences"));
-    return playPreferences[mode][preference];   
+    try{
+        const playPreferences = JSON.parse(localStorage.getItem("playPreferences"));
+        return playPreferences[mode][preference];  
+    }
+    catch(error){
+        console.log("There was an error trying to access a game mode preference, so we're setting the current preferences of that game mode to the defaults to see if that fixes it. This usually happens when the local storage variables for the game mode settings aren't up to date. If you still see an error then...erm...sorry");
+        console.log(`Error: ${error}`);
+        restoreDefault(mode);
+        return playPreferences[mode][preference];
+    }
+     
 }

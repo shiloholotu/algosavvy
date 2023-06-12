@@ -60,6 +60,9 @@ function gameModePopup(mode){
 
     //generate problem info input
     if(mode != 'error-blitz') html += generatePrefenceCheckboxes(mode,"problemInfo");
+    
+    //generate language input
+    else html += generatePrefenceCheckboxes(mode,"language");
 
     html += `<button id="restoreButton" onclick="restoreDefault('${mode}');gameModePopup('${mode}')">Restore to default</button>`;
 
