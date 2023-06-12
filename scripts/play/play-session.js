@@ -146,7 +146,7 @@ function submitTextAnswer(){//for solution search and error blitz
 
 
 function updateStats(){
-    let progess = 0;
+    let progress = 0;
     if(sessionStats[0] != 0)progress = sessionStats[1]/sessionStats[0];
     document.getElementById("sessionStats").innerHTML = `
     <p>Session Stats</p>
