@@ -426,6 +426,7 @@ button{
 #sessionProgressBar{
     border-radius: 10px;
     border: 2px solid var(--dark-transp-blue);
+    color:var(--lighter-font-color);
 }
 
 #sessionProgressBar div{

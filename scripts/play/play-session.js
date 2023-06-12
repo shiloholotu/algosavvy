@@ -149,7 +149,7 @@ function updateStats(){
     let progress = 0;
     if(sessionStats[0] != 0)progress = sessionStats[1]*100/sessionStats[0];
     document.getElementById("sessionStats").innerHTML = `
-    <p>Session Stats</p>
+    <p style="font-weight:600">Session Stats</p>
     <div id="sessionProgressBar">
         <div style="width:${progress}%"></div>
     </div>
