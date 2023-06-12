@@ -1,5 +1,5 @@
 ```cpp
-int binarySearch(vector<int> v, int n){
+int solve(vector<int> v, int n){
     
     int left = 0;
     int right = v.size()-1;
