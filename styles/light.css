@@ -431,6 +431,7 @@ button{
 #sessionProgressBar div{
     height: 10px;
     background: var(--pretty-green);
+    border-radius: 10px;
 }
 
 /* diffuculty indicator */
