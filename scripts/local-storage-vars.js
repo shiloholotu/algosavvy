@@ -34,7 +34,9 @@ const defaultPrefs = {
         "problemInfo":[true,true,false,false],//[statement, solution, method, time complexity]
         "difficulty":[true,true,true,true]//easy, medium, hard, advanced
     },
-    "error-blitz ":{}
+    "error-blitz":{
+        "language":[true,true]//c++,java
+    }
 };
 
 if(localStorage.getItem("playPreferences") == null){

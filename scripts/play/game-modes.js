@@ -7,7 +7,8 @@ const modeInfo = {
 
 const prefDetails = {
     "difficulty": ["Difficulty",["Easy","Medium","Hard","Advanced"]],
-    "problemInfo": ["Problem Info",["Problem Statement","Solution","Method","Time Compexltiy"]]
+    "problemInfo": ["Problem Info",["Problem Statement","Solution","Method","Time Compexltiy"]],
+    "language":["Language",["C++","Java"]]
 };
 
 

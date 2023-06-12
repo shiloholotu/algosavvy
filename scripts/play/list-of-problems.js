@@ -14,8 +14,12 @@ const problemFiles = {
     "advanced":[
         ["Alvin's Building Blocks","placeholder.md", "05/28/2023"]
     ],
-    "snippet":[
-        ["binsearch.cpp","binsearch.md","05/28/2023"],
-        ["bruteforce.cpp","bruteforce.md","06/08/2023"],
+    "snippet/cpp":[
+        ["snippet1.md"],
+        ["snippet2.md"],
+    ],
+    "snippet/java":[
+        ["snippet1.md"],
+        ["snippet2.md"],
     ]
 };

@@ -3,7 +3,8 @@ const problemData = {
     "medium":[],
     "hard":[],
     "advanced":[],
-    "snippet":[]
+    "snippet/cpp":[],
+    "snippet/java":[]
 };
 
 
@@ -32,7 +33,8 @@ async function loadProblems(type = "easy", ind = 0){
         if(type == "easy")type = "medium";
         else if(type == "medium") type = "hard";
         else if(type == "hard") type = "advanced";
-        else if(type == "advanced") type = "snippet";
+        else if(type == "advanced") type = "snippet/cpp";
+        else if(type == "snippet/cpp") type = "snippet/java";
         else type = "done";
     }
     loadProblems(type,ind);
@@ -96,8 +98,13 @@ function generateProblem(type){
 
     if(type == "error-blitz"){
 
+        let languageChoice = [];
+        if(getPlayPreference("snippet","language")[0])languageChoice.push("snippet/cpp");
+        if(getPlayPreference("snippet","language")[1])languageChoice.push("snippet/java");
+        if(languageChoice.length == 0)languageChoice.push("snippet/cpp");
+
         const errorType = Math.floor(Math.random()*6);
-        const snippet = randomChoice(problemData["snippet"]).split("");//must be broken into array because strings are immutable
+        const snippet = randomChoice(problemData[randomChoice(languageChoice)]).split("");//must be broken into array because strings are immutable
         const ogSnippet = [...snippet];//wont be messed with
         let errorExplanation = "There is no error.";
 
