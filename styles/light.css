@@ -14,6 +14,8 @@
     --lighter-font-color: rgb(100,100,100);
 }
 
+
+/* GENERAL */
 body{
     font-family: 'Poppins';
     color:var(--font-color);
@@ -55,19 +57,13 @@ button{
     background: white;
 }
 
-#fadeCover{
+.sideBar{
     position: fixed;
-    z-index:1000;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100vw;
-    height:100vh;
-    background:var(--bg-light-blue);
-    display:none;
+    width: 15vw;
+    padding: 15px;
+    max-height: 75vh;
+    overflow: auto;
 }
-
 
 /* NAVBAR */
 #navbar{
@@ -238,11 +234,6 @@ button{
 /* DOC VIEW LEARN PAGE */
 
 /* doc contents preview */
-#docContents{
-    position: fixed;
-    width: 15vw;
-    margin: 15px;
-}
 #docContents a{
     display: block;
     font-weight: 600;
@@ -429,6 +420,17 @@ button{
 #answerSection,#correctionSection,#confirmationSection{
     padding:10px;
     background:var(--bg-light-blue);
+}
+
+/* session stats */
+#sessionProgressBar{
+    border-radius: 10px;
+    border: 2px solid var(--dark-transp-blue);
+}
+
+#sessionProgressBar div{
+    height: 10px;
+    background: var(--pretty-green);
 }
 
 /* diffuculty indicator */

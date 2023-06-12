@@ -144,8 +144,22 @@ function submitTextAnswer(){//for solution search and error blitz
     document.getElementById("confirmationSection").style["display"] = "block";
 }
 
+
+function updateStats(){
+    let progess = 0;
+    if(sessionStats[0] != 0)progress = sessionStats[1]/sessionStats[0];
+    document.getElementById("sessionStats").innerHTML = `
+    <p>Session Stats</p>
+    <div id="sessionProgressBar">
+        <div style="width:${progress}%"></div>
+    </div>
+    <p>${sessionStats[1]} / ${sessionStats[0]} questions correct</p>
+    `
+}
+
 function nextProblem(correct){
     sessionStats[0]++;
     if(correct)sessionStats[1]++;
+    updateStats();
     displayRandomProblem();
 }
