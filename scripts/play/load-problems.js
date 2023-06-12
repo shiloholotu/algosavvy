@@ -278,7 +278,10 @@ function generateProblem(type){
         }
 
 
-        return [[snippet.join("")],errorExplanation];
+        if(langChoice == "snippet/cpp")langChoice = "c++";
+        else langChoice = "java";
+
+        return [[snippet.join("")],errorExplanation,langChoice];
         /*having the brackets around the snippet in the return looks redudant, but having them there helps this mode's return line up
         with the returns of the other modes, which look like this [[problem statement,...],...]
         */

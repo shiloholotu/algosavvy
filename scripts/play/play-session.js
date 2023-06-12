@@ -23,16 +23,14 @@ function displayRandomProblem(){
 
     renderMd(problemInfo,"problemView");//dispay problem statement
 
-    //difficulty indicator color based on difficulty
-    if(gameMode != "error-blitz"){
-        document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
-        if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
-        else if(problem[2] == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
-        else if(problem[2] == "hard")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
-        else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
-    }else{
-        document.getElementById("diffIndicator").style["display"] = "none";
-    }
+    //difficulty indicator color based on difficulty, or langauge if error blitz
+    
+    document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
+    if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
+    else if(problem[2] == "medium" || problem[2] == "c++")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
+    else if(problem[2] == "hard" || problem[2] == "java")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
+    else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
+    
 
     
     if(gameMode != "solution-search" && gameMode != "error-blitz"){//generate answer choice buttons
