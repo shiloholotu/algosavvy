@@ -114,7 +114,7 @@ function linkHeaders(){
 
     displayCompletionIndicator();
     displayDocNavBar();
-    document.getElementById("loadingScreen").style["opacity"] = 0;
+    hideLoadingScreen();
 
 }
 
