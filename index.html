@@ -131,12 +131,13 @@
         <div class="bigGap"></div>
         
         <script src="scripts/effects/parallax.js"></script>
+        <script src="scripts/util.js"></script>
 
         <script>
             const sp = new ScrollParallax();
             for(let i = 1; i <= 6; i++){
 
-                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random()*15 * (parseInt(Math.random() * 3)-1)}vh`;
+                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
 
                 const scrollIntensity = Math.random();
                 document.getElementById(`floatingCube${i}`).style["opacity"] = Math.max(.2,scrollIntensity);
@@ -145,7 +146,7 @@
 
 
             for(let i = 7; i <= 10; i++){
-                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random()*15** (parseInt(Math.random() * 3)-1)}vh`;
+                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() *15 * randomChoice([1,-1])}vh`;
 
                 const intensity = Math.max(.2,Math.min(.5,Math.random()));
                 document.getElementById(`floatingCube${i}`).style["opacity"] = 2*intensity;
