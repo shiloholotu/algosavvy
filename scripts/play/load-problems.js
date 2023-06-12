@@ -16,6 +16,7 @@ const problemData = {
 async function loadProblems(type = "easy", ind = 0){
     if(type == "done"){
         displayRandomProblem();
+        hideLoadingScreen();
         return;
     }
     //fetch problem file

@@ -65,6 +65,25 @@ button{
     overflow: auto;
 }
 
+/* LOADING SCREEN */
+#loadingScreen{
+    position: fixed;
+    z-index: 998;
+    background: var(--bg-light-blue);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    transition: .5s;
+}
+
+#loadingScreen img{
+    margin-bottom:20px;
+}
+
 /* NAVBAR */
 #navbar{
     border-bottom: 2px solid var(--light-transp-blue);

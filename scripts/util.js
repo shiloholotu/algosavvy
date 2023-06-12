@@ -19,6 +19,11 @@ function shuffleArray(arr){
     return newArr;
 }
 
+function hideLoadingScreen(){
+    document.getElementById("loadingScreen").style["pointer-events"] = "none";
+    setTimeout(function(){document.getElementById("loadingScreen").style["opacity"] = "0";},0);
+}
+
 //used for when you make changes to the url variables without changing the actual page, but actually want to update the page with those changes
 //window.open by itself just changes the url but the page isn't updated
 function openAndReload(url){

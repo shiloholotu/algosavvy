@@ -114,6 +114,7 @@ function linkHeaders(){
 
     displayCompletionIndicator();
     displayDocNavBar();
+    document.getElementById("loadingScreen").style["opacity"] = 0;
 
 }
 
@@ -155,6 +156,9 @@ function loadMdFromUrl(){
         readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
     }catch(error){
         renderMd(`# Uh Oh🫤\nWe can't find that page. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
+        console.error(error);
         document.getElementById("docNavBar").style["display"] = "none";
+
+        hideLoadingScreen();
     }
 }
