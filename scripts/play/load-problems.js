@@ -19,10 +19,13 @@ async function loadProblems(type = "easy", ind = 0){
         return;
     }
     //fetch problem file
-    const response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][1]}`);
+    let response = "";
+    if(type != "snippet/cpp" && type != "snippet/java") response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][1]}`);
+    else response = await fetch(`problem-markdown/${type}/${problemFiles[type][ind][0]}`);
+
     const text = await response.text();
     let data = null;
-    if(type != "snippet") data = text.split("\n[BREAK]\n");//break up file into problem statment, solution, algorithm/data structure, and time complexity
+    if(type != "snippet/cpp" && type != "snippet/java") data = text.split("\n[BREAK]\n");//break up file into problem statment, solution, algorithm/data structure, and time complexity
     else data = text;
 
     problemData[type].push(data);
@@ -98,13 +101,14 @@ function generateProblem(type){
 
     if(type == "error-blitz"){
 
-        let languageChoice = [];
-        if(getPlayPreference("snippet","language")[0])languageChoice.push("snippet/cpp");
-        if(getPlayPreference("snippet","language")[1])languageChoice.push("snippet/java");
-        if(languageChoice.length == 0)languageChoice.push("snippet/cpp");
+        let languageChoices = [];
+        if(getPlayPreference("error-blitz","language")[0])languageChoices.push("snippet/cpp");
+        if(getPlayPreference("error-blitz","language")[1])languageChoices.push("snippet/java");
+        if(languageChoices.length == 0)languageChoices.push("snippet/cpp");
 
         const errorType = Math.floor(Math.random()*6);
-        const snippet = randomChoice(problemData[randomChoice(languageChoice)]).split("");//must be broken into array because strings are immutable
+        const langChoice = randomChoice(languageChoices);
+        const snippet = randomChoice(problemData[langChoice]).split("");//must be broken into array because strings are immutable
         const ogSnippet = [...snippet];//wont be messed with
         let errorExplanation = "There is no error.";
 
