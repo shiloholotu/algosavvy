@@ -265,7 +265,7 @@ button{
     text-decoration: underline;
 }
 
-#completionIndicator{
+.checkBox{
     display: inline-block;
     border: 2px solid var(--light-transp-blue);
     border-radius: 10px;
@@ -276,7 +276,7 @@ button{
     cursor:pointer;
 }
 
-#completionIndicatorImg{
+.checkBox img{
     max-width: 100%;
     border-radius: 5px;
 }
