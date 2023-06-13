@@ -606,13 +606,13 @@ button{
 
 /* PROBLEM VIEW */
 .problemSection{
-    margin-top:20px;
     padding-left: 2em;
     color: var(--lighter-font-color);
 }
 
 .problemSectionHeader{
     cursor:pointer;
+    margin-bottom: 20px;
 }
 .problemSectionHeader:hover{
     color:var(--lighter-font-color);
@@ -620,7 +620,6 @@ button{
 
 .problemSectionHeader span{
     background: var(--light-transp-blue);
-    padding: 3px;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
