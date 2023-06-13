@@ -7,7 +7,7 @@ function breakProblem(text){
         let display = mdToHTML(text[i]);
         if(i == 3)display = "\\(" + text[i] + "\\)";
         html += `
-        <h2 class="problemSectionHeader" onclick="toggleView(${i})"><span id="hideIcon${i}">+</span> ${sections[i]}</h2>
+        <h2 class="problemSectionHeader" onclick="toggleView(${i})"><img id="hideIcon${i}" src="assets/svg/right.svg">${sections[i]}</h2>
         <div class="problemSection" id="problemSection${i}" style="display:none">
             ${display}
         </div>
@@ -24,6 +24,7 @@ async function viewProblem(folder,ind){
         renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"problemView");
         console.error(error);
         document.getElementById("diffIndicator").style["display"] = "none";
+        document.getElementById("docNavBar").style["display"] = "none";
         document.getElementById("problemView").classList.remove("mdNoTopPadding");
         hideLoadingScreen();
         return;
@@ -47,10 +48,10 @@ async function viewProblem(folder,ind){
 function toggleView(section){
     if(document.getElementById("problemSection"+section).style["display"] == "none"){
         document.getElementById("problemSection"+section).style["display"] = "block";
-        document.getElementById("hideIcon"+section).innerHTML = "-";
+        document.getElementById("hideIcon"+section).setAttribute("src","assets/svg/down.svg");
     }
     else{
         document.getElementById("problemSection"+section).style["display"] = "none";
-        document.getElementById("hideIcon"+section).innerHTML = "+";
+        document.getElementById("hideIcon"+section).setAttribute("src","assets/svg/right.svg");
     }
 }

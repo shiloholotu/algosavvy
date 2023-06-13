@@ -614,16 +614,9 @@ button{
     cursor:pointer;
     margin-bottom: 20px;
 }
-.problemSectionHeader:hover{
-    color:var(--lighter-font-color);
-}
 
-.problemSectionHeader span{
-    background: var(--light-transp-blue);
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: lighter;
+.problemSectionHeader img{
+    vertical-align: middle;
 }
 
 /* MARKDOWN SYNTAX */
