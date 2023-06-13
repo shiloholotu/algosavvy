@@ -116,7 +116,7 @@ button{
     height: var(--navbar-gap);
 }
 
-/* INDEX PAGE */
+/* LANDING PAGE */
 .bigHeader{
     font-size: 3em;
     text-align: center;
@@ -187,11 +187,10 @@ button{
     padding-left: 15px;
     padding-right: 15px;
     background: white;
-    border: none;
+    border: 2px solid var(--dark-transp-blue);
     border-radius: 15px;
     font-size: 20px;
     font-weight: 600;
-    box-shadow: 0 0 40px rgba(140,223,130,0.5);
     margin: auto;
     display: block;
     margin-top: 50px;
@@ -202,6 +201,7 @@ button{
 }
 .actionButton:hover{
     box-shadow: none;
+    border: 2px solid var(--light-transp-blue);
     background:var(--bg-light-blue);
 }
 
