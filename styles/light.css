@@ -611,6 +611,21 @@ button{
     color: var(--lighter-font-color);
 }
 
+.problemSectionHeader{
+    cursor:pointer;
+}
+.problemSectionHeader:hover{
+    color:var(--lighter-font-color);
+}
+
+.problemSectionHeader span{
+    background: var(--light-transp-blue);
+    padding: 3px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* MARKDOWN SYNTAX */
 
 /* container */
