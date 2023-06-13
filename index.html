@@ -38,18 +38,29 @@
         
         <div class="navbarGap"></div>
 
+        <div class="floatingCubeContainer">
+            
+            <div id="floatingCube4" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n*m)</p></div>
+            <div id="floatingCube5" class="gameModeIcon" style="background:var(--pretty-green)"><p>SORT</p></div>
+            <div id="floatingCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>BIN</p></div>
+            <img id="floatingCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingCube6" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>=D</p></div>
+            <div id="floatingCube1" class="gameModeIcon"><p>TREE</p></div>
+            
+        </div>
+
         <h1 class="bigHeader">A <span>FREE</span> and <span>FRIENDLY</span> way<br>to learn Data Structures and Algorithms.</h1>
         <h2 class="subHeader">Free • Open Source • No sign up required</h2>
 
         <div style="height:15vh"></div>
 
         <div class="floatingCubeContainer">
-            <div id="floatingCube1" class="gameModeIcon"><p>BFS</p></div>
-            <div id="floatingCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
-            <img id="floatingCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
-            <div id="floatingCube4" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
-            <div id="floatingCube5" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
-            <div id="floatingCube6" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
+            <div id="floatingCube7" class="gameModeIcon"><p>BFS</p></div>
+            <div id="floatingCube8" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
+            <img id="floatingCube9" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingCube10" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
+            <div id="floatingCube11" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
+            <div id="floatingCube12" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
         </div>
 
 
@@ -72,10 +83,10 @@
         <img id="tutorialImage" src="assets/homepage/docprev.png">
 
         <div class="floatingCubeContainer">
-            <div id="floatingCube7" class="gameModeIcon" style="background:var(--pretty-green); box-shadow: 0 0 100px var(--pretty-green)"><p>DP</p></div>
-            <div id="floatingCube8" class="gameModeIcon" style="margin-right:20vw;background:var(--pretty-yellow); box-shadow: 0 0 100px var(--pretty-yellow)"><p>DFS</p></div>
-            <div id="floatingCube9" class="gameModeIcon" style="margin-left:20vw; box-shadow: 0 0 100px var(--pretty-purple)"><p>O(1)</p></div>
-            <div id="floatingCube10" class="gameModeIcon" style="background:var(--pretty-red); box-shadow: 0 0 100px var(--pretty-red)"><p>C++</p></div>
+            <div id="floatingCube13" class="gameModeIcon" style="background:var(--pretty-green); box-shadow: 0 0 100px var(--pretty-green)"><p>DP</p></div>
+            <div id="floatingCube14" class="gameModeIcon" style="margin-right:20vw;background:var(--pretty-yellow); box-shadow: 0 0 100px var(--pretty-yellow)"><p>DFS</p></div>
+            <div id="floatingCube15" class="gameModeIcon" style="margin-left:20vw; box-shadow: 0 0 100px var(--pretty-purple)"><p>O(1)</p></div>
+            <div id="floatingCube16" class="gameModeIcon" style="background:var(--pretty-red); box-shadow: 0 0 100px var(--pretty-red)"><p>C++</p></div>
         </div>
 
 
@@ -135,7 +146,7 @@
 
         <script>
             const sp = new ScrollParallax();
-            for(let i = 1; i <= 6; i++){
+            for(let i = 1; i <= 12; i++){
 
                 document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
 
@@ -145,7 +156,7 @@
             }
 
 
-            for(let i = 7; i <= 10; i++){
+            for(let i = 13; i <= 16; i++){
                 document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() *15 * randomChoice([1,-1])}vh`;
 
                 const intensity = Math.max(.2,Math.min(.5,Math.random()));
