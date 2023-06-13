@@ -17,7 +17,18 @@ function breakProblem(text){
 }
 
 async function viewProblem(folder,ind){
-    const response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
+    let response = null;
+    try{
+        response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
+    }catch(error){
+        renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
+        console.error(error);
+        document.getElementById("docNavBar").style["display"] = "none";
+
+        hideLoadingScreen();
+        return;
+    }
+    
     const text = await response.text();
     document.getElementById("problemView").innerHTML = breakProblem(text);
 

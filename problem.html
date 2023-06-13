@@ -66,15 +66,8 @@
                 const folder = url.split("#")[1].split("/")[0];
                 const ind = url.split("#")[1].split("/")[1];
                 
-                try{
-                    viewProblem(folder,ind);
-                }catch(error){
-                    renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
-                    console.error(error);
-                    document.getElementById("docNavBar").style["display"] = "none";
+                viewProblem(folder,ind);
 
-                    hideLoadingScreen();
-                }
                 
             }
             else{
