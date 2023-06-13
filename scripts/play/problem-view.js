@@ -6,7 +6,7 @@ function breakProblem(text){
         html += `
         <h2 style="cursor:pointer" onclick="toggleView(${i})"><span id="hideIcon${i}">+</span> ${sections[i]}</h2>
         <div class="problemSection" id="problemSection${i}" style="display:none">
-            ${mdToHTML(text[i])}
+            ${dsigns}${mdToHTML(text[i])}${dsgins}
         </div>
         `;
     }
