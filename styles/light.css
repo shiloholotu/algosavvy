@@ -447,7 +447,8 @@ button{
 }
 #sessionProgressBar{
     border-radius: 10px;
-    border: 2px solid var(--dark-transp-blue);
+    padding:5px;
+    border: 2px solid var(--light-transp-blue);
 }
 
 #sessionProgressBar div{
