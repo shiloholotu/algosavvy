@@ -23,8 +23,6 @@ async function viewProblem(folder,ind){
     }catch(error){
         renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"problemView");
         console.error(error);
-        document.getElementById("docNavBar").style["display"] = "none";
-
         hideLoadingScreen();
         return;
     }
