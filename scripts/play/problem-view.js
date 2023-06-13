@@ -4,7 +4,7 @@ function breakProblem(text){
     let html = "";
     for(let i = 0; i < 4; i++){
         html += `
-        <h2 onclick="toggleView(${i})"><span id="hideIcon${i}">+</span> ${sections[i]}</h2>
+        <h2 style="cursor:pointer" onclick="toggleView(${i})"><span id="hideIcon${i}">+</span> ${sections[i]}</h2>
         <div class="problemSection" id="problemSection${i}" style="display:none">
             ${mdToHTML(text[i])}
         </div>

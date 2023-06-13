@@ -11,7 +11,7 @@
     --pretty-purple:rgb(245 152 229);
     --navbar-gap: max(12vh,100px);
     /* code blocks */
-    --lighter-font-color: rgb(100,100,100);
+    --lighter-font-color: rgb(111,111,111);
 }
 
 
@@ -601,6 +601,14 @@ button{
     padding-left: 15px;
     padding-right: 15px;
     font-size: 16px;
+}
+
+
+/* PROBLEM VIEW */
+.problemSection{
+    margin-top:20px;
+    padding-left: 2em;
+    color: var(--lighter-font-color);
 }
 
 /* MARKDOWN SYNTAX */
