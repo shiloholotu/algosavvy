@@ -55,6 +55,7 @@
         <script src="scripts/markdown-reading/markdown.js"></script>
 
         <script src="scripts/play/list-of-problems.js"></script>
+        <script src="scripts/play/problem-view.js"></script>
 
         <script>
 
@@ -63,10 +64,8 @@
             if(url.search("#") != -1){
                 const folder = url.split("#")[1].split("/")[0];
                 const ind = url.split("#")[1].split("/")[1];
-                const response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
-                const text = await response.text();
-                renderMd(text,"problemView");
-                hideLoadingScreen();
+
+                viewProblem(folder,ind);
             }
             else{
                 window.open('modes','_self');
