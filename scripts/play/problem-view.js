@@ -20,6 +20,14 @@ async function viewProblem(folder,ind){
     const response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
     const text = await response.text();
     document.getElementById("problemView").innerHTML = breakProblem(text);
+
+
+    document.getElementById("diffIndicator").innerHTML = folder[0].toUpperCase() + folder.slice(1);
+    if(folder == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
+    else if(folder == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
+    else if(folder == "hard")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
+    else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
+
     MathJax.typeset();
     hljs.highlightAll();
     hideLoadingScreen();
