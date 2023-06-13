@@ -13,9 +13,9 @@ const problemData = {
  - full problems, which can be broken into easy, medium, and hard, and are used by solution search, method madness, and time crunch
  - code snippets, which are used by error blitz
  */
-async function loadProblems(type = "easy", ind = 0){
+async function loadProblems(type = "easy", ind = 0, f = function(){displayRandomProblem()}){
     if(type == "done"){
-        displayRandomProblem();
+        f();//displayRandomProblem();
         hideLoadingScreen();
         return;
     }
@@ -41,7 +41,7 @@ async function loadProblems(type = "easy", ind = 0){
         else if(type == "snippet/cpp") type = "snippet/java";
         else type = "done";
     }
-    loadProblems(type,ind);
+    loadProblems(type,ind,f);
 }
 
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
+
+        <!-- our own stylesheet-->
+        <link id="mainStylesheet" rel="stylesheet" href="styles/light.css">
+        
+        <!-- showdown.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+        <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        
+        <!-- highligh.js -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+        <!-- alvin😊 -->
+        <link rel="icon" href="assets/logo/alvin32_r.png">
+        
+        
+        
+        <title id="title">AlgoSavvy</title>
+         
+    </head>
+    
+    <body>
+
+        <div id="navbar">
+            <a href="index"><h1 id="navbarLogo"><img src="assets/logo/alvin64_r.png">algosavvy</h1></a>
+        </div>
+
+        <div id="loadingScreen">
+            <img src="assets/logo/alvin64_r.png">
+            <h3>Getting everything ready...</h3>
+        </div>
+
+        <div class="navbarGap"></div>
+
+        <div class="bigBox">
+            <div class="mdContent" id="problemView"></div>
+        </div>
+
+
+        
+        <script src="scripts/util.js"></script>
+
+        <script src="scripts/markdown-reading/markdown.js"></script>
+
+        <script src="scripts/play/list-of-problems.js"></script>
+
+        <script>
+
+            const url = window.location.href;
+            
+            if(url.search("#") != -1){
+                const folder = url.split("#")[1].split("/")[0];
+                const ind = url.split("#")[1].split("/")[1];
+                const response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
+                const text = await response.text();
+                renderMd(text,"problemView");
+                hideLoadingScreen();
+            }
+            else{
+                window.open('modes','_self');
+            }
+        </script>
+
+        
+    </body>
+    
+</html>
