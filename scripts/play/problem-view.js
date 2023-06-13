@@ -21,7 +21,7 @@ async function viewProblem(folder,ind){
     try{
         response = await fetch(`problem-markdown/${folder}/${problemFiles[folder][ind][1]}`);
     }catch(error){
-        renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
+        renderMd(`# Uh Oh🫤\nWe can't find that problem. **Sorry**!\n\nHere's the error: \`${error}\``,"problemView");
         console.error(error);
         document.getElementById("docNavBar").style["display"] = "none";
 
