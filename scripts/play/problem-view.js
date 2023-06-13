@@ -3,10 +3,12 @@ function breakProblem(text){
     const sections = ["Problem Statement","Solution","Method","Time Complexity"];
     let html = "";
     for(let i = 0; i < 4; i++){
+        let dsigns = "";
+        if(i == 3)dsigns = "$";
         html += `
         <h2 style="cursor:pointer" onclick="toggleView(${i})"><span id="hideIcon${i}">+</span> ${sections[i]}</h2>
         <div class="problemSection" id="problemSection${i}" style="display:none">
-            ${dsigns}${mdToHTML(text[i])}${dsgins}
+            ${dsigns}${mdToHTML(text[i])}${dsigns}
         </div>
         `;
     }
