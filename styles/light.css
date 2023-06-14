@@ -119,13 +119,17 @@ button{
     display:flex;
     background:var(--bg-light-blue);
     z-index:999;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #navbar a{
     text-decoration: none;
     color:var(--font-color);
+    font-weight: 600;
 }
 
+/* alvin logo */
 #navbarLogo{
     font-size: 25px;
 }
@@ -136,6 +140,37 @@ button{
     margin-right: 10px;
 }
 
+
+/* side of navbar(tutorials, game modes, problemset, github) */
+#navbarSide{
+    display: flex;
+    align-items: center;
+}
+
+#navbarSide a{
+    margin-left: 5vw;
+    color:var(--dark-transp-blue);
+    transition:.5s;
+}
+
+#navbarSide a:hover{
+    color:var(--font-color);
+}
+
+#navbarSide img{
+    width: 30px;
+    vertical-align: middle;
+    padding:7px;
+    background:var(--font-color);
+    border-radius: 7px;
+    transition: .5s;
+}
+
+#navbarSide img:hover{
+    background:var(--lighter-font-color);
+}
+
+/* gap under navbar */
 .navbarGap{
     height: var(--navbar-gap);
 }
