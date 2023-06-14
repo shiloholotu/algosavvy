@@ -28,7 +28,7 @@ function displayProbNavBar(){
     let nextProblemInd = parseInt(curProblem)+1;
     let nextProblemFolder = curFolder;
     //if last doc of folder
-    if(nextProblemInd >= docs[nextProblemFolder].length){
+    if(nextProblemInd >= problemFiles[nextProblemFolder].length){
 
         nextProblemInd = 0;
 
