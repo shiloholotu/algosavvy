@@ -635,6 +635,7 @@ button{
 
 #completionStatusLabel{
     font-weight: 600;
+    color:var(--lighter-font-color);
 }
 
 #problemName{

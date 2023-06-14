@@ -11,7 +11,7 @@ function breakProblem(text){
         let display = mdToHTML(text[i]);
         if(i == 3)display = "\\(" + text[i] + "\\)";
         html += `
-        <h2 class="problemSectionHeader" onclick="toggleView(${i})"><img id="hideIcon${i}" src="assets/svg/right.svg">${sections[i]}</h2>
+        <h3 class="problemSectionHeader" onclick="toggleView(${i})"><img id="hideIcon${i}" src="assets/svg/right.svg">${sections[i]}</h3>
         <div class="problemSection" id="problemSection${i}" style="display:none">
             ${display}
         </div>
