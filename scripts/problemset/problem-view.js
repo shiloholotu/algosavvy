@@ -1,6 +1,50 @@
 let curProblem = null;
 let curFolder = null;
 
+
+//adds funcitonality to a tags in doc nav bar
+function displayProbNavBar(){
+
+    //previous doc
+    let prevProblemInd = parseInt(cuProblem)-1;
+    let prevProblemFolder = curFolder;
+    //if first doc of folder
+    if(prevProblemInd == -1){
+    
+        if(prevProblemFolder == "medium") prevProblemFolder = "easy";
+        else if(prevProblemFolder == "hard") prevProblemFolder = "medium";
+        else if(prevProblemFolder == "advanced") prevProblemFolder = "hard";
+        else{
+            document.getElementById("prevProbLink").style["background"] = "var(--light-transp-blue)";
+            document.getElementById("prevProbLink").style["pointer-events"] = "none";
+        }
+
+        prevProblemInd = problemFiles[prevProblemFolder].length-1;
+    }
+    document.getElementById("prevProbLink").setAttribute("href",`learn#${prevProblemFolder}/${prevProblemInd}`);
+    document.getElementById("prevProbLink").setAttribute("onclick",`openAndReload("learn#${prevProblemFolder}/${prevProblemInd}"); return false`);
+
+    //next doc
+    let nextProblemInd = parseInt(curProblem)+1;
+    let nextProblemFolder = curFolder;
+    //if last doc of folder
+    if(nextProblemInd >= docs[nextProblemFolder].length){
+
+        nextProblemInd = 0;
+
+        if(nextProblemFolder == "easy") nextProblemFolder = "medium";
+        else if(nextProblemFolder == "medium") nextProblemFolder = "hard";
+        else if(nextProblemFolder == "hard") nextProblemFolder = "advanced";
+        else{
+            document.getElementById("nextProbLink").style["background"] = "var(--light-transp-blue)";
+            document.getElementById("nextProbLink").style["pointer-events"] = "none";
+        }
+    }
+    document.getElementById("nextProbLink").setAttribute("href",`learn#${nextProblemFolder}/${nextProblemInd}`);
+    document.getElementById("nextProbLink").setAttribute("onclick",`openAndReload("learn#${nextProblemFolder}/${nextProblemInd}"); return false`);
+}
+
+
 //break problem into html collapsibles
 function breakProblem(text){
     text = text.split("\n[BREAK]\n");
@@ -46,6 +90,8 @@ async function viewProblem(folder,ind){
 
     document.getElementById("problemName").setAttribute("href",`problem#${folder}/${ind}`);
     document.getElementById("problemDiff").setAttribute("href","contents");
+
+    displayProbNavBar();
 
     //render checkbox depending on completion status of problem
     if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
