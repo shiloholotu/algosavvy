@@ -47,6 +47,8 @@ button{
     cursor: pointer;
 }
 
+/* big box */
+
 .bigBox{
     width:55vw;
     max-width: 800px;
@@ -57,6 +59,7 @@ button{
     background: white;
 }
 
+/* side bar */
 .sideBar{
     position: fixed;
     width: 15vw;
@@ -76,6 +79,14 @@ button{
 
 .sideBar a:hover{
     text-decoration: underline;
+}
+
+/* page header */
+
+.pageHeader{
+    font-weight: 800;
+    text-align: center;
+    margin-bottom:40px
 }
 
 /* LOADING SCREEN */
@@ -228,9 +239,10 @@ button{
     display:block;
 }
 #tableOfContents h2{
-    font-weight: bolder;
+    font-weight: 800;
     text-align: center;
-    margin-bottom:30px;
+    margin-bottom: 15px;
+    margin-top: 60px;
 }
 .tocBlock{
     border:2px solid var(--light-transp-blue);
@@ -467,15 +479,10 @@ button{
 
 /* diffuculty indicator */
 #diffIndicator{
-    font-weight: 600;
-    background: var(--pretty-green);
-    width: fit-content;
-    padding: 7px;
-    margin: 0;
-    border-radius: 10px;
     display: block;
     margin: 10px;
     margin-left: auto;
+    float:none;
 }
 
 /*answer section*/
@@ -641,6 +648,18 @@ button{
 #problemName{
     font-weight: 600;
     margin-left: 2vw;
+}
+
+/* PROBLEMSET PAGE */
+.diffLabel{
+    font-weight: 600;
+    background: var(--pretty-green);
+    width: fit-content;
+    padding: 7px;
+    margin: 0;
+    border-radius: 10px;
+    display: block;
+    float: right;
 }
 
 /* MARKDOWN SYNTAX */

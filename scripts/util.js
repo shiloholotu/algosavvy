@@ -19,6 +19,10 @@ function shuffleArray(arr){
     return newArr;
 }
 
+function capitalizeFirst(s){
+    return s[0].toUpperCase() + s.slice(1);
+}
+
 function hideLoadingScreen(){
     document.getElementById("loadingScreen").style["pointer-events"] = "none";
     setTimeout(function(){document.getElementById("loadingScreen").style["opacity"] = "0";},0);

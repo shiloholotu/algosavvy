@@ -27,70 +27,29 @@
         
         
         
-        <title id="title">AlgoSavvy</title>
+        <title>Problemset | AlgoSavvy</title>
          
     </head>
     
     <body>
-
+        
         <div id="navbar">
             <a href="index"><h1 id="navbarLogo"><img src="assets/logo/alvin64_r.png">algosavvy</h1></a>
         </div>
-
-        <div id="loadingScreen">
-            <img src="assets/logo/alvin64_r.png">
-            <h3>Getting everything ready...</h3>
-        </div>
-
         <div class="navbarGap"></div>
 
-        <div id="docNavBar">
-            <a id="prevDocLink" style="margin-left:0">Previous</a>
-            <a id="nextDocLink" style="margin-right:0">Next</a>
-        </div>
-
-        <div class="sideBar">
-            <a id="problemDiff"></a>
-            <a id="problemName"></a>
-            <div style="display:flex;align-items: center;">
-                <div class="checkBox" id="completionStatus" onclick="toggleCompletionStatus()"></div>
-                <p id="completionStatusLabel"></p>
-            </div>
-        </div>
-
-        <div class="bigBox">
-            <p id="diffIndicator" class="diffLabel"></p>
-            <div class="mdContent mdNoTopPadding" id="problemView"></div>
-        </div>
-
-
+        <h2 class="pageHeader">PROBLEM SET</h2>
         
+        <div id="tableOfContents"></div>
+
+
         <script src="scripts/util.js"></script>
         <script src="scripts/local-storage-vars.js"></script>
 
-        <script src="scripts/markdown-reading/markdown.js"></script>
-
         <script src="scripts/play/list-of-problems.js"></script>
 
-        <script src="scripts/problemset/problem-view.js"></script>
-
-        <script>
-
-            const url = window.location.href;
-            
-            if(url.search("#") != -1){
-                const folder = url.split("#")[1].split("/")[0];
-                const ind = url.split("#")[1].split("/")[1];
-                
-                viewProblem(folder,ind);
-
-                
-            }
-            else{
-                window.open('modes','_self');
-            }
-        </script>
-
+        <script src="scripts/problemset/table-of-contents/generate-toc.js"></script>
+        
         
     </body>
     
