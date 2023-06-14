@@ -1,3 +1,6 @@
+let curProblem = null;
+let curFolder = null;
+
 function breakProblem(text){
     text = text.split("\n[BREAK]\n");
     const sections = ["Problem Statement","Solution","Method","Time Complexity"];
@@ -29,10 +32,21 @@ async function viewProblem(folder,ind){
         hideLoadingScreen();
         return;
     }
+
+    curFolder = folder;
+    curProblem = ind;
     
     const text = await response.text();
     document.getElementById("problemView").innerHTML = breakProblem(text);
 
+    if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
+        renderCheckBox("completionStatus",false);
+        document.getElementById("completionStatusLabel").textContent = "Incomplete";
+    }
+    else{
+        renderCheckBox("completionStatus",true);
+        document.getElementById("completionStatusLabel").textContent = "Complete";
+    }
 
     document.getElementById("diffIndicator").innerHTML = folder[0].toUpperCase() + folder.slice(1);
     if(folder == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
@@ -53,5 +67,24 @@ function toggleView(section){
     else{
         document.getElementById("problemSection"+section).style["display"] = "none";
         document.getElementById("hideIcon"+section).setAttribute("src","assets/svg/right.svg");
+    }
+}
+
+function toggleCompletionStatus(){
+
+    if(getCompletionStatus(problemFiles[curFolder][curProblem][0]) == "complete"){
+
+        setCompletionStatus(problemFiles[curFolder][curProblem][0],"incomplete");
+        renderCheckBox("completionStatus",false);
+        document.getElementById("completionStatusLabel").textContent = "Incomplete";
+        
+    }
+
+    else{
+
+        setCompletionStatus(problemFiles[curFolder][curProblem][0],"complete");
+        renderCheckBox("completionStatus",true);
+        document.getElementById("completionStatusLabel").textContent = "Complete";
+        
     }
 }

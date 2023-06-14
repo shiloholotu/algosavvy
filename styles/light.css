@@ -278,7 +278,7 @@ button{
 
 .checkBox img{
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 #completionIndicatorLabel{
@@ -624,6 +624,12 @@ button{
     vertical-align: middle;
     margin-right: 10px;
 }
+
+/* side bar */
+#completionStatus{
+    margin-right: 10px;
+}
+
 
 /* MARKDOWN SYNTAX */
 
