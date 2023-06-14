@@ -6,7 +6,7 @@ let curFolder = null;
 function displayProbNavBar(){
 
     //previous doc
-    let prevProblemInd = parseInt(cuProblem)-1;
+    let prevProblemInd = parseInt(curProblem)-1;
     let prevProblemFolder = curFolder;
     //if first doc of folder
     if(prevProblemInd == -1){
