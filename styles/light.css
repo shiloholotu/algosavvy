@@ -388,9 +388,11 @@ button{
     margin: 5px;
 }
 
-.gameModeSettings input{
-    vertical-align: middle;
-    margin-right: 7px;
+.preferenceContainer{
+    display:flex;
+    align-items:middle;
+    margin-top:7px;
+    margin-bottom:7px
 }
 
 /* modes */

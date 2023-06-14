@@ -27,7 +27,7 @@ function generatePrefenceCheckboxes(mode,preference){
         if(modePref[i]) imgAttr = "src='assets/svg/check.svg' style='background:var(--pretty-green)'";
 
         html += `
-        <div style="display:flex;align-items:middle;margin-top:7px;margin-bottom:7px">
+        <div class="preferenceContainer">
             <div id="${mode}-${preference}-${i}" class="checkBox" onclick="togglePreference('${mode}','${preference}',${i})">
                 <img ${imgAttr}>
             </div>
