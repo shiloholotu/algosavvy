@@ -24,6 +24,15 @@ function hideLoadingScreen(){
     setTimeout(function(){document.getElementById("loadingScreen").style["opacity"] = "0";},0);
 }
 
+function renderCheckBox(element, on){
+    if(on){
+        document.getElementById(element).innerHTML = `<img src="assets/svg/check.svg" style="background:var(--pretty-green);float:right">`;
+    }
+    else{
+        document.getElementById(element).innerHTML = `<img src="assets/svg/minus.svg" style="background:var(--light-transp-blue);float:left">`;
+    }
+}
+
 //used for when you make changes to the url variables without changing the actual page, but actually want to update the page with those changes
 //window.open by itself just changes the url but the page isn't updated
 function openAndReload(url){

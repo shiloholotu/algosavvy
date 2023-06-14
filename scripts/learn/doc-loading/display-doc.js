@@ -55,17 +55,13 @@ function displayCompletionIndicator(){
     const completionIndicatorImg = document.getElementById("completionIndicatorImg");
     const completionIndicatorLabel = document.getElementById("completionIndicatorLabel");
     if(status == "complete"){
-        completionIndicatorImg.style["background"] = "var(--pretty-green)";
-        completionIndicatorImg.style["float"] = "right";
-        completionIndicatorImg.setAttribute("src","assets/svg/check.svg");
         completionIndicatorLabel.textContent = "Complete";
+        renderCheckBox("completionIndicator",true);
 
     }
     else{
-        completionIndicatorImg.style["background"] = "var(--light-transp-blue)";
-        completionIndicatorImg.style["float"] = "left";
-        completionIndicatorImg.setAttribute("src","assets/svg/minus.svg");
         completionIndicatorLabel.textContent = "Incomplete";
+        renderCheckBox("completionIndicator",false);
     }
 }
 
