@@ -71,6 +71,7 @@ button{
     text-decoration: none;
     color: var(--dark-transp-blue);
     margin-bottom:10px;
+    opacity: 1;
 }
 
 .sideBar a:hover{

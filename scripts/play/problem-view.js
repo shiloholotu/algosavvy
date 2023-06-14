@@ -42,7 +42,7 @@ async function viewProblem(folder,ind){
 
     //side bar links
     document.getElementById("problemName").textContent = problemFiles[folder][ind][0];
-    document.getElementById("problemDiff").textContent = folder[0].toUpperCase() + folder[0].slice(1);
+    document.getElementById("problemDiff").textContent = folder[0].toUpperCase() + folder.slice(1);
 
     document.getElementById("problemName").setAttribute("href",`problem/${folder}/${ind}`);
     document.getElementById("problemDiff").setAttribute("href","contents");
