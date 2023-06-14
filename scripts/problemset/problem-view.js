@@ -21,8 +21,8 @@ function displayProbNavBar(){
 
         prevProblemInd = problemFiles[prevProblemFolder].length-1;
     }
-    document.getElementById("prevProbLink").setAttribute("href",`learn#${prevProblemFolder}/${prevProblemInd}`);
-    document.getElementById("prevProbLink").setAttribute("onclick",`openAndReload("learn#${prevProblemFolder}/${prevProblemInd}"); return false`);
+    document.getElementById("prevProbLink").setAttribute("href",`problem#${prevProblemFolder}/${prevProblemInd}`);
+    document.getElementById("prevProbLink").setAttribute("onclick",`openAndReload("problem#${prevProblemFolder}/${prevProblemInd}"); return false`);
 
     //next doc
     let nextProblemInd = parseInt(curProblem)+1;
@@ -40,8 +40,8 @@ function displayProbNavBar(){
             document.getElementById("nextProbLink").style["pointer-events"] = "none";
         }
     }
-    document.getElementById("nextProbLink").setAttribute("href",`learn#${nextProblemFolder}/${nextProblemInd}`);
-    document.getElementById("nextProbLink").setAttribute("onclick",`openAndReload("learn#${nextProblemFolder}/${nextProblemInd}"); return false`);
+    document.getElementById("nextProbLink").setAttribute("href",`problem#${nextProblemFolder}/${nextProblemInd}`);
+    document.getElementById("nextProbLink").setAttribute("onclick",`openAndReload("problem#${nextProblemFolder}/${nextProblemInd}"); return false`);
 }
 
 
