@@ -270,7 +270,7 @@ button{
     border: 2px solid var(--light-transp-blue);
     border-radius: 10px;
     padding: 4px;
-    width: 48px;
+    width: 24px;
     height:24px;
     vertical-align: middle;
     cursor:pointer;
@@ -319,17 +319,20 @@ button{
 
 /* pop up */
 #gameModePopup{
-    padding: 30px;
-    max-height: calc(75vh - 60px);
     position: fixed;
     right: 50%;
     left: 50%;
     transform: translate(-50%,0);
-    overflow: auto;
     z-index: 998;
     transition:.5s;
     opacity: 0;
     pointer-events:none;
+}
+
+#popupContent{
+    max-height: calc(75vh - 60px);
+    padding:30px;
+    overflow:auto;
 }
 
 #popupBackdrop{

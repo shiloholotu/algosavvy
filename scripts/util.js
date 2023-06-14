@@ -26,10 +26,11 @@ function hideLoadingScreen(){
 
 function renderCheckBox(element, on){
     if(on){
-        document.getElementById(element).innerHTML = `<img src="assets/svg/check.svg" style="background:var(--pretty-green);float:right">`;
+
+        document.getElementById(element).innerHTML = `<img src="assets/svg/check.svg" style="background:var(--pretty-green)">`;
     }
     else{
-        document.getElementById(element).innerHTML = `<img src="assets/svg/minus.svg" style="background:var(--light-transp-blue);float:left">`;
+        document.getElementById(element).innerHTML = `<img src="assets/svg/minus.svg" style="background:var(--light-transp-blue)">`;
     }
 }
 

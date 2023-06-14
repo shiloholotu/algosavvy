@@ -14,8 +14,6 @@ const prefDetails = {
 
 function generatePrefenceCheckboxes(mode,preference){
 
-    
-
     let html = `
     <div class="gameModeSettings">
         <h3>${prefDetails[preference][0]}</h3>
@@ -24,9 +22,17 @@ function generatePrefenceCheckboxes(mode,preference){
     const checkboxes = prefDetails[preference][1];
     const modePref = getPlayPreference(mode,preference);
     for(const i in checkboxes){
-        let checked = "";
-        if(modePref[i])checked = "checked"
-        html += `<p><input onclick="togglePreference('${mode}','${preference}',${i})" type="checkbox" ${checked}>${checkboxes[i]}</p>`;
+
+        let imgAttr = "src='assets/svg/minus.svg' style='background:var(--light-transp-blue)'";
+        if(modePref[i]) imgAttr = "src='assets/svg/check.svg' style='background:var(--pretty-green)'";
+
+        html += `
+        <div style="display:flex;align-items:middle;margin-top:7px;margin-bottom:7px">
+            <div id="${mode}-${preference}-${i}" class="checkBox" onclick="togglePreference('${mode}','${preference}',${i})">
+                <img ${imgAttr}>
+            </div>
+            <p>${checkboxes[i]}</p>
+        </div>`;
     }
 
     html += "</div>";
@@ -68,7 +74,7 @@ function gameModePopup(mode){
 
     html += `<a href='play#${mode}'>Play!</a>`;
 
-    document.getElementById("gameModePopup").innerHTML = html;
+    document.getElementById("popupContent").innerHTML = html;
 
     document.getElementById("gameModePopup").style["opacity"] = 1;
     document.getElementById("gameModePopup").style["pointer-events"] = "all";
@@ -90,5 +96,6 @@ function togglePreference(mode,preference,ind){
     const curVal = getPlayPreference(mode,preference)[ind];
     let newPref = getPlayPreference(mode,preference);
     newPref[ind] = !curVal;
+    renderCheckBox(`${mode}-${preference}-${ind}`,newPref[ind]);
     setPlayPreference(mode,preference,newPref);
 }
