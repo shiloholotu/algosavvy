@@ -65,6 +65,18 @@ button{
     overflow: auto;
 }
 
+.sideBar a{
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark-transp-blue);
+    margin-bottom:10px;
+}
+
+.sideBar a:hover{
+    text-decoration: underline;
+}
+
 /* LOADING SCREEN */
 #loadingScreen{
     position: fixed;
@@ -253,17 +265,7 @@ button{
 /* DOC VIEW LEARN PAGE */
 
 /* doc contents preview */
-#docContents a{
-    display: block;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--dark-transp-blue);
-    opacity: 1;
-    margin-bottom:10px;
-}
-#docContents a:hover{
-    text-decoration: underline;
-}
+
 
 .checkBox{
     display: inline-block;
@@ -634,9 +636,9 @@ button{
     font-weight: 600;
 }
 
-
 #problemName{
     font-weight: 600;
+    margin-left: 2vw;
 }
 
 /* MARKDOWN SYNTAX */

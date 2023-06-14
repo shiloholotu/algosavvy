@@ -40,7 +40,12 @@ async function viewProblem(folder,ind){
     const text = await response.text();
     document.getElementById("problemView").innerHTML = breakProblem(text);
 
+    //side bar links
     document.getElementById("problemName").textContent = problemFiles[folder][ind][0];
+    document.getElementById("problemDiff").textContent = folder[0].toUpperCase() + folder[0].slice(1);
+
+    document.getElementById("problemName").setAttribute("href",`problem/${folder}/${ind}`);
+    document.getElementById("problemDiff").setAttribute("href","contents");
 
     //render checkbox depending on completion status of problem
     if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
