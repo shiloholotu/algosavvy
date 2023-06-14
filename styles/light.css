@@ -390,7 +390,7 @@ button{
 
 .preferenceContainer{
     display:flex;
-    align-items:middle;
+    align-items:center;
     margin-top:7px;
     margin-bottom:7px
 }
@@ -630,6 +630,14 @@ button{
     margin-right: 10px;
 }
 
+#completionStatusLabel{
+    font-weight: 600;
+}
+
+
+#problemName{
+    font-weight: 600;
+}
 
 /* MARKDOWN SYNTAX */
 

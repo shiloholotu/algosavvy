@@ -1,6 +1,7 @@
 let curProblem = null;
 let curFolder = null;
 
+//break problem into html collapsibles
 function breakProblem(text){
     text = text.split("\n[BREAK]\n");
     const sections = ["Problem Statement","Solution","Method","Time Complexity"];
@@ -39,6 +40,9 @@ async function viewProblem(folder,ind){
     const text = await response.text();
     document.getElementById("problemView").innerHTML = breakProblem(text);
 
+    document.getElementById("problemName").textContent = problemFiles[folder][ind][0];
+
+    //render checkbox depending on completion status of problem
     if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
@@ -48,6 +52,8 @@ async function viewProblem(folder,ind){
         document.getElementById("completionStatusLabel").textContent = "Complete";
     }
 
+
+    //color difficulty indicator
     document.getElementById("diffIndicator").innerHTML = folder[0].toUpperCase() + folder.slice(1);
     if(folder == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
     else if(folder == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
