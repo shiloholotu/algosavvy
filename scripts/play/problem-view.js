@@ -44,7 +44,7 @@ async function viewProblem(folder,ind){
     document.getElementById("problemName").textContent = problemFiles[folder][ind][0];
     document.getElementById("problemDiff").textContent = folder[0].toUpperCase() + folder.slice(1);
 
-    document.getElementById("problemName").setAttribute("href",`problem/${folder}/${ind}`);
+    document.getElementById("problemName").setAttribute("href",`problem#${folder}/${ind}`);
     document.getElementById("problemDiff").setAttribute("href","contents");
 
     //render checkbox depending on completion status of problem
