@@ -20,6 +20,7 @@ body{
     font-family: 'Poppins';
     color:var(--font-color);
     background:var(--bg-light-blue);
+    margin:0;
 }
 
 
@@ -174,6 +175,31 @@ button{
 .navbarGap{
     height: var(--navbar-gap);
 }
+
+
+/* FOOTER */
+#footer{
+    background:var(--light-transp-blue);
+    display: grid;
+    padding: 10px;
+}
+
+#footer p{
+    font-weight: 600;
+    color:var(--dark-transp-blue);
+    margin:0;
+}
+
+#footer span{
+    color:black;
+    text-shadow: 0 0 2px;
+}
+
+#footer a{
+    color:var(--font-color);
+    text-decoration: none;
+}
+
 
 /* LANDING PAGE */
 .bigHeader{

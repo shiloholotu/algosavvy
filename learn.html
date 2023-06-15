@@ -58,7 +58,6 @@
         <script src="scripts/util.js"></script>
         <script src="scripts/local-storage-vars.js"></script>
         <script src="scripts/templating.js"></script>
-        <script>renderNavbar()</script>
         
         <script src="scripts/markdown-reading/markdown.js"></script>
 
@@ -66,7 +65,10 @@
 
         <script src="scripts/learn/doc-loading/display-doc.js"></script>
         
-
+        <script>
+            renderNavbar();
+            renderFooter();
+        </script>
 
         <script>
             const url = window.location.href;
