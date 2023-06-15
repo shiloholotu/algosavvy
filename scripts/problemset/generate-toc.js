@@ -33,11 +33,9 @@ function generateProblemList(diff){
             </div>
             
         </a>`;
-        if(i != problemFiles[diff].length-1){
-            html += "<div class='tocBlockSeparator'></div>";
-        }
+        
+        html += "<div style='height:20px'></div>";
     }
-    html += "<div style='height:10vh'></div>"
 
     return html;
 }
