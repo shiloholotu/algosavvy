@@ -33,22 +33,10 @@
     
     <body>
 
-        <div id="navbar">
-            <a href="index"><h1 id="navbarLogo"><img src="assets/logo/alvin64_r.png">algosavvy</h1></a>
-            <div id="navbarSide">
-                <a href="contents">Tutorials</a>
-                <a href="modes">Game Modes</a>
-                <a href="problemset">Problemset</a>
-                <a href="https://github.com/shiloholotu/algosavvy"><img src="assets/svg/github-mark-white.svg"></a>
-            </div>
-        </div>
-
         <div id="loadingScreen">
             <img src="assets/logo/alvin64_r.png">
             <h3>Getting everything ready...</h3>
         </div>
-
-        <div class="navbarGap"></div>
 
         <div id="sessionStats" class="sideBar">
         </div>
@@ -79,6 +67,9 @@
         
         <script src="scripts/util.js"></script>
         <script src="scripts/local-storage-vars.js"></script>
+        <script src="scripts/templating.js">
+            renderNavbar();
+        </script>
 
         <script src="scripts/markdown-reading/markdown.js"></script>
 
