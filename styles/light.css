@@ -183,8 +183,6 @@ button{
     width: fit-content;
     margin: auto;
     margin-bottom: 5vh;
-    border-radius: 15px;
-    border: 2px solid var(--light-transp-blue);
 }
 
 #footer p{
