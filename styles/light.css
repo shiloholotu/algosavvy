@@ -179,9 +179,12 @@ button{
 
 /* FOOTER */
 #footer{
-    background:var(--light-transp-blue);
-    display: grid;
     padding: 10px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    border: 2px solid var(--light-transp-blue);
 }
 
 #footer p{
@@ -196,7 +199,7 @@ button{
 }
 
 #footer a{
-    color:var(--font-color);
+    color:var(--lighter-font-color);
     text-decoration: none;
 }
 
