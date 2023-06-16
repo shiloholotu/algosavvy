@@ -531,6 +531,7 @@ button{
 #answerSection,#correctionSection,#confirmationSection{
     padding:10px;
     background:var(--bg-light-blue);
+    overflow: auto;
 }
 
 /* session stats */
@@ -658,6 +659,7 @@ button{
     background:var(--bg-light-blue);
     padding: 40px;
     padding-top: 0.1px;/*when its 0, the margins from the paragraphs start acting weird*/
+    overflow: auto;
 }
 
 /* confirmation section */
