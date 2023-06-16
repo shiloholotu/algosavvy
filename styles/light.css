@@ -110,6 +110,10 @@ button{
 }
 
 /* NAVBAR */
+#mobileNavbar,#burgerMenu{
+    display: none;
+}
+
 #navbar{
     border-bottom: 2px solid var(--light-transp-blue);
     padding: 10px;
@@ -787,6 +791,69 @@ pre code.hljs {
 /* MOBILE */
 @media only screen and (max-width: 950px) {
 
+    /* general */
+    .bigGap{
+        height: 20vh;
+    }
+
+    /* navbar and burger menu */
+    #navbar{
+        display:none;
+    }
+
+    #mobileNavbar{
+        display: block;
+        border-bottom: 2px solid var(--light-transp-blue);
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        display:flex;
+        background:var(--bg-light-blue);
+        z-index:999;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #mobileNavbar img{
+        width: 40px;
+        vertical-align: middle;
+    }
+
+
+    #burgerMenu{
+        position: fixed;
+        display: grid;
+        z-index: 998;
+        background: var(--bg-light-blue);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-items: center;
+        align-content: center;
+        transition:.5s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #burgerMenu img{
+        width: 30px;
+        padding:7px;
+        background:var(--font-color);
+        border-radius: 7px;
+        transition: .5s;
+    }
+
+    #burgerMenu a{
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--dark-transp-blue);
+        margin:5vh;
+
+    }
+
     /* landing page */
     .bigHeader{
         font-size:2.4em;
@@ -820,7 +887,7 @@ pre code.hljs {
 
 
     /* tutorial view page */
-    #docContents{
+    .sideBar{
         width: unset;
         position: unset;
         max-height: unset;

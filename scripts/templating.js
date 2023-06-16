@@ -11,8 +11,36 @@ function renderNavbar(){
                 <a href="https://github.com/shiloholotu/algosavvy"><img src="assets/svg/github-mark-white.svg"></a>
             </div>
         </div>
+
+        <div id="mobileNavbar">
+            <a href="index"><img src="assets/logo/alvin64_r.png"></a>
+            <img id="burgerMenuIcon" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
+        </div>
+
+        <div id="burgerMenu">
+            <a href="contents">Tutorials</a>
+            <a href="modes">Game Modes</a>
+            <a href="problemset">Problemset</a>
+            <a href="https://github.com/shiloholotu/algosavvy"><img src="assets/svg/github-mark-white.svg"></a>
+        </div>
+
         <div class="navbarGap"></div>
     ` + body.innerHTML;
+}
+
+function toggleBurgerMenu(){
+    if(document.getElementById("burgerMenu").style["opacity"] == 0){
+
+        document.getElementById("burgerMenu").style["opacity"] = 1;
+        document.getElementById("burgerMenu").style["pointer-events"] = "all";
+        document.getElementById("burgerMenuIcon").setAttribute("src","assets/svg/cancel.svg");
+    }
+
+    else{
+        document.getElementById("burgerMenu").style["opacity"] = 0;
+        document.getElementById("burgerMenu").style["pointer-events"] = "none";
+        document.getElementById("burgerMenuIcon").setAttribute("src","assets/svg/menu.svg");
+    }
 }
 
 //footer
