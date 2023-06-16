@@ -768,20 +768,6 @@ img{
 
 /* code */
 
-.singleCodeBlock,.multiCodeBlock{
-    background:var(--bg-light-blue);
-    font-family: monospace;
-    padding:10px;
-    border-radius: 7px;
-    font-weight: lighter;
-    color:var(--lighter-font-color);
-    border: none;
-}
-
-.multiCodeBlock{
-    overflow-x:auto;
-}
-
 code{
     padding: 5px;
     border-radius: 7px;
@@ -796,3 +782,61 @@ pre code.hljs {
     border-radius: 10px;
     max-height: 50vh;
 }
+
+
+/* MOBILE */
+@media only screen and (max-width: 950px) {
+
+    /* landing page */
+    .bigHeader{
+        font-size:2.4em;
+    }
+    .subHeader{
+        font-size:1em;
+    }
+
+    .floatingCubeContainer{
+        display: none;
+    }
+
+    #tutorialImage{
+        display: none;
+    }
+
+    .gameModeIcon{
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .gameModeIcon p{
+        font-size: 12px;
+    }
+
+    #modePreviewContainer{
+        width: 80%;
+    }
+
+    body {
+      background-color: lightblue;
+    }
+
+
+    /* tutorial view page */
+    #docContents{
+        width: unset;
+        position: unset;
+        max-height: unset;
+    }
+
+    #docNavBar{
+        width:unset;
+        padding:15px;
+    }
+
+    .bigBox{
+        width: unset;
+        border: none;
+        border-radius: 0;
+    }
+  }
