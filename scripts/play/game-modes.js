@@ -1,3 +1,4 @@
+//info on different modes
 const modeInfo = {
     "solution-search": ["HEY!","Solution Search", "Write a solution in plain english"],
     "method-madness": ["o o o","Method Madness", "Choose the best DS/A for a problem"],
@@ -5,6 +6,7 @@ const modeInfo = {
     "error-blitz": ["! ! !","Error Blitz", "Spot the potential error"]
 };
 
+//display names of preferences
 const prefDetails = {
     "difficulty": ["Difficulty",["Easy","Medium","Hard","Advanced"]],
     "problemInfo": ["Problem Info",["Problem Statement","Solution","Method","Time Compexltiy"]],
@@ -71,7 +73,6 @@ function gameModePopup(mode){
     else html += generatePrefenceCheckboxes(mode,"language");
 
     html += `<button id="restoreButton" onclick="restoreDefault('${mode}');gameModePopup('${mode}')">Restore to default</button>`;
-
     html += `<a href='play#${mode}'>Play!</a>`;
 
     document.getElementById("popupContent").innerHTML = html;

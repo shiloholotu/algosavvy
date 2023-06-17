@@ -23,19 +23,18 @@ const defaultPrefs = {
     "solution-search":{
         //what part of the problem is shown
         "problemInfo":[true,false,false,false],//[statement, solution, method, time complexity]
-        "difficulty":[true,true,true,true]//easy, medium, hard, advanced
+        "difficulty":[true,true,true,true]//[easy, medium, hard, advanced]
     },
     "method-madness":{ 
         "problemInfo":[true,false,false,false],
         "difficulty":[true,true,true,true]
     },
     "time-crunch":{
-        //what part of the problem is shown
-        "problemInfo":[true,true,false,false],//[statement, solution, method, time complexity]
-        "difficulty":[true,true,true,true]//easy, medium, hard, advanced
+        "problemInfo":[true,true,false,false],
+        "difficulty":[true,true,true,true]
     },
     "error-blitz":{
-        "language":[true,true]//c++,java
+        "language":[true,false]//[c++,java]
     }
 };
 

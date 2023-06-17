@@ -416,6 +416,10 @@ button{
     pointer-events:none;
 }
 
+#closePopup{
+    display:none;
+}
+
 #popupContent{
     max-height: calc(75vh - 60px);
     padding:30px;
@@ -904,5 +908,25 @@ pre code.hljs {
         width: unset;
         border: none;
         border-radius: 0;
+    }
+
+    /* game mode page */
+    #gameModePopup{
+        left: 0;
+        right: 0;
+        transform: unset;
+        top: 0;
+        bottom: 0;
+        z-index: 9999;
+    }
+
+    #popupContent{
+        max-height: unset;
+    }
+
+    #closePopup{
+        display: block;
+        margin-left:auto;
+        width: 40px;
     }
   }
