@@ -1,0 +1,77 @@
+:root{
+    /* overall stuff */
+    --font-color: rgb(242,242,247);
+    --bg-light-blue:  rgb(14,17,25);
+    --lighter-gray: rgb(22,27,34);
+    --light-transp-blue: rgb(97,97,103, .3);
+    --dark-transp-blue:rgb(175,175,185,.3);
+    --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
+    --pretty-green: rgb(140,223,130);
+    --pretty-yellow: rgb(255 216 107);
+    --pretty-red:rgb(255 109 109);
+    --pretty-purple:rgb(245 152 229);
+    --navbar-gap: max(12vh,100px);
+    /* code blocks */
+    --lighter-font-color: rgb(111,111,111);
+}
+
+/* NAVBAR */
+#navbarSide img{
+    background:transparent;
+    opacity:.3;
+}
+#navbarSide img:hover{
+    background: transparent;
+    opacity: 1;
+}
+
+/* LANDING PAGE */
+.gameModeIcon{
+    color:var(--bg-light-blue);
+}
+
+.bigHeader span{
+    text-shadow: 0 0 100px rgb(140,223,130,0.5);
+}
+
+.actionButton{
+    background:transparent;
+    border:2px solid var(--light-transp-blue);
+}
+
+.actionButton:hover{
+    border:2px solid var(--dark-transp-blue);
+}
+
+/* TUTORIAL LIST PAGE */
+.tocBlock img{
+    vertical-align: middle;
+    border: 2px solid var(--light-transp-blue);
+    border-radius: 7px;
+    background: none;
+    margin-right: 7px;
+}
+
+.tocBlock:hover{
+    border:2px solid var(--dark-transp-blue);
+}
+
+
+/* GAME MODE PAGE */
+
+#gameModePopup{
+    background:var(--lighter-gray);
+}
+
+#popupBackdrop{
+    background: rgb(14 17 25 / 50%);
+}
+
+.gameModeOption:hover{
+    border:2px solid var(--dark-transp-blue);
+}
+
+/* PROBLEMSET PAGE */
+.diffLabel{
+    color:var(--bg-light-blue);
+}

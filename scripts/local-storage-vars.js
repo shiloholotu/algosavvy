@@ -1,3 +1,8 @@
+//color scheme
+if(localStorage.getItem("colorScheme") == null){
+    localStorage.setItem("colorScheme","system");
+}
+
 //tutorial completion history
 if(localStorage.getItem("completionHistory") == null){
     const completionHistory = {};

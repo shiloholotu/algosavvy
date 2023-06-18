@@ -12,7 +12,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
 
         <!-- our own stylesheet-->
-        <link id="mainStylesheet" rel="stylesheet" href="styles/light.css">
+        <link rel="stylesheet" href="styles/light.css">
+        <link id="darkMode" rel="stylesheet">
+        <script src="scripts/effects/color-scheme.js"></script>
         
         <!-- showdown.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
@@ -35,14 +37,14 @@
         
         <div class="navbarGap"></div>
 
-        <div class="floatingCubeContainer">
+        <div class="floatingCubeContainer" style="margin-bottom:15px">
             
-            <div id="floatingCube4" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(m)</p></div>
-            <div id="floatingCube5" class="gameModeIcon" style="background:var(--pretty-green)"><p>SORT</p></div>
-            <div id="floatingCube2" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>BIN</p></div>
-            <img id="floatingCube3" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
-            <div id="floatingCube6" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>:D</p></div>
-            <div id="floatingCube1" class="gameModeIcon"><p>TREE</p></div>
+            <div id="floatingCube1" class="gameModeIcon"><p>O(m)</p></div>
+            <div id="floatingCube2" class="gameModeIcon"><p>SORT</p></div>
+            <div id="floatingCube3" class="gameModeIcon" ><p>BIN</p></div>
+            <img id="floatingCube4" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingCube5" class="gameModeIcon"><p>:D</p></div>
+            <div id="floatingCube6" class="gameModeIcon"><p>TREE</p></div>
             
         </div>
 
@@ -136,8 +138,10 @@
             </div>
         </div>
 
-        
+        <script src="scripts/local-storage-vars.js"></script>
+
         <script src="scripts/effects/parallax.js"></script>
+
         <script src="scripts/templating.js"></script>
         <script src="scripts/util.js"></script>
 
@@ -147,22 +151,41 @@
         </script>
 
         <script>
+
+            let colors = shuffleArray(["var(--pretty-red)","var(--pretty-yellow)","var(--pretty-purple)","rgb(217 217 227)"]);
+            
             const sp = new ScrollParallax();
             for(let i = 1; i <= 12; i++){
 
-                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
+                const cube = document.getElementById(`floatingCube${i}`);
+                let cubeColor = colors[(i - 1) % 4];
+                console.log(cubeColor);
+                if(cube.tagName == "IMG")cubeColor = "var(--pretty-green)";
 
-                const scrollIntensity = Math.random();
-                document.getElementById(`floatingCube${i}`).style["opacity"] = Math.max(.2,scrollIntensity);
-                sp.enable(`floatingCube${i}`,scrollIntensity);
+                cube.style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
+                cube.style["background"] = cubeColor;
+                cube.style["box-shadow"] = "0 0 150px " + cubeColor;
+
+                const intensity = Math.random();
+                cube.style["opacity"] = Math.max(.2,intensity);
+                sp.enable(`floatingCube${i}`,intensity);
             }
 
 
+            colors = shuffleArray(colors);
+
             for(let i = 13; i <= 16; i++){
-                document.getElementById(`floatingCube${i}`).style["margin-top"] = `${Math.random() *15 * randomChoice([1,-1])}vh`;
+
+                const cube = document.getElementById(`floatingCube${i}`);
+                let cubeColor = colors[(i - 1) % 4];
+                if(cube.tagName == "IMG")cubeColor = "var(--pretty-green)";
+
+                cube.style["margin-top"] = `${Math.random() *15 * randomChoice([1,-1])}vh`;
+                cube.style["background"] = cubeColor;
+                cube.style["box-shadow"] = "0 0 100px " + cubeColor;
 
                 const intensity = Math.max(.2,Math.min(.5,Math.random()));
-                document.getElementById(`floatingCube${i}`).style["opacity"] = 2*intensity;
+                cube.style["opacity"] = 2*intensity;
                 sp.enable(`floatingCube${i}`,intensity);
             }
 

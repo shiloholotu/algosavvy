@@ -8,7 +8,7 @@ function generateTOC(){
         let compStatusStr = "<p style='font-weight:lighter'><img src='assets/svg/minus.svg'><span style='opacity:.5'>Incomplete</span></p>";
         let boxShadowStr = "";
         if(getCompletionStatus(docs["introduction"][i][0]) == "complete"){
-            compStatusStr = "<p style='font-weight:lighter'><img src='assets/svg/check.svg' style='background:var(--pretty-green)'><span style='opacity:.5'>Complete</span></p>";
+            compStatusStr = "<p style='font-weight:lighter'><img src='assets/svg/check.svg' style='background:var(--pretty-green);border:none'><span style='opacity:.5'>Complete</span></p>";
             boxShadowStr = "style='box-shadow:none'";
         }
         table.innerHTML += `

@@ -215,6 +215,7 @@ button{
 /* LANDING PAGE */
 .bigHeader{
     font-size: 3em;
+    margin-bottom: .5em;
     text-align: center;
 }
 .bigHeader span{
@@ -241,6 +242,7 @@ button{
     margin:auto;
     text-align: center;
     max-width: 700px;
+    opacity: .7;
 }
 
 .bigParagraph b{
@@ -863,6 +865,7 @@ pre code.hljs {
     /* landing page */
     .bigHeader{
         font-size:2.4em;
+        
     }
     .subHeader{
         font-size:1em;
