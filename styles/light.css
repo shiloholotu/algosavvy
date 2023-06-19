@@ -746,7 +746,6 @@ button{
 
 /* container */
 .mdContent{
-    background: white;
     padding:40px;
 }
 
@@ -783,14 +782,14 @@ img{
 code{
     padding: 5px;
     border-radius: 7px;
-    color:rgb(111,111,111);
-    background:rgb(242,242,247);
+    color:var(--lighter-font-color);
+    background:var(--bg-light-blue);
 }
 
 pre code.hljs {
     padding: 14px;
     font-size: 14px;
-    background: rgb(242,242,247);
+    background: var(--bg-light-blue);
     border-radius: 10px;
     max-height: 50vh;
 }
