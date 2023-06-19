@@ -80,3 +80,8 @@
 .diffLabel{
     color:var(--bg-light-blue);
 }
+
+/* MARKDOWN */
+pre code.hljs {
+    background: rgb(40,44,52);
+}
