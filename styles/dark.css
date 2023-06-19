@@ -35,6 +35,10 @@
     color:var(--bg-light-blue);
 }
 
+.gameModeDesc{
+    font-weight: lighter;
+}
+
 .bigHeader span{
     text-shadow: 0 0 100px rgb(140,223,130,0.5);
 }
