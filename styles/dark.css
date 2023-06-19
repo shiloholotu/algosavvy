@@ -15,6 +15,11 @@
     --lighter-font-color: rgb(111,111,111);
 }
 
+/* GENERAL */
+.bigBox{
+    background:var(--lighter-gray);
+}
+
 /* NAVBAR */
 #navbarSide img{
     background:transparent;

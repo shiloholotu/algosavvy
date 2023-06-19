@@ -783,14 +783,14 @@ img{
 code{
     padding: 5px;
     border-radius: 7px;
-    color:var(--lighter-font-color);
-    background:var(--bg-light-blue);
+    color:rgb(111,111,111);
+    background:rgb(242,242,247);
 }
 
 pre code.hljs {
     padding: 14px;
     font-size: 14px;
-    background: var(--bg-light-blue);
+    background: rgb(242,242,247);
     border-radius: 10px;
     max-height: 50vh;
 }
