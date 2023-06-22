@@ -80,7 +80,33 @@
     border:2px solid var(--dark-transp-blue);
 }
 
+/* PLAY PAGE */
+.confirmChoiceButton{
+    color:var(--bg-light-blue);
+}
+
+#correctionIndicator{
+    color:var(--bg-light-blue);
+}
+
+#changeCorrectButton{
+    color:var(--bg-light-blue);
+}
+
+#nextProblemButton{
+    background: var(--lighter-gray);
+    color: var(--font-color);
+}
+
+
+#errorText{
+    background-color: transparent;
+}
+
+
 /* PROBLEMSET PAGE */
+
+
 .diffLabel{
     color:var(--bg-light-blue);
 }

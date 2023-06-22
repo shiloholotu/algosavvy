@@ -64,7 +64,7 @@ function hideLoadingScreen(){
 //check boxes
 function renderCheckBox(element, on){
 
-    if(on) document.getElementById(element).innerHTML = `<img src="assets/svg/check.svg" style="background:var(--pretty-green)">`;
-    else document.getElementById(element).innerHTML = `<img src="assets/svg/minus.svg" style="background:var(--light-transp-blue)">`;
+    if(on) document.getElementById(element).innerHTML = `<div style="background:var(--pretty-green)"></div>`;
+    else document.getElementById(element).innerHTML = `<div style="background:var(--light-transp-blue)"></div>`;
 
 }

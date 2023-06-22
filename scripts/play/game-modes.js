@@ -25,13 +25,13 @@ function generatePrefenceCheckboxes(mode,preference){
     const modePref = getPlayPreference(mode,preference);
     for(const i in checkboxes){
 
-        let imgAttr = "src='assets/svg/minus.svg' style='background:var(--light-transp-blue)'";
-        if(modePref[i]) imgAttr = "src='assets/svg/check.svg' style='background:var(--pretty-green)'";
+        let style = "background:var(--light-transp-blue)";
+        if(modePref[i]) style = "background:var(--pretty-green)";
 
         html += `
         <div class="preferenceContainer">
             <div id="${mode}-${preference}-${i}" class="checkBox" onclick="togglePreference('${mode}','${preference}',${i})">
-                <img ${imgAttr}>
+                <div style="${style}"></div>
             </div>
             <p>${checkboxes[i]}</p>
         </div>`;
