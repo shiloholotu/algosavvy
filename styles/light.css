@@ -371,7 +371,7 @@ button{
 .checkBox div{
     max-width: 100%;
     height: inherit;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 #completionIndicatorLabel{
