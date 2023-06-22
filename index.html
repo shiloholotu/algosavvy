@@ -39,14 +39,14 @@
         
         <div class="navbarGap"></div>
 
-        <div class="floatingCubeContainer" style="margin-bottom:15px">
+        <div class="floatingWidgetContainer" style="margin-bottom:15px">
             
-            <div id="floatingCube1" class="gameModeIcon"><p>O(m)</p></div>
-            <div id="floatingCube2" class="gameModeIcon"><p>SORT</p></div>
-            <div id="floatingCube3" class="gameModeIcon" ><p>BIN</p></div>
-            <img id="floatingCube4" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
-            <div id="floatingCube5" class="gameModeIcon"><p>:D</p></div>
-            <div id="floatingCube6" class="gameModeIcon"><p>TREE</p></div>
+            <div id="floatingWidget1" class="gameModeIcon"><p>O(m)</p></div>
+            <div id="floatingWidget2" class="gameModeIcon"><p>SORT</p></div>
+            <div id="floatingWidget3" class="gameModeIcon" ><p>BIN</p></div>
+            <img id="floatingWidget4" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingWidget5" class="gameModeIcon"><p>:D</p></div>
+            <div id="floatingWidget6" class="gameModeIcon"><p>TREE</p></div>
             
         </div>
 
@@ -55,13 +55,13 @@
 
         <div style="height:15vh"></div>
 
-        <div class="floatingCubeContainer">
-            <div id="floatingCube7" class="gameModeIcon"><p>BFS</p></div>
-            <div id="floatingCube8" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
-            <img id="floatingCube9" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
-            <div id="floatingCube10" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
-            <div id="floatingCube11" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
-            <div id="floatingCube12" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
+        <div class="floatingWidgetContainer">
+            <div id="floatingWidget7" class="gameModeIcon"><p>BFS</p></div>
+            <div id="floatingWidget8" class="gameModeIcon" style="background:var(--pretty-yellow)"><p>o o o</p></div>
+            <img id="floatingWidget9" src="assets/logo/alvin64.png" style="width:50px;height:50px;border-radius:10px">
+            <div id="floatingWidget10" class="gameModeIcon" style="background:var(--pretty-red)"><p>O(n!)</p></div>
+            <div id="floatingWidget11" class="gameModeIcon" style="background:var(--pretty-green)"><p>? ? ?</p></div>
+            <div id="floatingWidget12" class="gameModeIcon" style="background:var(--light-transp-blue)"><p>o o x</p></div>
         </div>
 
 
@@ -83,11 +83,11 @@
         
         <img id="tutorialImage" src="assets/homepage/docprev.png">
 
-        <div class="floatingCubeContainer">
-            <div id="floatingCube13" class="gameModeIcon" style="background:var(--pretty-green); box-shadow: 0 0 100px var(--pretty-green)"><p>DP</p></div>
-            <div id="floatingCube14" class="gameModeIcon" style="margin-right:20vw;background:var(--pretty-yellow); box-shadow: 0 0 100px var(--pretty-yellow)"><p>DFS</p></div>
-            <div id="floatingCube15" class="gameModeIcon" style="margin-left:20vw; box-shadow: 0 0 100px var(--pretty-purple)"><p>O(1)</p></div>
-            <div id="floatingCube16" class="gameModeIcon" style="background:var(--pretty-red); box-shadow: 0 0 100px var(--pretty-red)"><p>C++</p></div>
+        <div class="floatingWidgetContainer">
+            <div id="floatingWidget13" class="gameModeIcon" style="background:var(--pretty-green); box-shadow: 0 0 100px var(--pretty-green)"><p>DP</p></div>
+            <div id="floatingWidget14" class="gameModeIcon" style="margin-right:20vw;background:var(--pretty-yellow); box-shadow: 0 0 100px var(--pretty-yellow)"><p>DFS</p></div>
+            <div id="floatingWidget15" class="gameModeIcon" style="margin-left:20vw; box-shadow: 0 0 100px var(--pretty-purple)"><p>O(1)</p></div>
+            <div id="floatingWidget16" class="gameModeIcon" style="background:var(--pretty-red); box-shadow: 0 0 100px var(--pretty-red)"><p>C++</p></div>
         </div>
 
 
@@ -152,48 +152,7 @@
             renderFooter();
         </script>
 
-        <script>
-
-            let colors = shuffleArray(["var(--pretty-red)","var(--pretty-yellow)","var(--pretty-purple)","rgb(217 217 227)"]);
-            
-            const sp = new ScrollParallax();
-            for(let i = 1; i <= 12; i++){
-
-                const cube = document.getElementById(`floatingCube${i}`);
-                let cubeColor = colors[(i - 1) % 4];
-                console.log(cubeColor);
-                if(cube.tagName == "IMG")cubeColor = "var(--pretty-green)";
-
-                cube.style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
-                cube.style["background"] = cubeColor;
-                cube.style["box-shadow"] = "0 0 150px " + cubeColor;
-
-                const intensity = Math.random();
-                cube.style["opacity"] = Math.max(.2,intensity);
-                sp.enable(`floatingCube${i}`,intensity);
-            }
-
-
-            colors = shuffleArray(colors);
-
-            for(let i = 13; i <= 16; i++){
-
-                const cube = document.getElementById(`floatingCube${i}`);
-                let cubeColor = colors[(i - 1) % 4];
-                if(cube.tagName == "IMG")cubeColor = "var(--pretty-green)";
-
-                cube.style["margin-top"] = `${Math.random() *15 * randomChoice([1,-1])}vh`;
-                cube.style["background"] = cubeColor;
-                cube.style["box-shadow"] = "0 0 100px " + cubeColor;
-
-                const intensity = Math.max(.2,Math.min(.5,Math.random()));
-                cube.style["opacity"] = 2*intensity;
-                sp.enable(`floatingCube${i}`,intensity);
-            }
-
-            //sp.enable("tutorialImage",.1);
-            //document.getElementById("tutorialImage").style["z-index"] = -1;
-        </script>
+        <script src="scripts/effects/floating-widgets.js"></script>
         
     </body>
     

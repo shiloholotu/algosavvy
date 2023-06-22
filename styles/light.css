@@ -253,7 +253,7 @@ button{
 }
 
 /* floating cubes */
-.floatingCubeContainer{
+.floatingWidgetContainer{
     display:flex;
     justify-content: space-evenly;
     position:relative;
@@ -874,7 +874,7 @@ pre code.hljs {
         font-size:1em;
     }
 
-    .floatingCubeContainer{
+    .floatingWidgetContainer{
         display: none;
     }
 
