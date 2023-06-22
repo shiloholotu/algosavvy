@@ -706,7 +706,6 @@ button{
 /* PROBLEM VIEW */
 .problemSection{
     padding-left: 2em;
-    color: var(--lighter-font-color);
 }
 
 .problemSectionHeader{

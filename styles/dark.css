@@ -66,6 +66,11 @@
 }
 
 
+/* TUTORIAL DOC VIEW PAGE */
+#docNavBar a:hover{
+    background: var(--lighter-gray);
+}
+
 /* GAME MODE PAGE */
 
 #gameModePopup{
@@ -105,8 +110,6 @@
 
 
 /* PROBLEMSET PAGE */
-
-
 .diffLabel{
     color:var(--bg-light-blue);
 }
