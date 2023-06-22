@@ -205,10 +205,13 @@ button{
 #footer a{
     color:var(--lighter-font-color);
     text-decoration: none;
+    transition: .5s;
+    display: inline-block;
 }
 
 #footer a:hover{
     color:var(--font-color);
+    transform:translate(0, -5px);
 }
 
 

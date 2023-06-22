@@ -87,7 +87,10 @@ function checkAnswerChoice(answer){
     for(let i of buttons){
         i.style["pointer-events"] = "none";
         i.style["opacity"] = ".6";
-        if(i.classList.contains("correctAnswer"))i.style["background"] = "var(--pretty-green)";
+        if(i.classList.contains("correctAnswer")){
+            i.style["background"] = "var(--pretty-green)";
+            i.style["color"] = "black";
+        }
     }
 
     if(buttons[answer].classList.contains("correctAnswer")){//picked right answer
