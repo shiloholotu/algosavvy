@@ -55,7 +55,11 @@ function breakProblem(text){
         let display = mdToHTML(text[i]);
         if(i == 3)display = "\\(" + text[i] + "\\)";
         html += `
-        <h3 class="problemSectionHeader" onclick="toggleView(${i})"><img id="hideIcon${i}" src="assets/svg/right.svg">${sections[i]}</h3>
+        <h3 class="problemSectionHeader" onclick="toggleView(${i})">
+            <img id="hideIcon${i}Black" class="lightModeSvg" src="assets/svg/right.svg">
+            <img id="hideIcon${i}White" class="darkModeSvg" src="assets/svg/right-white.svg">
+            ${sections[i]}
+        </h3>
         <div class="problemSection" id="problemSection${i}" style="display:none">
             ${display}
         </div>
@@ -118,11 +122,13 @@ async function viewProblem(folder,ind){
 function toggleView(section){
     if(document.getElementById("problemSection"+section).style["display"] == "none"){
         document.getElementById("problemSection"+section).style["display"] = "block";
-        document.getElementById("hideIcon"+section).setAttribute("src","assets/svg/down.svg");
+        document.getElementById("hideIcon"+section+"Black").setAttribute("src","assets/svg/down.svg");
+        document.getElementById("hideIcon"+section+"White").setAttribute("src","assets/svg/down-white.svg");
     }
     else{
         document.getElementById("problemSection"+section).style["display"] = "none";
-        document.getElementById("hideIcon"+section).setAttribute("src","assets/svg/right.svg");
+        document.getElementById("hideIcon"+section+"Black").setAttribute("src","assets/svg/right.svg");
+        document.getElementById("hideIcon"+section+"White").setAttribute("src","assets/svg/right-white.svg");
     }
 }
 
