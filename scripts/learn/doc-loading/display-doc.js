@@ -87,8 +87,16 @@ function linkHeaders(){
         const newUrl = "learn#" + curFolder + "/" + curDoc + "/" + i.id;
         link.setAttribute("href",newUrl);
 
+        const blackLink = link.cloneNode(true);
+        blackLink.classList.add("lightModeSvg");
+
+        const whiteLink = link.cloneNode(true);
+        whiteLink.innerHTML = "<img src='assets/svg/link-white.svg'>";
+        whiteLink.classList.add("darkModeSvg");
+
         //add <a> tags to all headers in docView
-        i.appendChild(link);
+        i.appendChild(blackLink);
+        i.appendChild(whiteLink);
         //duplicate link in doc contents preview
         const docContLink = link.cloneNode(false);
         docContLink.textContent = i.textContent;

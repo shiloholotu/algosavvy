@@ -20,6 +20,15 @@
     background:var(--lighter-gray);
 }
 
+/* svgs */
+.lightModeSvg{
+    display:none;
+}
+
+.darkModeSvg{
+    display:inline;
+}
+
 /* NAVBAR */
 #navbarSide img{
     background:transparent;
