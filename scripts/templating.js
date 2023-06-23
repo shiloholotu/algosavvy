@@ -15,7 +15,7 @@ function renderNavbar(){
         <div id="mobileNavbar">
             <a href="index"><img src="assets/logo/alvin64_r.png"></a>
             <img id="burgerMenuIconBlack" class="lightModeSvg" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
-            <img id="burgerMenuIconWhite" class="darkModeSvg" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
+            <img id="burgerMenuIconWhite" class="darkModeSvg" src="assets/svg/menu-white.svg" onclick="toggleBurgerMenu()">
         </div>
 
         <div id="burgerMenu">
