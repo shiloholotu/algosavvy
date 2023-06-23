@@ -14,7 +14,8 @@ function renderNavbar(){
 
         <div id="mobileNavbar">
             <a href="index"><img src="assets/logo/alvin64_r.png"></a>
-            <img id="burgerMenuIcon" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
+            <img id="burgerMenuIconBlack" class="lightModeSvg" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
+            <img id="burgerMenuIconWhite" class="darkModeSvg" src="assets/svg/menu.svg" onclick="toggleBurgerMenu()">
         </div>
 
         <div id="burgerMenu">
@@ -33,13 +34,15 @@ function toggleBurgerMenu(){
 
         document.getElementById("burgerMenu").style["opacity"] = 1;
         document.getElementById("burgerMenu").style["pointer-events"] = "all";
-        document.getElementById("burgerMenuIcon").setAttribute("src","assets/svg/cancel.svg");
+        document.getElementById("burgerMenuIconBlack").setAttribute("src","assets/svg/cancel.svg");
+        document.getElementById("burgerMenuIconWhite").setAttribute("src","assets/svg/cancel-white.svg");
     }
 
     else{
         document.getElementById("burgerMenu").style["opacity"] = 0;
         document.getElementById("burgerMenu").style["pointer-events"] = "none";
-        document.getElementById("burgerMenuIcon").setAttribute("src","assets/svg/menu.svg");
+        document.getElementById("burgerMenuIconBlack").setAttribute("src","assets/svg/menu.svg");
+        document.getElementById("burgerMenuIconWhite").setAttribute("src","assets/svg/menu-white.svg");
     }
 }
 
