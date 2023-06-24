@@ -130,3 +130,13 @@ code{
 pre code.hljs {
     background: rgb(40,44,52);
 }
+
+/* MOBILE */
+@media only screen and (max-width: 950px) {
+
+    /* navbar */
+    #burgerMenu img{
+        background: none;
+    }
+
+}
