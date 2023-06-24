@@ -885,6 +885,9 @@ pre code.hljs {
     }
 
     /* landing page */
+    #parallaxPref{
+        display: none;
+    }
     .bigHeader{
         font-size:2.4em;
         
@@ -955,4 +958,4 @@ pre code.hljs {
         margin-left:auto;
         width: 40px;
     }
-  }
+}
