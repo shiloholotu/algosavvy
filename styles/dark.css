@@ -124,6 +124,9 @@
 }
 
 /* MARKDOWN */
+code{
+    background:var(--light-transp-blue);
+}
 pre code.hljs {
     background: rgb(40,44,52);
 }
