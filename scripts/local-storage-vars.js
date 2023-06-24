@@ -1,3 +1,8 @@
+//parallax effect
+if(localStorage.getItem("parallax") == null){
+    localStorage.setItem("parallax",true);
+}
+
 //color scheme
 if(localStorage.getItem("colorScheme") == null){
     localStorage.setItem("colorScheme","system");

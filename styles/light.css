@@ -257,6 +257,21 @@ button{
     font-weight: 600;
 }
 
+/* parallax preference */
+#parallaxPref{
+    display: flex;
+    align-items: center;
+    opacity: .4;
+    transition: .5s;
+    cursor: pointer;
+}
+#parallaxPref:hover{
+    opacity: 1;
+}
+#parallaxPref p{
+    margin-left:10px;
+}
+
 /* floating cubes */
 .floatingWidgetContainer{
     display:flex;

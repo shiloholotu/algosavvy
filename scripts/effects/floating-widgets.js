@@ -1,6 +1,33 @@
+
+
+
 let colors = shuffleArray(["var(--pretty-red)","var(--pretty-yellow)","var(--pretty-purple)","rgb(217 217 227)"]);
             
 const sp = new ScrollParallax();
+
+
+if(localStorage.getItem("parallax") == "true"){
+    renderCheckBox("parallaxCheckbox",true);
+    sp.tracking = true;
+}
+else{
+    renderCheckBox("parallaxCheckbox",false);
+    sp.tracking = false;
+}
+
+function toggleParallax(){
+    if(localStorage.getItem("parallax") == "true"){
+        localStorage.setItem("parallax","false");
+        renderCheckBox("parallaxCheckbox",false);
+        sp.tracking = false;
+    }
+    else{
+        localStorage.setItem("parallax","true");
+        renderCheckBox("parallaxCheckbox",true);
+        sp.tracking = true;
+    }
+}
+
 for(let i = 1; i <= 12; i++){
 
     const cube = document.getElementById(`floatingWidget${i}`);
