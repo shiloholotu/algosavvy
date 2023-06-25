@@ -270,6 +270,7 @@ button{
 }
 #parallaxPref p{
     margin-left:10px;
+    font-weight: 600;
 }
 
 /* floating cubes */
