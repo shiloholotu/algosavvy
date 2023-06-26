@@ -277,6 +277,7 @@ button{
     display:flex;
     justify-content: space-evenly;
     position:relative;
+    pointer-events: none;
     z-index:1;
 }
 
