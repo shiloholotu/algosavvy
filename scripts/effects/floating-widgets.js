@@ -1,7 +1,7 @@
 
 
 
-let colors = shuffleArray(["var(--pretty-red)","var(--pretty-yellow)","var(--pretty-purple)","rgb(217 217 227)"]);
+let colors = shuffleArray(["var(--pretty-red)","var(--pretty-yellow)","var(--pretty-purple)","var(--pretty-blue)"]);
             
 const sp = new ScrollParallax();
 
@@ -32,7 +32,6 @@ for(let i = 1; i <= 12; i++){
 
     const cube = document.getElementById(`floatingWidget${i}`);
     let cubeColor = colors[(i - 1) % 4];
-    console.log(cubeColor);
     if(cube.tagName == "IMG")cubeColor = "var(--pretty-green)";
 
     cube.style["margin-top"] = `${Math.random() * 15 * randomChoice([1,-1])}vh`;
