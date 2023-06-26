@@ -776,6 +776,15 @@ button{
     padding-top: 0;
 }
 
+/* links */
+.mdContent a{
+    color:var(--pretty-blue);
+    text-decoration: none;
+}
+
+.mdContent a:hover{
+    text-decoration: underline;
+}
 
 /* header links */
 .headerLink{
