@@ -27,8 +27,9 @@ function displayRandomProblem(){
     
     document.getElementById("diffIndicator").innerHTML = problem[2][0].toUpperCase() + problem[2].slice(1);
     if(problem[2] == "easy")document.getElementById("diffIndicator").style["background"] = "var(--pretty-green)";
-    else if(problem[2] == "medium" || problem[2] == "c++")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
+    else if(problem[2] == "medium")document.getElementById("diffIndicator").style["background"] = "var(--pretty-yellow)";
     else if(problem[2] == "hard" || problem[2] == "java")document.getElementById("diffIndicator").style["background"] = "var(--pretty-red)";
+    else if(problem[2] == "c++")document.getElementById("diffIndicator").style["background"] = "var(--pretty-blue)";
     else document.getElementById("diffIndicator").style["background"] = "var(--pretty-purple)";
     
 
