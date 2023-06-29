@@ -8,6 +8,7 @@ function renderNavbar(){
                 <a href="contents">Tutorials</a>
                 <a href="modes">Game Modes</a>
                 <a href="problemset">Problemset</a>
+                <a href="settings">Settings</a>
                 <a href="https://github.com/shiloholotu/algosavvy"><img src="assets/svg/github-mark-white.svg"></a>
             </div>
         </div>
@@ -22,6 +23,7 @@ function renderNavbar(){
             <a href="contents">Tutorials</a>
             <a href="modes">Game Modes</a>
             <a href="problemset">Problemset</a>
+            <a href="settings">Settings</a>
             <a href="https://github.com/shiloholotu/algosavvy"><img src="assets/svg/github-mark-white.svg"></a>
         </div>
 
