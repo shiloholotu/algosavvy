@@ -501,16 +501,18 @@ button{
 }
 
 
-.gameModeSettings p{
-    font-weight: 600;
-    margin: 5px;
-}
+
 
 .preferenceContainer{
     display:flex;
     align-items:center;
     margin-top:7px;
     margin-bottom:7px
+}
+
+.preferenceContainer p{
+    font-weight: 600;
+    margin: 5px;
 }
 
 /* modes */
