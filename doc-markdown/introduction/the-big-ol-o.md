@@ -5,13 +5,13 @@ When trying to write fast and efficient solutions, its important to have a way o
 
 ## Common Rules:
 
-### Drop the constants
+### Drop the Constants
 Let's say we have an algorithm that, when given an input of $n$, outputs `"Hello World!"` $2n$ times. As $n$ grows arbitrarily, the $2$ matters less and less to the efficiency of the algorithm(For input size of $10^{50}$, $10^{50}$ operations isn't much better than $2 \times10^{50}$ operations. They're both **a lot** of operations). So then we can simplify this notation to $O(n)$. We would do the same for an algorithm with a complexity of $O(n+1)$ or $O(5n)$ or something similar.
 
 ### Drop Lower Order Terms
 Just like how $n$ dominates constants in Big-O notation, as stated in the previous rule, higher order terms of $n$ dominate the lower order terms. For example, $O(n!\log n)$ would often be simplified to $O(n!)$, as $\log n$ matters less relative to $n!$ as $n$ grows.
 
-### Use the worst case scenario
+### Use the Worst Case Scenario
 When determining the Big-O notation of an algorithm, you should try to view the problem from the perspective of the worst possible scenario. For example, lets say you wanted to use [**The Quick Sort algorithm**](https://www.geeksforgeeks.org/quick-sort/) to sort an array of size $n$. The **best case scenario** for this algorithm would be if the array was already sorted. In that case, the algorithm would run with an extremely low time complexity, as there would be no calculations needed to be done. However, this calculation isn't very helpful if we are assuming the array isn't already sorted. But now, try to imagine if the array was scrambled in a way where it would take Quick Sort the longest possible time to sort an array of size $n$. This calculation, **the worst case scenario,** is much more indicative of the complexity of the algorithm relative to $n$.
 
 ## Common Complexities
