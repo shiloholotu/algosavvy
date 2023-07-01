@@ -42,32 +42,43 @@
         
         <h2 class="pageHeader">SETTINGS</h2>
 
-        <h3>Color scheme</h3>
-        <div class="preferenceContainer">
-            <div class="checkBox">
-                <div></div>
-            </div>
-            <p>Light</p>
-        </div>
+        <div id="settingsContainer">
 
-        <div class="preferenceContainer">
-            <div class="checkBox">
-                <div></div>
+            <h3>Color scheme</h3>
+            <div class="preferenceContainer">
+                <div id="lightSchemeBox" class="checkBox" onclick="setColorSetting('light')"></div>
+                <p>Light</p>
             </div>
-            <p>Dark</p>
-        </div>
 
-        <div class="preferenceContainer">
-            <div class="checkBox">
-                <div></div>
+            <div class="preferenceContainer">
+                <div id="darkSchemeBox" class="checkBox" onclick="setColorSetting('dark')"></div>
+                <p>Dark</p>
             </div>
-            <p>Match system</p>
+
+            <div class="preferenceContainer">
+                <div id="systemSchemeBox" class="checkBox" onclick="setColorSetting('system')"></div>
+                <p>Match system</p>
+            </div>
+
+            <p style="color:var(--lighter-font-color)">*Reload to see scheme change.</p>
+
+            <h3>Parallax effect</h3>
+            <div class="preferenceContainer">
+                <div id="parallaxCheckbox" class="checkBox" onclick="toggleParallax()"></div>
+                <p>Parallax</p>
+            </div>
+
+            <h3>Game mode preferences</h3>
+            <p style="color:var(--lighter-font-color);margin-top: 5px;">These can be managed in the <a href="modes">game mode page.</a></p>
+
         </div>
 
 
         <script src="scripts/util.js"></script>
         <script src="scripts/local-storage-vars.js"></script>
         <script src="scripts/templating.js"></script>
+
+        <script src="scripts/settings-page.js"></script>
 
 
         <script>
