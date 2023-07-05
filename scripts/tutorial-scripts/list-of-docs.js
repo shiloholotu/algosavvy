@@ -1,4 +1,4 @@
-const docs = {
+const tutorialFiles = {
     "introduction":[
         //[title, md file, last update mm/dd/yyyy]
         ["A Warm Hello: What is AlgoSavvy?", "a-warm-hello.md","05/23/2023"],

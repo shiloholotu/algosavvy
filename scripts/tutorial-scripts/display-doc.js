@@ -23,7 +23,7 @@ function displayDocNavBar(){
             document.getElementById("prevDocLink").style["pointer-events"] = "none";
         }
 
-        prevDocInd = docs[prevDocFolder].length-1;
+        prevDocInd = tutorialFiles[prevDocFolder].length-1;
     }
     document.getElementById("prevDocLink").setAttribute("href",`learn#${prevDocFolder}/${prevDocInd}`);
     document.getElementById("prevDocLink").setAttribute("onclick",`openAndReload("learn#${prevDocFolder}/${prevDocInd}"); return false`);
@@ -32,7 +32,7 @@ function displayDocNavBar(){
     let nextDocInd = parseInt(curDoc)+1;
     let nextDocFolder = curFolder;
     //if last doc of folder
-    if(nextDocInd >= docs[nextDocFolder].length){
+    if(nextDocInd >= tutorialFiles[nextDocFolder].length){
 
         nextDocInd = 0;
 
@@ -51,7 +51,7 @@ function displayDocNavBar(){
 
 //displays competion indicator at bottom of doc content preview
 function displayCompletionIndicator(){
-    const status = getCompletionStatus(docs[curFolder][curDoc][0]);
+    const status = getCompletionStatus(tutorialFiles[curFolder][curDoc][0]);
     const completionIndicatorImg = document.getElementById("completionIndicatorImg");
     const completionIndicatorLabel = document.getElementById("completionIndicatorLabel");
     if(status == "complete"){
@@ -67,8 +67,8 @@ function displayCompletionIndicator(){
 
 
 function toggleCompletionIndicator(){
-    if(getCompletionStatus(docs[curFolder][curDoc][0]) == "incomplete") setCompletionStatus(docs[curFolder][curDoc][0],"complete");
-    else setCompletionStatus(docs[curFolder][curDoc][0],"incomplete");
+    if(getCompletionStatus(tutorialFiles[curFolder][curDoc][0]) == "incomplete") setCompletionStatus(tutorialFiles[curFolder][curDoc][0],"complete");
+    else setCompletionStatus(tutorialFiles[curFolder][curDoc][0],"incomplete");
     displayCompletionIndicator();
 }
 
@@ -133,7 +133,7 @@ function loadMdFile(text,scrollTo){
     }
         
     linkHeaders();
-    document.getElementById("title").innerHTML = docs[curFolder][curDoc][0];
+    document.getElementById("title").innerHTML = tutorialFiles[curFolder][curDoc][0];
 
 }
 async function readMdFile(location,scrollTo = null){
@@ -157,7 +157,7 @@ function loadMdFromUrl(){
     if(loc.length == 3 && loc[2] != "")section = loc[2];
 
     try{
-        readMdFile("doc-markdown/"+folder+"/" + docs[folder][doc][1],section);
+        readMdFile("tutorial-markdown/"+folder+"/" + tutorialFiles[folder][doc][1],section);
     }catch(error){
         renderMd(`# Uh Oh🫤\nWe can't find that page. **Sorry**!\n\nHere's the error: \`${error}\``,"docView");
         console.error(error);
