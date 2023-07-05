@@ -334,6 +334,7 @@ a:hover{
     box-shadow: none;
     border: 2px solid var(--light-transp-blue);
     background:var(--bg-light-blue);
+    text-decoration: none;
 }
 
 /* TABLE OF CONTENTS */
