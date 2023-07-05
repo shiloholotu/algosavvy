@@ -29,14 +29,14 @@ Floating point numbers are the most common way to store decimal numbers. They ar
 Commonly referred to as **floats**, 32-bit floating point numbers can store up to about 7 significant digits. Floats usually suffice for operations on decimal numbers. In many languages, such C++ and Java, floats are declared with the `float` specifier, but in some languages, float values are indicated with the "f" suffix(e.g., `54.3f`).
 
 ```cpp
-float pi = 3.14159;//🍰
+float pie = 3.14159;//🍰
 ```
 
 ### 64-bit
 Commonly referred to as **doubles**, 64-bit floating point numbers can store up to about 15 significant digits. While they are more precise, doubles are slower and take up more memory that floats. In most languages, doubles are declared with the `double` specifier, but floating point literals without a specifier are usually considered doubles by default.
 
 ```cpp
-double pi = 3.14159265358979;//🍰🍰
+double pie = 3.14159265358979;//🍰🍰
 ```
   
 ## Booleans
