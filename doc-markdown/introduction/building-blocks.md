@@ -55,7 +55,7 @@ char yum = '🍕';
 ```
 
 ## Arrays
-Arrays are a collection of elements of the same data type. Each element can be accessed with a unique index, usually with the first element having the index `0` and the next having the index `1` and so on. Many languages allow the use of 2 different types of arrays: **Static and Dynamic**. Different languages can vary a lot in how they declare arrays, so its best to figure out how your language of choice does it specifically.
+Arrays are a collection of elements of the same data type. Each element can be accessed with a unique index, usually with the first element having the index `0` and the next having the index `1` and so on. Many languages allow the use of 2 different types of arrays: **Static and Dynamic**. Different languages can vary a lot in how they declare and handle arrays, so its best to figure out how your language of choice does it specifically.
 
 **Static arrays** have a **static** size, i.e. the amount of elements they can store cannot be changed.
 ```cpp
