@@ -1,7 +1,7 @@
 let curFolder = null;
 let curDoc = null;
 
-
+let confetti = null;
 
 
 //adds funcitonality to a tags in doc nav bar
@@ -51,17 +51,19 @@ function displayDocNavBar(){
 
 //displays competion indicator at bottom of doc content preview
 function displayCompletionIndicator(){
+
     const status = getCompletionStatus(tutorialFiles[curFolder][curDoc][0]);
-    const completionIndicatorImg = document.getElementById("completionIndicatorImg");
     const completionIndicatorLabel = document.getElementById("completionIndicatorLabel");
     if(status == "complete"){
         completionIndicatorLabel.textContent = "Complete";
         renderCheckBox("completionIndicator",true);
+        confetti.setSize(0);
 
     }
     else{
         completionIndicatorLabel.textContent = "Incomplete";
         renderCheckBox("completionIndicator",false);
+        confetti.setSize(1);
     }
 }
 
@@ -115,6 +117,14 @@ function linkHeaders(){
         <p id="completionIndicatorLabel">Complete</p>
     </div>
     `;
+
+    //add confetti to completion check box
+    confetti = new Confetti('completionIndicator');
+    confetti.setCount(75);
+    confetti.setSize(1);
+    confetti.setPower(25);
+    confetti.setFade(false);
+    confetti.destroyTarget(false);
 
     displayCompletionIndicator();
     displayDocNavBar();

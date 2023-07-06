@@ -2,6 +2,14 @@ let curProblem = null;
 let curFolder = null;
 
 
+//confetti
+let confetti = new Confetti('completionStatus');
+confetti.setCount(75);
+confetti.setSize(1);
+confetti.setPower(25);
+confetti.setFade(false);
+confetti.destroyTarget(false);
+
 //adds funcitonality to a tags in doc nav bar
 function displayProbNavBar(){
 
@@ -100,10 +108,12 @@ async function viewProblem(folder,ind){
     if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
+        confetti.setSize(1);
     }
     else{
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
+        confetti.setSize(0);
     }
 
 
@@ -139,6 +149,7 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"incomplete");
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
+        confetti.setSize(1);
         
     }
 
@@ -147,6 +158,7 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"complete");
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
+        confetti.setSize(0);
         
     }
 }
