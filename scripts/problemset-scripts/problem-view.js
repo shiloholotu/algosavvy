@@ -149,7 +149,6 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"incomplete");
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
-        confetti.setSize(1);
         
     }
 
@@ -158,7 +157,6 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"complete");
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
-        confetti.setSize(0);
         
     }
 }

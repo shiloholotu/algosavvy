@@ -57,13 +57,13 @@ function displayCompletionIndicator(){
     if(status == "complete"){
         completionIndicatorLabel.textContent = "Complete";
         renderCheckBox("completionIndicator",true);
-        confetti.setSize(0);
+        confetti.setSize(1);
 
     }
     else{
         completionIndicatorLabel.textContent = "Incomplete";
         renderCheckBox("completionIndicator",false);
-        confetti.setSize(1);
+        confetti.setSize(0);
     }
 }
 
