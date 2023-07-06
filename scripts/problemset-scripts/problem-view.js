@@ -108,12 +108,10 @@ async function viewProblem(folder,ind){
     if(getCompletionStatus(problemFiles[folder][ind][0]) == "incomplete"){
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
-        confetti.setSize(1);
     }
     else{
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
-        confetti.setSize(0);
     }
 
 
