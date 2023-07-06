@@ -1,8 +1,9 @@
 let curProblem = null;
 let curFolder = null;
 
-
+let confetti = null;
 //confetti
+
 
 
 //adds funcitonality to a tags in doc nav bar
@@ -120,6 +121,13 @@ async function viewProblem(folder,ind){
     MathJax.typeset();
     hljs.highlightAll();
     hideLoadingScreen();
+
+    confetti = new Confetti('completionStatus');
+    confetti.setCount(75);
+    confetti.setSize(1);
+    confetti.setPower(25);
+    confetti.setFade(false);
+    confetti.destroyTarget(false);
 }
 
 function toggleView(section){
@@ -142,6 +150,7 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"incomplete");
         renderCheckBox("completionStatus",false);
         document.getElementById("completionStatusLabel").textContent = "Incomplete";
+        confetti.setSize(0);
         
     }
 
@@ -150,6 +159,7 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"complete");
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
+        confetti.setSize(1);
         
     }
 }
