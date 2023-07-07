@@ -9,7 +9,7 @@ n = 3
 h = [1, 5, 6]
 x = 6
 
-Output: 2
+Output: 1
 ```
 
 **Limits**
