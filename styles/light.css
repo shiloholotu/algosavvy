@@ -236,10 +236,7 @@ a:hover{
 }
 .bigHeader span{
     font-weight: 800;
-    background: -webkit-linear-gradient(right, rgb(130 223 185), var(--pretty-green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 100px var(--pretty-green);
+    color: var(--pretty-green);
 }
 
 .bigGap{
