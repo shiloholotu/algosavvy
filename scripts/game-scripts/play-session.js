@@ -91,6 +91,7 @@ function checkAnswerChoice(answer){
         if(i.classList.contains("correctAnswer")){
             i.style["background"] = "var(--pretty-green)";
             i.style["color"] = "black";
+            i.style["border"] = "2px solid transparent"
         }
     }
 

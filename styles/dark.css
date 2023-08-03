@@ -110,7 +110,9 @@
     color:var(--bg-light-blue);
 }
 
-
+#changeCorrectButton{
+    color:var(--bg-light-blue);
+}
 
 #nextProblemButton{
     background: var(--lighter-gray);
