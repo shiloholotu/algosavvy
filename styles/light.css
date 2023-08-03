@@ -501,6 +501,11 @@ a:hover{
     font-weight: 600;
     padding-left: 15px;
     padding-right: 15px;
+    transition: .25s;
+}
+
+#gameModePopup a:hover{
+    background:var(--lighter-font-color);
 }
 
 .gameModeSettings{
@@ -612,6 +617,7 @@ a:hover{
     align-items: center;
     font-size: 16px;
     background: transparent;
+    transition: .25s;
 }
 
 .answerChoice:hover{
@@ -672,18 +678,23 @@ a:hover{
 
 #changeCorrectButton,#nextProblemButton{
     float: right;
-    background: var(--light-transp-blue);
     padding: 5px;
     border-radius: 7px;
     margin-top: -3px;
     border: none;
     font-size: 16px;
     font-weight: 600;
+}
+
+#changeCorrectButton{
     color: var(--font-color);
+    background:transparent;
+    opacity: .6;
+    transition: .25s;
 }
 
 #changeCorrectButton:hover{
-    background:transparent;
+    opacity: 1;
 }
 
 #nextProblemButton{

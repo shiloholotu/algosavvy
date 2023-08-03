@@ -83,6 +83,16 @@
     background:var(--lighter-gray);
 }
 
+#gameModePopup a{
+    background: var(--light-transp-blue);
+    color:var(--font-color);
+    font-weight: lighter;
+}
+
+#gameModePopup a:hover{
+    background:var(--dark-transp-blue);
+}
+
 #popupBackdrop{
     background: rgb(14 17 25 / 50%);
 }
@@ -100,9 +110,7 @@
     color:var(--bg-light-blue);
 }
 
-#changeCorrectButton{
-    color:var(--bg-light-blue);
-}
+
 
 #nextProblemButton{
     background: var(--lighter-gray);
