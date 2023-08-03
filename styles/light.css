@@ -637,7 +637,7 @@ a:hover{
     height: -webkit-fill-available;
     color: var(--font-color);
     border: none;
-    background-color: var(--bg-light-blue);
+    background: var(--bg-light-blue);
 }
 
 #answerTextareaContainer{
@@ -729,7 +729,8 @@ a:hover{
 
 #confirmChoiceLabel{
     font-weight: 600;
-    color: var(--dark-transp-blue);
+    color: var(--font-color);
+    margin:0;
     margin-left: 10px;
 }
 

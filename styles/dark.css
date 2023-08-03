@@ -144,6 +144,10 @@
     border-top: 2px solid var(--light-transp-blue);
 }
 
+#answerTextarea{
+    background:rgb(0,0,0,0.2);
+}
+
 #answerDoneButton{
     background: var(--dark-transp-blue);
     color: var(--font-color);
@@ -166,7 +170,9 @@
     background:transparent;
 }
 
-
+#confirmChoiceLabel{
+    font-weight: lighter;
+}
 
 
 /* PROBLEMSET PAGE */
