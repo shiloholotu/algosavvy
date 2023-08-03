@@ -135,6 +135,30 @@
     background-color: transparent;
 }
 
+#answerSection{
+    border-top: 2px solid var(--light-transp-blue);
+}
+
+#answerDoneButton{
+    background: var(--dark-transp-blue);
+    color: var(--font-color);
+    font-weight: 100;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#answerDoneButton:hover{
+    background:var(--light-transp-blue);
+}
+
+#answerSection, #correctionSection, #confirmationSection {
+    padding: 10px;
+    background: transparent;
+    overflow: auto;
+}
+
+
+
 
 /* PROBLEMSET PAGE */
 .diffLabel{
@@ -146,7 +170,7 @@ code{
     background:var(--light-transp-blue);
 }
 pre code.hljs {
-    background: rgb(40,44,52);
+    background:var(--bg-light-blue);
 }
 
 /* MOBILE */

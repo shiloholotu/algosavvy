@@ -658,6 +658,7 @@ a:hover{
     background: var(--font-color);
     border-radius: 10px;
     color: var(--bg-light-blue);
+    transition:.25s;
 }
 
 
