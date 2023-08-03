@@ -1,8 +1,8 @@
 :root{
     /* overall stuff */
     --font-color: rgb(242,242,247);
-    --bg-light-blue:  rgb(14,17,25);
-    --lighter-gray: rgb(22,27,34);
+    --bg-light-blue:  rgb(22,27,34);
+    --lighter-gray: rgb(34 42 52);
     --light-transp-blue: rgb(97,97,103, .3);
     --dark-transp-blue:rgb(175,175,185,.3);
     --light-shadow: 0 10px 30px rgb(0,0,50,0.1);
