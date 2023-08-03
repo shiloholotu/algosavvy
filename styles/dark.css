@@ -108,8 +108,13 @@
     background: rgb(14 17 25 / 50%);
 }
 
+.gameModeOption{
+    background:var(--lighter-gray);
+    border:none;
+}
+
 .gameModeOption:hover{
-    border:2px solid var(--dark-transp-blue);
+    opacity:.4;
 }
 
 /* PLAY PAGE */
@@ -155,6 +160,10 @@
     padding: 10px;
     background: transparent;
     overflow: auto;
+}
+
+#explanationSection{
+    background:transparent;
 }
 
 
