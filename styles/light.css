@@ -97,6 +97,11 @@ a:hover{
 
 /* page header */
 
+.pageHeader{
+    width: 80%;
+    margin:auto;
+}
+
 .pageHeader h2{
     font-weight: 800;
     text-align: center;
@@ -872,6 +877,10 @@ pre code.hljs {
     /* general */
     .bigGap{
         height: 20vh;
+    }
+
+    .pageHeader br{
+        display: none;
     }
 
     /* navbar and burger menu */
