@@ -94,6 +94,10 @@
     background: rgb(50 62 77);
 }
 
+.disabledNav{
+    background:var(--bg-light-blue);
+}
+
 /* GAME MODE PAGE */
 
 #gameModePopup{

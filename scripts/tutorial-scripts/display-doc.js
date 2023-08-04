@@ -19,8 +19,7 @@ function displayDocNavBar(){
         else if(prevDocFolder == "hard") prevDocFolder = "medium";
         else if(prevDocFolder == "advanced") prevDocFolder = "hard";
         else{
-            document.getElementById("prevDocLink").style["background"] = "var(--light-transp-blue)";
-            document.getElementById("prevDocLink").style["pointer-events"] = "none";
+            document.getElementById("prevDocLink").classList.add("disabledNav");
         }
 
         prevDocInd = tutorialFiles[prevDocFolder].length-1;
@@ -41,8 +40,7 @@ function displayDocNavBar(){
         else if(nextDocFolder == "medium") nextDocFolder = "hard";
         else if(nextDocFolder == "hard") nextDocFolder = "advanced";
         else{
-            document.getElementById("nextDocLink").style["background"] = "var(--light-transp-blue)";
-            document.getElementById("nextDocLink").style["pointer-events"] = "none";
+            document.getElementById("nextDocLink").classList.add("disabledNav");
         }
     }
     document.getElementById("nextDocLink").setAttribute("href",`learn#${nextDocFolder}/${nextDocInd}`);
