@@ -95,7 +95,7 @@
 }
 
 .disabledNav{
-    background:var(--bg-light-blue);
+    background:var(--bg-light-blue) !important;
 }
 
 /* GAME MODE PAGE */

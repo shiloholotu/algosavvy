@@ -19,7 +19,7 @@ function displayProbNavBar(){
         else if(prevProblemFolder == "hard") prevProblemFolder = "medium";
         else if(prevProblemFolder == "advanced") prevProblemFolder = "hard";
         else{
-            document.getElementById("prevDocLink").classList.add("disabledNav");
+            document.getElementById("prevProbLink").classList.add("disabledNav");
         }
 
         prevProblemInd = problemFiles[prevProblemFolder].length-1;
@@ -39,7 +39,7 @@ function displayProbNavBar(){
         else if(nextProblemFolder == "medium") nextProblemFolder = "hard";
         else if(nextProblemFolder == "hard") nextProblemFolder = "advanced";
         else{
-            document.getElementById("nextDocLink").classList.add("disabledNav");
+            document.getElementById("nextProbLink").classList.add("disabledNav");
         }
     }
     document.getElementById("nextProbLink").setAttribute("href",`problem#${nextProblemFolder}/${nextProblemInd}`);
