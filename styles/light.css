@@ -424,11 +424,12 @@ a:hover{
     border: 2px solid var(--light-transp-blue);
     cursor: pointer;
     margin: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: 600;
     color: var(--dark-transp-blue);
     padding: 5px;
     text-decoration: none;
+    transition: .25s;
 }
 
 #docNavBar a:hover{

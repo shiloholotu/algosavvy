@@ -84,8 +84,14 @@
 
 
 /* TUTORIAL DOC VIEW PAGE */
+#docNavBar a{
+    background:var(--lighter-gray);
+    border:none;
+}
+
 #docNavBar a:hover{
-    background: var(--lighter-gray);
+    color:var(--font-color);
+    background: rgb(50 62 77);
 }
 
 /* GAME MODE PAGE */
