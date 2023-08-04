@@ -41,6 +41,11 @@
         </div>
 
         <div id="sessionStats" class="sideBar">
+            <p style="font-weight:600">Session Stats</p>
+            <div id="sessionProgressBar">
+                <div style="transition: .25s;" id="greenBar"></div>
+            </div>
+            <p id="progressDesc">${sessionStats[1]} / ${sessionStats[0]} questions correct</p>
         </div>
 
         <div class="bigBox">

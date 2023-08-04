@@ -151,13 +151,8 @@ function submitTextAnswer(){//for solution search and error blitz
 function updateStats(){
     let progress = 0;
     if(sessionStats[0] != 0)progress = sessionStats[1]*100/sessionStats[0];
-    document.getElementById("sessionStats").innerHTML = `
-    <p style="font-weight:600">Session Stats</p>
-    <div id="sessionProgressBar">
-        <div style="width:${progress}%"></div>
-    </div>
-    <p>${sessionStats[1]} / ${sessionStats[0]} questions correct</p>
-    `
+    document.getElementById("greenBar").style["width"] = `${progress}%`;
+    document.getElementById("progressDesc").innerHTML = `${sessionStats[1]} / ${sessionStats[0]} questions correct.`;
 }
 
 function nextProblem(correct){
