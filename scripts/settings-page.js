@@ -28,6 +28,9 @@ function toggleParallax(){
 }
 
 
+//confetti
+if(localStorage.getItem("confetti") == "true") renderCheckBox("confettiCheckbox",true);
+else renderCheckBox("confettiCheckbox",false);
 
 function toggleConfetti(){
     if(localStorage.getItem("confetti") == "true"){
