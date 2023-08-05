@@ -192,7 +192,7 @@
 
 /* MARKDOWN */
 code{
-    background:var(--light-transp-blue);
+    background:var(--bg-light-blue);
 }
 pre code.hljs {
     background:var(--bg-light-blue);
