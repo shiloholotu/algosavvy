@@ -3,6 +3,11 @@ if(localStorage.getItem("parallax") == null){
     localStorage.setItem("parallax",true);
 }
 
+//confetti effect
+if(localStorage.getItem("confetti") == null){
+    localStorage.setItem("confetti",true);
+}
+
 //color scheme
 if(localStorage.getItem("colorScheme") == null){
     localStorage.setItem("colorScheme","system");
