@@ -55,7 +55,7 @@ function displayCompletionIndicator(){
     if(status == "complete"){
         completionIndicatorLabel.textContent = "Complete";
         renderCheckBox("completionIndicator",true);
-        confetti.setSize(1);
+        if(localStorage.getItem("confetti") == "true")confetti.setSize(1);
 
     }
     else{
@@ -119,7 +119,8 @@ function linkHeaders(){
     //add confetti to completion check box
     confetti = new Confetti('completionIndicator');
     confetti.setCount(75);
-    confetti.setSize(1);
+    if(localStorage.getItem("confetti") == "true")confetti.setSize(1);
+    else confetti.setSize(0);
     confetti.setPower(25);
     confetti.setFade(false);
     confetti.destroyTarget(false);

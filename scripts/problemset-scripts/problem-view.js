@@ -122,7 +122,8 @@ async function viewProblem(folder,ind){
 
     confetti = new Confetti('completionStatus');
     confetti.setCount(75);
-    confetti.setSize(1);
+    if(localStorage.getItem("confetti") == "true")confetti.setSize(1);
+    else confetti.setSize(0);
     confetti.setPower(25);
     confetti.setFade(false);
     confetti.destroyTarget(false);
@@ -157,7 +158,7 @@ function toggleCompletionStatus(){
         setCompletionStatus(problemFiles[curFolder][curProblem][0],"complete");
         renderCheckBox("completionStatus",true);
         document.getElementById("completionStatusLabel").textContent = "Complete";
-        confetti.setSize(1);
+        if(localStorage.getItem("confetti") == "true")confetti.setSize(1);
         
     }
 }

@@ -28,3 +28,14 @@ function toggleParallax(){
 }
 
 
+
+function toggleConfetti(){
+    if(localStorage.getItem("confetti") == "true"){
+        localStorage.setItem("confetti","false");
+        renderCheckBox("confettiCheckbox",false);
+    }
+    else{
+        localStorage.setItem("confetti","true");
+        renderCheckBox("confettiCheckbox",true);
+    }
+}
