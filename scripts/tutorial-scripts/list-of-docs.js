@@ -7,7 +7,8 @@ const tutorialFiles = {
         ["Giving a Helping Hand: Contributing to AlgoSavvy", "giving-a-helping-hand.md","07/05/2023"]
     ],
     "easy":[
-        ["Building Blocks: Ints, Strings, Arrays, and Others", "building-blocks.md","08/05/2023"]
+        ["Building Blocks: Ints, Strings, Arrays, and Others", "building-blocks.md","08/05/2023"],
+        ["Get in Line: Queues, Stacks, Heaps, and More", "get-in-line.md","08/05/2023"],
     ],
     "medium":[],
     "hard":[],
