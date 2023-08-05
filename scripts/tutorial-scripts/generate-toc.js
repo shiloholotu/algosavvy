@@ -19,7 +19,7 @@ function generateSection(section){
             
         </a>`;
         if(i != tutorialFiles[section].length-1){
-            table.innerHTML += "<div class='tocBlockSeparator'></div>";
+            html += "<div class='tocBlockSeparator'></div>";
         }
     }
 
@@ -28,7 +28,7 @@ function generateSection(section){
 function generateTOC(){
     const table = document.getElementById("tableOfContents")
     table.innerHTML = "";
-    for(let i in ["introduction","easy","medium","hard","advanced"]){
+    for(let i of ["introduction","easy","medium","hard","advanced"]){
         table.innerHTML += generateSection(i);
     }
 
