@@ -1,5 +1,5 @@
 function generateSection(section){
-    html = `<h2>${section.toUpperCase()}</h2>`;
+    html = `<h2>${(section[0].toUpperCase() + section.slice(1))}</h2>`;
     for(let i in tutorialFiles[section]){
 
         //completion status
