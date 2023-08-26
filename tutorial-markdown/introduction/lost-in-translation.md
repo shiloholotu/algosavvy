@@ -3,13 +3,13 @@
 
 As you can imagine, picking a language can be a very important step in your programming journey. The importance of a language is amplified even further when trying to create crazy fast and efficient solutions, like you would in a competitive programming  scenario. This tutorial will cover the 3 of the most common programming languages for data structures and algorithms: **C++, Java, and Python.**
 
-## C++: Raw, Untamed Power🔥
+## C++
 Out of the 3, C++ is the most powerful and efficient language. It offers low-level control over memory management and allows fine-grained optimizations. Its steep learning curve can be a little frustrating to beginners, but dedicated practice can help beginners develop a deeper understanding of low-level programming concepts. It is often the programing language of choice for advanced competitive programming competitions.
 
-## Java: Structured, Organized Efficiency☕
+## Java
 Java, while not as fast as C++, serves well for dealing with data structures and algorithms. The language comes with a rich standard library of commonly used data structures and its strict syntax encourages organized coding. However, Java is generally more verbose than other languages and usually requires more code to do the same tasks.
 
-## Python: Friendly, Concise Simplicity 🐍
+## Python
 Python is a very common choice among beginner programmers thanks to its friendly syntax and readability. In comparison to other languages, Python is extremely concise can almost always do more with less code. However, due to its interpreted nature, Python is often much slower than C++ and Java.
 
 ## So, What Do I Pick?
