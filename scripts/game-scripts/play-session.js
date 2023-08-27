@@ -133,7 +133,7 @@ function submitTextAnswer(){//for solution search and error blitz
     
     if(gameMode == "error-blitz"){
         document.getElementById("confirmationSection").innerHTML = `<p id='errorText'>${curProblem[1]}</p>`;
-        if(curProblem[1] != "There is no error.") document.getElementById("errorText").style["color"] = "var(--pretty-red);";
+        if(curProblem[1] != "There is no error.") document.getElementById("errorText").style["color"] = "var(--pretty-red)";
     }
     document.getElementById("confirmationSection").innerHTML += `
         <div style="display:flex; align-items:center; justify-content:space-between;background:var(--light-transp-blue);padding:10px;border-radius:10px">

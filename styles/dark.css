@@ -147,7 +147,8 @@
 
 
 #errorText{
-    background-color: transparent;
+    background-color: var(--bg-light-blue);
+    color: var(--font-color);
 }
 
 #answerSection{
