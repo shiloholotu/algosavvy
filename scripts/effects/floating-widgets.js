@@ -27,7 +27,7 @@ function toggleParallax(){
         sp.tracking = true;
     }
 }
-
+/*
 for(let i = 1; i <= 12; i++){
 
     const cube = document.getElementById(`floatingWidget${i}`);
@@ -42,7 +42,7 @@ for(let i = 1; i <= 12; i++){
     cube.style["opacity"] = Math.max(.2,intensity);
     sp.enable(`floatingWidget${i}`,intensity);
 }
-
+*/
 
 colors = shuffleArray(colors);
 
