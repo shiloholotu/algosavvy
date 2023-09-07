@@ -248,9 +248,47 @@ a:hover{
 }
 
 
-/* LANDING PAGE */
+/* HOME PAGE */
+
+/* landing section */
+#landingSection{
+    display:flex;
+    align-items: center;
+    width:80%;
+    margin:auto;
+    justify-content: center;
+}
+
+#landingSection > #textSide{
+    max-width: 600px;
+}
+
+#landingSection img{
+    width: 100%;
+    max-width: 600px;
+}
+
+#tagHolder{
+    display:flex;
+}
+.tags{
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+    background:var(--light-transp-blue);
+    color:var(--dark-transp-blue);
+    font-weight: 600;
+    border-radius: 15px;
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+
+/* text */
 .bigHeader{
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: .5em;
     text-align: center;
 }
@@ -268,17 +306,18 @@ a:hover{
     opacity: .2;
 }
 
-.bigParagraph{
-    font-weight: lighter;
+.subParagraph{
+    opacity: .6; 
+    font-size: 18px;
     width: 60%;
     display: block;
-    margin:auto;
+    margin-left:auto;
+    margin-right: auto;
     text-align: center;
     max-width: 700px;
-    opacity: .7;
 }
 
-.bigParagraph b{
+.subParagraph b{
     font-weight: 600;
 }
 
@@ -334,22 +373,21 @@ a:hover{
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    background: white;
-    border: 2px solid var(--dark-transp-blue);
+    background: var(--light-transp-blue);
+    border: 2px solid transparent;
     border-radius: 15px;
     font-size: 20px;
     font-weight: 600;
     margin: auto;
     display: block;
     margin-top: 50px;
-    color: var(--lighter-font-color);
+    color: var(--dark-transp-blue);
     margin-bottom: 50px;
     width: fit-content;
-    transition:1s;
+    transition:.5s;
 }
 .actionButton:hover{
-    box-shadow: none;
-    border: 2px solid var(--light-transp-blue);
+    border:2px solid var(--light-transp-blue);
     background:var(--bg-light-blue);
     text-decoration: none;
 }
@@ -950,10 +988,23 @@ pre code.hljs {
 
     }
 
-    /* landing page */
-    #parallaxPref{
-        display: none;
+    /* home page */
+    #landingSection{
+        display: block;
+        width: 100%;
     }
+
+    #landingSection > #textSide{
+        width: 80%;
+        margin:auto;
+    }
+
+
+    #landingSection img{
+        margin: auto;
+        display: block;
+    }
+
     .bigHeader{
         font-size:2.4em;
         
