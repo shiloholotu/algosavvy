@@ -9,6 +9,7 @@ const tutorialFiles = {
     "easy":[
         ["Building Blocks: Ints, Strings, Arrays, and Others", "building-blocks.md","08/05/2023"],
         ["Get in Line: Queues, Stacks, Heaps, and More", "get-in-line.md","08/05/2023"],
+        ["Brains vs Brawn: Implementing Brute Force", "brains-vs-brawn.md", "09/08/2023"]
     ],
     "medium":[],
     "hard":[],
