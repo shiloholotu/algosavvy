@@ -21,6 +21,10 @@
     border:none;
 }
 
+.checkBox{
+    border: 2px solid var(--lighter-font-color);
+}
+
 /* svgs */
 .lightModeSvg{
     display:none;
@@ -40,6 +44,10 @@
     opacity: 1;
 }
 
+#navbarSide a{
+    color:var(--lighter-font-color);
+}
+
 /* LANDING PAGE */
 .gameModeIcon{
     color:var(--bg-light-blue);
@@ -51,12 +59,16 @@
 
 
 .actionButton{
-    background:transparent;
-    border:2px solid var(--light-transp-blue);
+    background:var(--light-transp-blue);
+    color:var(--lighter-font-color);
 }
 
 .actionButton:hover{
     border:2px solid var(--dark-transp-blue);
+}
+
+.tags{
+    color:var(--lighter-font-color);
 }
 
 /* TUTORIAL LIST PAGE */

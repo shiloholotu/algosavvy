@@ -376,7 +376,6 @@ a:hover{
     background: var(--light-transp-blue);
     border: 2px solid transparent;
     border-radius: 15px;
-    font-size: 20px;
     font-weight: 600;
     margin: auto;
     display: block;
@@ -385,6 +384,7 @@ a:hover{
     margin-bottom: 50px;
     width: fit-content;
     transition:.5s;
+
 }
 .actionButton:hover{
     border:2px solid var(--light-transp-blue);
