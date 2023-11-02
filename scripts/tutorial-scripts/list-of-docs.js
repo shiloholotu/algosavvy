@@ -13,7 +13,9 @@ const tutorialFiles = {
         ["Getting Graphy with It: Adjacency Lists, BFS, and DFS", "getting-graphy-with-it.md", "10/25/2023"],
         ["Think Greedy, Act Greedy: Greedy Algorithms", "think-greedy-act-greedy.md", "10/27/2023"]
     ],
-    "medium":[],
+    "medium":[
+        ["It Takes 10 to Tango: Binary Search", "it-takes-10-to-tango.md", "11/1/2023"]
+    ],
     "hard":[],
     "advanced":[]
 };
