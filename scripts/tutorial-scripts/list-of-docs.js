@@ -10,11 +10,11 @@ const tutorialFiles = {
         ["Building Blocks: Ints, Strings, Arrays, and Others", "building-blocks.md","08/05/2023"],
         ["Get in Line: Queues, Stacks, Heaps, and More", "get-in-line.md","08/05/2023"],
         ["Brains vs Brawn: Implementing Brute Force", "brains-vs-brawn.md", "09/08/2023"],
-        ["Getting Graphy with It: Adjacency Lists, BFS, and DFS", "getting-graphy-with-it.md", "10/25/2023"],
         ["Think Greedy, Act Greedy: Greedy Algorithms", "think-greedy-act-greedy.md", "10/27/2023"]
     ],
     "medium":[
-        ["It Takes 10 to Tango: Binary Search", "it-takes-10-to-tango.md", "11/1/2023"]
+        ["It Takes 10 to Tango: Binary Search", "it-takes-10-to-tango.md", "11/3/2023"],
+        ["Getting Graphy with It: Adjacency Lists, BFS, and DFS", "getting-graphy-with-it.md", "11/3/2023"],
     ],
     "hard":[],
     "advanced":[]
