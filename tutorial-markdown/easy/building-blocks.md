@@ -55,16 +55,16 @@ char yum = '🍕';
 ```
 
 ## Arrays
-Arrays are a collection of elements of the same data type. Each element can be accessed with a unique index, usually with the first element having the index `0` and the next having the index `1` and so on. Many languages allow the use of 2 different types of arrays: **Static and Dynamic**. Different languages can vary a lot in how they declare and handle arrays, so its best to figure out how your language of choice does it specifically.
+Arrays are a collection of elements of the same data type. Each element can be accessed with a unique index, usually with the first element having the index `0` and the next having the index `1` and so on. Many languages allow the use of 2 different types of arrays: **Static and Dynamic**. Different languages can vary a lot in how they declare and handle arrays, so its best to figure out how your language of choice does it specifically. This tutorial only covers C++
 
 **Static arrays** have a **static** size, i.e. the amount of elements they can store cannot be changed.
 ```cpp
-string dogs[3] = {"Golden Retriever🐕", "Poodle🐩","Chihuahua👹"};
+string dogs[3] = {"Golden Retriever🐕", "Poodle🐩","Chihuahua👹"}; // you can declare a static array in C++ using this format: 'datatype name[size]'
 cout << dog[1]; // "Poodle🐩"
 ```
 **Dynamic arrays** can do everything that static arrays can do, but can be resized. This allows for elements to be added to the array and the array will automatically adjust its size to fit them.
 ```cpp
-vector<string> dogs = {};
+vector<string> dogs = {}; // you can declare a dynamic array in C++ using this format: 'vector<datatype> name'
 dogs.push_back("Golden Retriever🐕");
 cout << dogs[0]; // "Golden Retriever🐕"
 ``` 
@@ -76,4 +76,13 @@ Strings are sequence of characters and can often be treated like an array of cha
 string name = "Alvin";
 name[3] = 'y';//C++ strings are mutable
 cout << name; // "Alvyn"
+```
+
+## Pairs(C++ only)
+Pairs are a data type that allow us to pair 2 values that may be from different data types. We can pair ints and ints, strings and strings, strings and ints, etc.
+In C++, we have to specify the data types of each value when declaring a pair using this format: `pair<datatype1, datatype2> nameOfPair`. 
+```cpp
+pair<string,int> nameAndAge; // you can declare a pair using the following format: 'pair<datatype1, datatype2> name'
+nameAndAge = {"Jason", 15};
+nameAndAge.first = "Jack"; // you access the individual values of a pair using '.first' and '.second'
 ```
