@@ -3,7 +3,7 @@
 
 A graph is a non-linear data structure that consists of nodes connected by edges. This sort of data structure can be very useful, like when trying to represent different routes between houses or a series of flights between airports.
 
-**Note: All examples in this tutorial are in psuedocode.**
+**Note: All examples in this tutorial are in C++.**
 
 ## Important Vocabulary
 Before we dive deeper, lets introduce some important words that you'll encounter a lot when dealing with graphs. Don't worry if its a too much to memorize right now, these terms will become natural as you gain more experience with graphs.
