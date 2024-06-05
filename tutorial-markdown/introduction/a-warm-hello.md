@@ -1,7 +1,7 @@
 # **A Warm Hello:** What is AlgoSavvy?
 **A Free and Open Source resource for diving deep into data structures and algorithms.**
 
-**Howdy👋!** AlgoSavvy is a free online open-source resource that provides a variety of tutorials and game modes to help you understand a wide range data structures and algorithms. The different concepts addressed in this guide are invaluable for **coding interviews, competitive programming, writing clean and effective code, and more!**
+**Howdy👋!** AlgoSavvy is a free online open-source resource that provides a variety of tutorials and game modes to help you understand a wide range Java data structures and algorithms. The different concepts addressed in this guide are invaluable for **computer science courses, coding interviews, competitive programming, writing clean and effective code, and more!**
 
 ## Learning on AlgoSavvy
 
@@ -25,7 +25,7 @@ AlgoSavvy has 4 built in game modes: **Solution Search, Method Madness, Time Cru
 
 - **Time Crunch:** Given a problem statement **and** its solution, determine the time complexity of the described solution
 
-- **Error Blitz:** Given an incorrect code snippet(C++), describe the mistake
+- **Error Blitz:** Given an incorrect code snippet (Java), describe the mistake
 
 ## Other Amazing Resources!
 - **[USACO](http://www.usaco.org)** - The United States of America Computing Olympiad; hosts various competitions every year for multiple skill levels
